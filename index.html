@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitchell's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Mitchell Carter</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Mitchell Carter</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onClick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onClick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onClick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="prof-section-pic-container">
+            <img src="./assets/profile-pic.jpg" 
+            alt="Headshot of a handsome young man, look at those stunning curls and his friendly smile!"/>
+        </div>
+        <div class="section-text">
+            <p class="section-text-p1"> Hello, I'm</p>
+            <h1 class="title"> Mitchell Carter</h1>
+            <p class="section-text-p2">(Aspiring) Full Stack Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" 
+                onClick="window.open('./assets/resume.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" 
+                onClick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div class="socials-container">
+                <img src="./assets/linkedin.png" 
+                    alt="My Linkedin profile" 
+                    class="icon" 
+                    onClick="location.href='https://linkedin.com/in/mitchell-carter-128805256/'"
+                />
+                <img src="./assets/github.png" 
+                    alt="My Github profile" 
+                    class="icon" 
+                    onClick="location.href='https://github.com/WeezerGeezer'"
+                />
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section-text-p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="about-section-pic-container">
+                <img src="./assets/about-pic.JPEG" 
+                alt="Handsome young man stuns in amazing photo"
+                class="about-pic"/>
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" 
+                        alt="Experience icon"
+                        class="icon"
+                        />
+                        <h3>Experience</h3>
+                        <p>3 months of industry Full Stack Development</p>
+
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" 
+                        alt="Education icon"
+                        class="icon"
+                        />
+                        <h3>Education</h3>
+                        <p>Bachelor of Science in Informatics</p>
+                        <p>University of Michigan</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>Relevant courses:</p>
+                    <ul>
+                        <li>Web Systems (EECS 485)</li>
+                        <li>Data Structures and Algorithms (EECS 281)</li>
+                        <li>Programming and Data Structures (EECS 280)</li>
+                        <li>Elementary Programming Concepts (EECS 183)</li>
+                        <li>Discrete Math (EECS 203)</li>
+                        <li>Applied Statistical Methods (STATS 401)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" 
+        alt="arrow icon" 
+        class="icon arrow" 
+        onclick="location.href='./experience'">
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
