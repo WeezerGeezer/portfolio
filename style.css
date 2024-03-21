@@ -281,6 +281,7 @@ section-container {
 
 .about-containers, .about-details-container {
     display: flex;
+    margin-top: 1rem;
 }
 
 .arrow {
@@ -302,7 +303,8 @@ section-container {
 /* EXPERIENCE SECTION */
 
 #experience {
-    position: relative
+    position: relative;
+    height: fit-content;
 }
 
 .experience-sub-title   {
@@ -343,6 +345,7 @@ article .icon{
 /* PROJECTS SECTION */
 #projects {
     position: relative;
+    height: fit-content;
 }
 
 .color-container {
@@ -364,6 +367,10 @@ article .icon{
 .project-btn    {
     color: black;
     border-color: rgb(163, 163, 163);
+}
+
+.project-sub-title  {
+    font-size: medium;
 }
 
 .project-arrow {

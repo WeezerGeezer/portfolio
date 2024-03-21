@@ -4,7 +4,7 @@
         margin-bottom: 6rem;
     }
     .about-containers {
-        flex-wrap: wrap
+        flex-wrap: wrap;
     }
 }
 
@@ -62,6 +62,7 @@
     }
     .about-containers, .contact-info-upper-container, .btn-container {
         flex-wrap: wrap;
+        margin-top: 2rem;
     }
     .contact-info-container {
         margin: 0;
@@ -91,7 +92,10 @@
     .title {
         font-size: 2rem;
     }
-      .text-container {
+    .text-container {
         text-align: justify;
+    }
+    .experience-details-container   {
+        margin-left: 4.5rem;
     }
 }
