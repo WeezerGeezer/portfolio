@@ -320,6 +320,7 @@ section-container {
     flex-direction: column;
     margin-left: 7rem;
     margin-right: 7rem;
+    margin-top: 2rem;
 }
 
 .article-container {
