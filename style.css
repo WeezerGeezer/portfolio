@@ -298,6 +298,87 @@ section-container {
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.details-container.clickable {
+    cursor: pointer;
+}
+
+.details-container.clickable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.highlight-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.university-name {
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+.education-details {
+    margin-top: 2rem;
+}
+
+.education-title {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.education-content {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.coursework, .achievements {
+    flex: 1;
+}
+
+.coursework h4, .achievements h4 {
+    color: #444;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.education-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-content li {
+    color: #666;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.education-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #444;
+}
+
+/* Update media queries for education section */
+@media screen and (max-width: 768px) {
+    .education-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .about-section-pic-container {
+        margin: 0 auto 1rem;
+    }
 }
 
 /* EXPERIENCE SECTION */
@@ -352,12 +433,22 @@ article .icon{
 .color-container {
     border-color: rgb(163, 163, 163);
     background: rgb(250, 250, 250);
+    width: 25%;
+    min-width: 250px;
+}
+
+#projects .about-containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .project-img {
     border-radius: 2rem;
     width: 90%;
     height: 90%;
+    object-fit: cover;
 }
 
 .project-title  {
@@ -377,6 +468,13 @@ article .icon{
 .project-arrow {
     position: absolute;
     bottom: 2.5rem;
+}
+
+#projects .article-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
 }
 
 /* CONTACT */
@@ -430,4 +528,66 @@ footer  {
 
 footer p    {
     text-align: center;
+}
+
+/* Update media queries for smaller screens */
+@media screen and (max-width: 1200px) {
+    .color-container {
+        width: 40%;
+    }
+}
+
+/* EXPERIENCE SECTION UPDATES */
+
+.role-title {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.experience-description ul {
+    text-align: left;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.experience-description li {
+    color: #555;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.tools-container {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.tools-container h4 {
+    margin-bottom: 0.8rem;
+    color: #444;
+}
+
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tool-tag {
+    background: #f0f0f0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+/* Update existing styles */
+.experience-sub-title {
+    margin-bottom: 1rem;
+}
+
+#experience .details-container {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
 }

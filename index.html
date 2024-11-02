@@ -13,8 +13,8 @@
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -29,8 +29,8 @@
             </div>
             <div class="menu-links">
                 <li><a href="#about" onClick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onClick="toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="#experience" onClick="toggleMenu()">Experience</a></li>
                 <li><a href="#contact" onClick="toggleMenu()">Contact</a></li>
             </div>
         </div>
@@ -43,7 +43,7 @@
         <div class="section-text">
             <p class="section-text-p1"> Hello, I'm</p>
             <h1 class="title"> Mitchell Carter</h1>
-            <p class="section-text-p2">(Aspiring) Full Stack Developer</p>
+            <p class="section-text-p2">Full Stack Developer</p>
             <div class="btn-container">
                 <button class="btn btn-color-2" 
                 onClick="window.open('./assets/resume.pdf')">
@@ -79,15 +79,14 @@
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
-                    <div class="details-container">
+                    <div class="details-container clickable" onclick="location.href='#experience'">
                         <img src="./assets/experience.png" 
                         alt="Experience icon"
                         class="icon"
                         />
-                        <h3>Experience</h3>
-                        <p>3 months of industry Full Stack </p>
-                        <p>Development (Internship)</p>
-
+                        <h3>Industry Experience</h3>
+                        <p>12 months Full Stack Development</p>
+                        <p class="highlight-text">Click to learn more!</p>
                     </div>
                     <div class="details-container">
                         <img src="./assets/education.png" 
@@ -96,31 +95,180 @@
                         />
                         <h3>Education</h3>
                         <p>Bachelor of Science in Informatics</p>
-                        <p>University of Michigan</p>
+                        <p class="university-name">University of Michigan</p>
                     </div>
                 </div>
-                <div class="text-container">
-                    <p>Relevant courses:</p>
-                    <ul>
-                        <li>Web Systems (EECS 485)</li>
-                        <li>Data Structures and Algorithms (EECS 281)</li>
-                        <li>Programming and Data Structures (EECS 280)</li>
-                        <li>Elementary Programming Concepts (EECS 183)</li>
-                        <li>Discrete Math (EECS 203)</li>
-                        <li>Applied Statistical Methods (STATS 401)</li>
-                    </ul>
+                <div class="education-details">
+                    <div class="details-container">
+                        <h3 class="education-title">Academic Background</h3>
+                        <div class="education-content">
+                            <div class="coursework">
+                                <h4>Key Coursework:</h4>
+                                <ul>
+                                    <li>Web Systems (EECS 485)</li>
+                                    <li>Data Structures and Algorithms (EECS 281)</li>
+                                    <li>Programming and Data Structures (EECS 280)</li>
+                                    <li>Elementary Programming Concepts (EECS 183)</li>
+                                    <li>Discrete Math (EECS 203)</li>
+                                    <li>Applied Statistical Methods (STATS 401)</li>
+                                </ul>
+                            </div>
+                            <div class="achievements">
+                                <h4>Leadership:</h4>
+                                <ul>
+                                    <li><a href="https://icc.coop">Inter-Cooperative Council (2021-2024)</a></li>
+                                    <li>Nakamura House President (2023-2024)</li>
+                                    <li>Nakamura House Sustainability Steward (2022-2023)</li>
+                                    <li>Nakamura House Maintainence Manager (2021-2022)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <img src="./assets/arrow.png" 
         alt="arrow icon" 
         class="icon arrow" 
-        onclick="location.href='#experience'">
+        onclick="location.href='#projects'">
+    </section>
+    <section id="projects">
+        <p class="section-text-p1"> View my latest</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-6.jpeg" alt="Time Crisis Search Engine"
+                        class="project-img">
+                    </div>
+                    <h2 class="experience-subtitle project-title"> Time Crisis Search<p class="project-sub-title">w/ Whoosh, Google Cloud, & OpenAI Whisper</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="location.href='https://tc-search.com'">Site</button>
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="location.href='https://github.com/WeezerGeezer/tc-search'">Github</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-5.jpeg" alt="Arduino "Catchphrase" Device"
+                        class="project-img">
+                    </div>
+                    <h2 class="experience-subtitle project-title"> Arduino "Catchphrase" Device<p class="project-sub-title">w/ C++ & Swift App</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="location.href='https://www.youtube.com/shorts/hS1pL4IaIuI'">Video</button>
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="location.href='https://github.com/WeezerGeezer/catchphrase'">Github</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-1.jpeg" alt="M-Event Mobile App"
+                        class="project-img">
+                    </div>
+                    <h2 class="experience-subtitle project-title"> M-Event Mobile App<p class="project-sub-title">w/ React Native & PostgreSQL</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="location.href='https://www.youtube.com/watch?v=pVt3-H-_ns0'">Live Demo</button>
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="location.href='https://docs.google.com/presentation/d/1G6IULeW_Sf3MmnjrImDCt90rcZ-KoJnMQaO8ebDHy5c/edit?pli=1#slide=id.p'">Slide Deck</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-2.png" alt="React Instagram Clone"
+                        class="project-img">
+                    </div>
+                    <h2 class="experience-subtitle project-title"> React Instagram Clone<p class="project-sub-title">w/ Infinite Scroll and Pagination</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="location.href='https://github.com/WeezerGeezer/p3-insta-clientside'"> Github </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-3.png" alt="Personal Portfolio Site"
+                        class="project-img">
+                    </div>
+                    <h2 class="experience-subtitle project-title">Personal Portfolio Site<p class="project-sub-title">Mobile Responsive CSS (Adjust the window size!)</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="location.href='https://github.com/WeezerGeezer/portfolio'"> Github </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/project-4.jpeg" alt="Project 3"
+                        class="project-img">
+                    </div>
+                    <h2 class="experience-subtitle project-title"> Content Aware Image Re-sizer<p class="project-sub-title">Developed in C++</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" 
+                        onclick="location.href='https://github.com/WeezerGeezer/image-resizer'"> Github </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" 
+        alt="arrow icon" 
+        class="icon project-arrow arrow" 
+        onclick="location.href='#experience'"/>
     </section>
     <section id="experience">
         <p class="section-text-p1">Learn more about my</p>
         <h1 class="title">Experience</h1>
         <div class="experience-details-container">
+            <!-- Professional Experience -->
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">University of Michigan ITS</h2>
+                    <h3 class="role-title">Full Stack Development Internship</h3>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Developed Python code within the Django framework as a part of a cross-functional team, improving the security of the university's account management web application which serves over 60,000 students, faculty, and employees</li>
+                            <li>Enhanced the security and user accessibility of the university's account management web app by utilizing Javascript and HTML/CSS to improve the two-factor authentication system</li>
+                            <li>Facilitated an intern project team in the development of a Minimum Viable Prototype mobile application using React Native, following the Agile framework</li>
+                        </ul>
+                    </div>
+                    <div class="tools-container">
+                        <h4>Tools & Technologies:</h4>
+                        <div class="tools-grid">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">Django</span>
+                            <span class="tool-tag">JavaScript</span>
+                            <span class="tool-tag">HTML/CSS</span>
+                            <span class="tool-tag">React Native</span>
+                            <span class="tool-tag">Agile</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Nar Cannabis</h2>
+                    <h3 class="role-title">Data & Automation Specialist</h3>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Developed Python scripts to automate inventory workflows, streamlining processes and enhancing efficiency for the back-of-house team</li>
+                            <li>Coordinated and executed IT logistics for large customer events, including relocation of customer checkout stations and network infrastructure</li>
+                            <li>Maintained custom filters, discounts, and inventory within the in-house database system to track and monitor compliance with state regulations</li>
+                        </ul>
+                    </div>
+                    <div class="tools-container">
+                        <h4>Tools & Technologies:</h4>
+                        <div class="tools-grid">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">SQL</span>
+                            <span class="tool-tag">Database Management</span>
+                            <span class="tool-tag">IT Infrastructure</span>
+                            <span class="tool-tag">Automation Scripts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
             <div class="about-containers">
                 <div class="details-container">
                     <h2 class="experience-sub-title">Frontend Development</h2>
@@ -157,6 +305,13 @@
                             <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
                             <div>
                                 <h3>SQL</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>SwiftUI</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
@@ -210,68 +365,100 @@
                     </div>
                 </div>
             </div>
-        </div>
-    <img src="./assets/arrow.png" 
-        alt="arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='#projects'"/>
-    </section>
-    <section id="projects">
-        <p class="section-text-p1"> View my latest</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-1.jpeg" alt="M-Event Mobile App"
-                        class="project-img">
-                    </div>
-                    <h2 class="experience-subtitle project-title"> M-Event Mobile App<p class="project-sub-title">w/ React Native & PostgreSQL</p></h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://www.youtube.com/watch?v=pVt3-H-_ns0'">Live Demo</button>
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://docs.google.com/presentation/d/1G6IULeW_Sf3MmnjrImDCt90rcZ-KoJnMQaO8ebDHy5c/edit?pli=1#slide=id.p'">Slide Deck</button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-2.png" alt="React Instagram Clone"
-                        class="project-img">
-                    </div>
-                    <h2 class="experience-subtitle project-title"> React Instagram Clone<p class="project-sub-title">w/ Infinite Scroll and Pagination</p></h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://github.com/WeezerGeezer/p3-insta-clientside'"> Github </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-3.png" alt="Personal Portfolio Site"
-                        class="project-img">
-                    </div>
-                    <h2 class="experience-subtitle project-title">Personal Portfolio Site<p class="project-sub-title">Mobile Responsive CSS (Adjust the window size!)</p></h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://github.com/WeezerGeezer/portfolio'"> Github </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-4.jpeg" alt="Project 3"
-                        class="project-img">
-                    </div>
-                    <h2 class="experience-subtitle project-title"> Content Aware Image Re-sizer<p class="project-sub-title">Developed in C++</p></h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://github.com/WeezerGeezer/image-resizer'"> Github </button>
-                    </div>
+            <!-- Add this after the Backend Development container in the experience section -->
+            <div class="details-container">
+                <h2 class="experience-sub-title">General Technical Skills</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Google Workspace</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Adobe Creative Suite</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>macOS</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Windows</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Command Line</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Docker</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>AWS/Cloud Services</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Version Control</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Agile</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Microsoft Office</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Database Design</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Technical Writing</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
         <img src="./assets/arrow.png" 
         alt="arrow icon" 
-        class="icon project-arrow arrow" 
+        class="icon arrow" 
         onclick="location.href='#contact'"/>
     </section>
     <section id="contact">
@@ -301,8 +488,8 @@
             <div class="nav-links-container">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>

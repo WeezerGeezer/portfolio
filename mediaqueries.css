@@ -43,6 +43,9 @@
     .about-containers {
         margin-top: 0;
     }
+    .color-container {
+        width: 45%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -97,5 +100,8 @@
     }
     .experience-details-container   {
         margin-left: 4.5rem;
+    }
+    .color-container {
+        width: 100%;
     }
 }
