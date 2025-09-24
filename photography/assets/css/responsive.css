@@ -1,0 +1,236 @@
+/* Mobile First Approach */
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    /* Show mobile header and hide desktop sidebar */
+    .mobile-header {
+        display: block;
+    }
+
+    .mobile-menu-overlay {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    /* Main content full width on mobile */
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 60px; /* Account for fixed mobile header */
+    }
+
+    .gallery-container {
+        padding: 1rem;
+    }
+}
+
+/* Base Mobile Styles (320px - 480px) */
+@media screen and (max-width: 480px) {
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    /* Header */
+    .nav-links {
+        position: fixed;
+        top: var(--header-height);
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Gallery Grid - Masonry Mobile - handled by JavaScript */
+
+    /* Forms */
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* Tablet Styles (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Gallery Grid - Masonry Tablet - handled by JavaScript */
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Desktop Styles (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Gallery Grid - Masonry Desktop - handled by JavaScript */
+}
+
+/* Large Desktop Styles (1025px - 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Gallery Grid - Masonry Large Desktop - handled by JavaScript */
+
+    /* Container */
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* Ultra-wide Desktop Styles (1441px+) */
+@media screen and (min-width: 1441px) {
+    /* Gallery Grid - Masonry Ultra-wide - handled by JavaScript */
+
+    /* Container */
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* Shared Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Lightbox Navigation */
+    .lightbox .prev,
+    .lightbox .next {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .lightbox .prev { left: 10px; }
+    .lightbox .next { right: 10px; }
+
+    /* Album Header */
+    .album-header {
+        padding: 0 1rem;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+        padding: 0 1rem;
+    }
+
+    /* About Page Mobile */
+    .about-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .profile-image img,
+    .profile-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-image img:hover {
+        transform: scale(1.02); /* Reduced hover effect on mobile */
+    }
+
+    .profile-icon {
+        font-size: 2rem;
+    }
+
+    .profile-placeholder p {
+        font-size: 0.8rem;
+    }
+
+    .awards-list {
+        grid-template-columns: 1fr;
+    }
+
+    .specialty-item {
+        padding: 1rem;
+    }
+}
+
+/* High DPI Screens */
+@media screen and (min-resolution: 192dpi) {
+    /* Optimize images for retina displays */
+    .gallery-item img {
+        transform: translateZ(0); /* Hardware acceleration */
+    }
+}
+
+/* Print Styles */
+@media print {
+    header,
+    footer,
+    .gallery-filters,
+    .load-more-btn,
+    .lightbox {
+        display: none;
+    }
+
+    .gallery-grid,
+    .album-grid {
+        /* Print layout handled by JavaScript masonry */
+    }
+
+    .gallery-item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .gallery-item img {
+        page-break-inside: avoid;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #f5f6fa;
+        --light-gray: #2c3e50;
+        --medium-gray: #7f8c8d;
+        --dark-gray: #1a252f;
+        --white: #1a1a1a;
+    }
+
+    body {
+        background-color: var(--white);
+        color: var(--text-color);
+    }
+
+    header {
+        background-color: var(--dark-gray);
+    }
+
+    .nav-links a {
+        color: var(--text-color);
+    }
+
+    input, textarea, select {
+        background-color: var(--dark-gray);
+        color: var(--text-color);
+        border-color: var(--medium-gray);
+    }
+} 

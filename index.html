@@ -14,6 +14,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="photography/index.html">Photography</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -30,6 +31,7 @@
             <div class="menu-links">
                 <li><a href="#about" onClick="toggleMenu()">About</a></li>
                 <li><a href="#projects" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="photography/index.html" onClick="toggleMenu()">Photography</a></li>
                 <li><a href="#experience" onClick="toggleMenu()">Experience</a></li>
                 <li><a href="#contact" onClick="toggleMenu()">Contact</a></li>
             </div>
@@ -178,9 +180,49 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" 
-        alt="arrow icon" 
-        class="icon project-arrow arrow" 
+        <img src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon project-arrow arrow"
+        onclick="location.href='#photography'"/>
+    </section>
+    <section id="photography">
+        <p class="section-text-p1">Explore my</p>
+        <h1 class="title">Photography</h1>
+        <div class="photography-preview-container">
+            <div class="photography-hero">
+                <p>Capturing moments through the lens - from nature's beauty to life's precious memories.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onClick="window.open('photography/index.html')">
+                        View Full Portfolio
+                    </button>
+                </div>
+            </div>
+            <div class="photography-samples">
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="photography/assets/images/thumbnails/sample1.webp" alt="Sample photograph 1"/>
+                    </div>
+                    <div class="photo-item">
+                        <img src="photography/assets/images/thumbnails/sample2.webp" alt="Sample photograph 2"/>
+                    </div>
+                    <div class="photo-item">
+                        <img src="photography/assets/images/thumbnails/sample3.webp" alt="Sample photograph 3"/>
+                    </div>
+                    <div class="photo-item">
+                        <img src="photography/assets/images/thumbnails/sample4.webp" alt="Sample photograph 4"/>
+                    </div>
+                    <div class="photo-item">
+                        <img src="photography/assets/images/thumbnails/sample5.webp" alt="Sample photograph 5"/>
+                    </div>
+                    <div class="photo-item">
+                        <img src="photography/assets/images/thumbnails/sample6.webp" alt="Sample photograph 6"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon photography-arrow arrow"
         onclick="location.href='#experience'"/>
     </section>
     <section id="experience">
@@ -463,6 +505,7 @@
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#photography">Photography</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>

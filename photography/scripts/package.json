@@ -1,0 +1,27 @@
+{
+  "name": "photography-scripts",
+  "version": "1.0.0",
+  "description": "Photo import and processing scripts for photography website",
+  "main": "import-photos.js",
+  "scripts": {
+    "import": "node import-photos.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+  },
+  "keywords": [
+    "photography",
+    "image-processing",
+    "thumbnail-generation",
+    "webp-conversion"
+  ],
+  "author": "",
+  "license": "MIT"
+}

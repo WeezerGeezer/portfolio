@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://your-domain.com/</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-domain.com/about.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://your-domain.com/contact.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Album Pages -->
+  <url>
+    <loc>https://your-domain.com/album.html?id=nature</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/nature/mountain-sunrise.webp</image:loc>
+      <image:title>Mountain Sunrise</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/nature/forest-path.webp</image:loc>
+      <image:title>Forest Path</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/nature/ocean-waves.webp</image:loc>
+      <image:title>Ocean Waves</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://your-domain.com/album.html?id=portraits</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/portraits/headshot.webp</image:loc>
+      <image:title>Professional Headshot</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/portraits/natural-light.webp</image:loc>
+      <image:title>Natural Light Portrait</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/portraits/studio.webp</image:loc>
+      <image:title>Studio Portrait</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://your-domain.com/album.html?id=events</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/events/wedding.webp</image:loc>
+      <image:title>Wedding Ceremony</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/events/conference.webp</image:loc>
+      <image:title>Corporate Conference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/events/birthday.webp</image:loc>
+      <image:title>Birthday Celebration</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://your-domain.com/album.html?id=example</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <!-- Example album images -->
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa1375419.webp</image:loc>
+      <image:title>1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa2375419.webp</image:loc>
+      <image:title>2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa3375419.webp</image:loc>
+      <image:title>3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa4375419.webp</image:loc>
+      <image:title>4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa5375419.webp</image:loc>
+      <image:title>5</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa6375419.webp</image:loc>
+      <image:title>6</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa7375419.webp</image:loc>
+      <image:title>7</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa8375419.webp</image:loc>
+      <image:title>8</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa9375419.webp</image:loc>
+      <image:title>9</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa10375419.webp</image:loc>
+      <image:title>10</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa11375419.webp</image:loc>
+      <image:title>11</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa12375419.webp</image:loc>
+      <image:title>12</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa13375419.webp</image:loc>
+      <image:title>13</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa14375419.webp</image:loc>
+      <image:title>14</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa15375419.webp</image:loc>
+      <image:title>15</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa16375419.webp</image:loc>
+      <image:title>16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa17375419.webp</image:loc>
+      <image:title>17</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa18375419.webp</image:loc>
+      <image:title>18</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa19375419.webp</image:loc>
+      <image:title>19</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa20375419.webp</image:loc>
+      <image:title>20</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa21375419.webp</image:loc>
+      <image:title>21</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa22375419.webp</image:loc>
+      <image:title>22</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa23375419.webp</image:loc>
+      <image:title>23</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa24375419.webp</image:loc>
+      <image:title>24</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa25375419.webp</image:loc>
+      <image:title>25</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa26375419.webp</image:loc>
+      <image:title>26</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa27375419.webp</image:loc>
+      <image:title>27</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://your-domain.com/assets/images/full/example/exa28375419.webp</image:loc>
+      <image:title>28</image:title>
+    </image:image>
+  </url>
+  
+</urlset>

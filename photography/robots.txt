@@ -1,0 +1,22 @@
+# Robots.txt for Photography Portfolio Website
+# Allow all search engines to crawl the entire site
+
+User-agent: *
+Allow: /
+
+# Block access to sensitive directories and files
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /*.json
+Disallow: /node_modules/
+
+# Allow access to important image directories
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Crawl delay to be respectful to server resources
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml

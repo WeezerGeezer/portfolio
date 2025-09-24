@@ -1,0 +1,765 @@
+{
+    "nature": {
+        "title": "Nature Photography",
+        "description": "Capturing the beauty of landscapes and wildlife",
+        "cover": "nature/cover.jpg",
+        "images": [
+            {
+                "id": "nat001",
+                "title": "Mountain Sunrise",
+                "thumbnail": "assets/images/thumbnails/nature/mountain-sunrise.webp",
+                "full": "assets/images/full/nature/mountain-sunrise.webp",
+                "date": "2024-02-11"
+            },
+            {
+                "id": "nat002",
+                "title": "Forest Path",
+                "thumbnail": "assets/images/thumbnails/nature/forest-path.webp",
+                "full": "assets/images/full/nature/forest-path.webp",
+                "date": "2024-02-10"
+            },
+            {
+                "id": "nat003",
+                "title": "Ocean Waves",
+                "thumbnail": "assets/images/thumbnails/nature/ocean-waves.webp",
+                "full": "assets/images/full/nature/ocean-waves.webp",
+                "date": "2024-02-09"
+            }
+        ]
+    },
+    "portraits": {
+        "title": "Portrait Photography",
+        "description": "Professional portraits and candid moments",
+        "cover": "portraits/cover.jpg",
+        "images": [
+            {
+                "id": "port001",
+                "title": "Professional Headshot",
+                "thumbnail": "assets/images/thumbnails/portraits/headshot.webp",
+                "full": "assets/images/full/portraits/headshot.webp",
+                "date": "2024-02-08"
+            },
+            {
+                "id": "port002",
+                "title": "Natural Light Portrait",
+                "thumbnail": "assets/images/thumbnails/portraits/natural-light.webp",
+                "full": "assets/images/full/portraits/natural-light.webp",
+                "date": "2024-02-07"
+            },
+            {
+                "id": "port003",
+                "title": "Studio Portrait",
+                "thumbnail": "assets/images/thumbnails/portraits/studio.webp",
+                "full": "assets/images/full/portraits/studio.webp",
+                "date": "2024-02-06"
+            }
+        ]
+    },
+    "events": {
+        "title": "Event Photography",
+        "description": "Capturing special moments at weddings, parties, and corporate events",
+        "cover": "events/cover.jpg",
+        "images": [
+            {
+                "id": "evt001",
+                "title": "Wedding Ceremony",
+                "thumbnail": "assets/images/thumbnails/events/wedding.webp",
+                "full": "assets/images/full/events/wedding.webp",
+                "date": "2024-02-05"
+            },
+            {
+                "id": "evt002",
+                "title": "Corporate Conference",
+                "thumbnail": "assets/images/thumbnails/events/conference.webp",
+                "full": "assets/images/full/events/conference.webp",
+                "date": "2024-02-04"
+            },
+            {
+                "id": "evt003",
+                "title": "Birthday Celebration",
+                "thumbnail": "assets/images/thumbnails/events/birthday.webp",
+                "full": "assets/images/full/events/birthday.webp",
+                "date": "2024-02-03"
+            }
+        ]
+    },
+    "example": {
+        "title": "Example Photography",
+        "description": "A collection of example photography",
+        "cover": "example/cover.jpg",
+        "images": [
+            {
+                "id": "exa1375419",
+                "title": "1",
+                "thumbnail": "assets/images/thumbnails/example/exa1375419.webp",
+                "full": "assets/images/full/example/exa1375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "1.jpeg"
+                }
+            },
+            {
+                "id": "exa10375419",
+                "title": "10",
+                "thumbnail": "assets/images/thumbnails/example/exa10375419.webp",
+                "full": "assets/images/full/example/exa10375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "10.jpeg"
+                }
+            },
+            {
+                "id": "exa11375419",
+                "title": "11",
+                "thumbnail": "assets/images/thumbnails/example/exa11375419.webp",
+                "full": "assets/images/full/example/exa11375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "11.jpeg"
+                }
+            },
+            {
+                "id": "exa12375419",
+                "title": "12",
+                "thumbnail": "assets/images/thumbnails/example/exa12375419.webp",
+                "full": "assets/images/full/example/exa12375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "12.jpeg"
+                }
+            },
+            {
+                "id": "exa13375419",
+                "title": "13",
+                "thumbnail": "assets/images/thumbnails/example/exa13375419.webp",
+                "full": "assets/images/full/example/exa13375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "13.jpeg"
+                }
+            },
+            {
+                "id": "exa14375419",
+                "title": "14",
+                "thumbnail": "assets/images/thumbnails/example/exa14375419.webp",
+                "full": "assets/images/full/example/exa14375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "14.jpeg"
+                }
+            },
+            {
+                "id": "exa15375419",
+                "title": "15",
+                "thumbnail": "assets/images/thumbnails/example/exa15375419.webp",
+                "full": "assets/images/full/example/exa15375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "15.jpeg"
+                }
+            },
+            {
+                "id": "exa16375419",
+                "title": "16",
+                "thumbnail": "assets/images/thumbnails/example/exa16375419.webp",
+                "full": "assets/images/full/example/exa16375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "16.jpeg"
+                }
+            },
+            {
+                "id": "exa17375419",
+                "title": "17",
+                "thumbnail": "assets/images/thumbnails/example/exa17375419.webp",
+                "full": "assets/images/full/example/exa17375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "17.jpeg"
+                }
+            },
+            {
+                "id": "exa18375419",
+                "title": "18",
+                "thumbnail": "assets/images/thumbnails/example/exa18375419.webp",
+                "full": "assets/images/full/example/exa18375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "18.jpeg"
+                }
+            },
+            {
+                "id": "exa19375419",
+                "title": "19",
+                "thumbnail": "assets/images/thumbnails/example/exa19375419.webp",
+                "full": "assets/images/full/example/exa19375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "19.jpeg"
+                }
+            },
+            {
+                "id": "exa2375419",
+                "title": "2",
+                "thumbnail": "assets/images/thumbnails/example/exa2375419.webp",
+                "full": "assets/images/full/example/exa2375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "2.jpeg"
+                }
+            },
+            {
+                "id": "exa20375419",
+                "title": "20",
+                "thumbnail": "assets/images/thumbnails/example/exa20375419.webp",
+                "full": "assets/images/full/example/exa20375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "20.jpeg"
+                }
+            },
+            {
+                "id": "exa21375419",
+                "title": "21",
+                "thumbnail": "assets/images/thumbnails/example/exa21375419.webp",
+                "full": "assets/images/full/example/exa21375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "21.jpeg"
+                }
+            },
+            {
+                "id": "exa22375419",
+                "title": "22",
+                "thumbnail": "assets/images/thumbnails/example/exa22375419.webp",
+                "full": "assets/images/full/example/exa22375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "22.jpeg"
+                }
+            },
+            {
+                "id": "exa23375419",
+                "title": "23",
+                "thumbnail": "assets/images/thumbnails/example/exa23375419.webp",
+                "full": "assets/images/full/example/exa23375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "23.jpeg"
+                }
+            },
+            {
+                "id": "exa24375419",
+                "title": "24",
+                "thumbnail": "assets/images/thumbnails/example/exa24375419.webp",
+                "full": "assets/images/full/example/exa24375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "24.jpeg"
+                }
+            },
+            {
+                "id": "exa25375419",
+                "title": "25",
+                "thumbnail": "assets/images/thumbnails/example/exa25375419.webp",
+                "full": "assets/images/full/example/exa25375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "25.jpeg"
+                }
+            },
+            {
+                "id": "exa26375419",
+                "title": "26",
+                "thumbnail": "assets/images/thumbnails/example/exa26375419.webp",
+                "full": "assets/images/full/example/exa26375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "26.jpeg"
+                }
+            },
+            {
+                "id": "exa27375419",
+                "title": "27",
+                "thumbnail": "assets/images/thumbnails/example/exa27375419.webp",
+                "full": "assets/images/full/example/exa27375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "27.jpeg"
+                }
+            },
+            {
+                "id": "exa28375419",
+                "title": "28",
+                "thumbnail": "assets/images/thumbnails/example/exa28375419.webp",
+                "full": "assets/images/full/example/exa28375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "28.jpeg"
+                }
+            },
+            {
+                "id": "exa3375419",
+                "title": "3",
+                "thumbnail": "assets/images/thumbnails/example/exa3375419.webp",
+                "full": "assets/images/full/example/exa3375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "3.jpeg"
+                }
+            },
+            {
+                "id": "exa4375419",
+                "title": "4",
+                "thumbnail": "assets/images/thumbnails/example/exa4375419.webp",
+                "full": "assets/images/full/example/exa4375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "4.jpeg"
+                }
+            },
+            {
+                "id": "exa5375419",
+                "title": "5",
+                "thumbnail": "assets/images/thumbnails/example/exa5375419.webp",
+                "full": "assets/images/full/example/exa5375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 5338,
+                    "height": 3559,
+                    "originalFilename": "5.jpeg"
+                }
+            },
+            {
+                "id": "exa6375419",
+                "title": "6",
+                "thumbnail": "assets/images/thumbnails/example/exa6375419.webp",
+                "full": "assets/images/full/example/exa6375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "6.jpeg"
+                }
+            },
+            {
+                "id": "exa7375419",
+                "title": "7",
+                "thumbnail": "assets/images/thumbnails/example/exa7375419.webp",
+                "full": "assets/images/full/example/exa7375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "7.jpeg"
+                }
+            },
+            {
+                "id": "exa8375419",
+                "title": "8",
+                "thumbnail": "assets/images/thumbnails/example/exa8375419.webp",
+                "full": "assets/images/full/example/exa8375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "8.jpeg"
+                }
+            },
+            {
+                "id": "exa9375419",
+                "title": "9",
+                "thumbnail": "assets/images/thumbnails/example/exa9375419.webp",
+                "full": "assets/images/full/example/exa9375419.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "9.jpeg"
+                }
+            },
+            {
+                "id": "exa1394586",
+                "title": "1",
+                "thumbnail": "assets/images/thumbnails/example/exa1394586.webp",
+                "full": "assets/images/full/example/exa1394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "1.jpeg"
+                }
+            },
+            {
+                "id": "exa10394586",
+                "title": "10",
+                "thumbnail": "assets/images/thumbnails/example/exa10394586.webp",
+                "full": "assets/images/full/example/exa10394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "10.jpeg"
+                }
+            },
+            {
+                "id": "exa11394586",
+                "title": "11",
+                "thumbnail": "assets/images/thumbnails/example/exa11394586.webp",
+                "full": "assets/images/full/example/exa11394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "11.jpeg"
+                }
+            },
+            {
+                "id": "exa12394586",
+                "title": "12",
+                "thumbnail": "assets/images/thumbnails/example/exa12394586.webp",
+                "full": "assets/images/full/example/exa12394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "12.jpeg"
+                }
+            },
+            {
+                "id": "exa13394586",
+                "title": "13",
+                "thumbnail": "assets/images/thumbnails/example/exa13394586.webp",
+                "full": "assets/images/full/example/exa13394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "13.jpeg"
+                }
+            },
+            {
+                "id": "exa14394586",
+                "title": "14",
+                "thumbnail": "assets/images/thumbnails/example/exa14394586.webp",
+                "full": "assets/images/full/example/exa14394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "14.jpeg"
+                }
+            },
+            {
+                "id": "exa15394586",
+                "title": "15",
+                "thumbnail": "assets/images/thumbnails/example/exa15394586.webp",
+                "full": "assets/images/full/example/exa15394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "15.jpeg"
+                }
+            },
+            {
+                "id": "exa16394586",
+                "title": "16",
+                "thumbnail": "assets/images/thumbnails/example/exa16394586.webp",
+                "full": "assets/images/full/example/exa16394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "16.jpeg"
+                }
+            },
+            {
+                "id": "exa17394586",
+                "title": "17",
+                "thumbnail": "assets/images/thumbnails/example/exa17394586.webp",
+                "full": "assets/images/full/example/exa17394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "17.jpeg"
+                }
+            },
+            {
+                "id": "exa18394586",
+                "title": "18",
+                "thumbnail": "assets/images/thumbnails/example/exa18394586.webp",
+                "full": "assets/images/full/example/exa18394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "18.jpeg"
+                }
+            },
+            {
+                "id": "exa19394586",
+                "title": "19",
+                "thumbnail": "assets/images/thumbnails/example/exa19394586.webp",
+                "full": "assets/images/full/example/exa19394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "19.jpeg"
+                }
+            },
+            {
+                "id": "exa2394586",
+                "title": "2",
+                "thumbnail": "assets/images/thumbnails/example/exa2394586.webp",
+                "full": "assets/images/full/example/exa2394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "2.jpeg"
+                }
+            },
+            {
+                "id": "exa20394586",
+                "title": "20",
+                "thumbnail": "assets/images/thumbnails/example/exa20394586.webp",
+                "full": "assets/images/full/example/exa20394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "20.jpeg"
+                }
+            },
+            {
+                "id": "exa21394586",
+                "title": "21",
+                "thumbnail": "assets/images/thumbnails/example/exa21394586.webp",
+                "full": "assets/images/full/example/exa21394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "21.jpeg"
+                }
+            },
+            {
+                "id": "exa22394586",
+                "title": "22",
+                "thumbnail": "assets/images/thumbnails/example/exa22394586.webp",
+                "full": "assets/images/full/example/exa22394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "22.jpeg"
+                }
+            },
+            {
+                "id": "exa23394586",
+                "title": "23",
+                "thumbnail": "assets/images/thumbnails/example/exa23394586.webp",
+                "full": "assets/images/full/example/exa23394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "23.jpeg"
+                }
+            },
+            {
+                "id": "exa24394586",
+                "title": "24",
+                "thumbnail": "assets/images/thumbnails/example/exa24394586.webp",
+                "full": "assets/images/full/example/exa24394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "24.jpeg"
+                }
+            },
+            {
+                "id": "exa25394586",
+                "title": "25",
+                "thumbnail": "assets/images/thumbnails/example/exa25394586.webp",
+                "full": "assets/images/full/example/exa25394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "25.jpeg"
+                }
+            },
+            {
+                "id": "exa26394586",
+                "title": "26",
+                "thumbnail": "assets/images/thumbnails/example/exa26394586.webp",
+                "full": "assets/images/full/example/exa26394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "26.jpeg"
+                }
+            },
+            {
+                "id": "exa27394586",
+                "title": "27",
+                "thumbnail": "assets/images/thumbnails/example/exa27394586.webp",
+                "full": "assets/images/full/example/exa27394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "27.jpeg"
+                }
+            },
+            {
+                "id": "exa28394586",
+                "title": "28",
+                "thumbnail": "assets/images/thumbnails/example/exa28394586.webp",
+                "full": "assets/images/full/example/exa28394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "28.jpeg"
+                }
+            },
+            {
+                "id": "exa3394586",
+                "title": "3",
+                "thumbnail": "assets/images/thumbnails/example/exa3394586.webp",
+                "full": "assets/images/full/example/exa3394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "3.jpeg"
+                }
+            },
+            {
+                "id": "exa4394586",
+                "title": "4",
+                "thumbnail": "assets/images/thumbnails/example/exa4394586.webp",
+                "full": "assets/images/full/example/exa4394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "4.jpeg"
+                }
+            },
+            {
+                "id": "exa5394586",
+                "title": "5",
+                "thumbnail": "assets/images/thumbnails/example/exa5394586.webp",
+                "full": "assets/images/full/example/exa5394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 5338,
+                    "height": 3559,
+                    "originalFilename": "5.jpeg"
+                }
+            },
+            {
+                "id": "exa6394586",
+                "title": "6",
+                "thumbnail": "assets/images/thumbnails/example/exa6394586.webp",
+                "full": "assets/images/full/example/exa6394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "6.jpeg"
+                }
+            },
+            {
+                "id": "exa7394586",
+                "title": "7",
+                "thumbnail": "assets/images/thumbnails/example/exa7394586.webp",
+                "full": "assets/images/full/example/exa7394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "7.jpeg"
+                }
+            },
+            {
+                "id": "exa8394586",
+                "title": "8",
+                "thumbnail": "assets/images/thumbnails/example/exa8394586.webp",
+                "full": "assets/images/full/example/exa8394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 6000,
+                    "height": 4000,
+                    "originalFilename": "8.jpeg"
+                }
+            },
+            {
+                "id": "exa9394586",
+                "title": "9",
+                "thumbnail": "assets/images/thumbnails/example/exa9394586.webp",
+                "full": "assets/images/full/example/exa9394586.webp",
+                "date": "2025-09-18",
+                "metadata": {
+                    "width": 4000,
+                    "height": 6000,
+                    "originalFilename": "9.jpeg"
+                }
+            }
+        ]
+    }
+}

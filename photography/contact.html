@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch for photography sessions, collaborations, or inquiries">
+    <title>Contact - Photography Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/contact-form.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Schema Markup for Contact Information -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Photography Portfolio",
+        "description": "Professional photography services for events, portraits, nature, and travel photography",
+        "url": "https://your-domain.com/contact.html",
+        "image": "https://your-domain.com/assets/images/headshot.jpeg",
+        "priceRange": "$$",
+        "telephone": "Contact via form",
+        "email": "Contact via form",
+        "areaServed": {
+            "@type": "Place",
+            "name": "Southeast Michigan and Worldwide"
+        },
+        "serviceType": [
+            "Event Photography",
+            "Wedding Photography", 
+            "Portrait Photography",
+            "Nature Photography",
+            "Travel Photography",
+            "Corporate Photography"
+        ],
+        "openingHours": [
+            "Mo-Fr 09:00-18:00",
+            "Sa 10:00-16:00"
+        ],
+        "provider": {
+            "@type": "Person",
+            "name": "Mitchell Carter",
+            "jobTitle": "Professional Photographer",
+            "image": "https://your-domain.com/assets/images/headshot.jpeg",
+            "sameAs": [
+                "https://instagram.com/your-profile",
+                "https://facebook.com/your-profile",
+                "https://twitter.com/your-profile"
+            ]
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "English",
+            "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday", 
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "18:00"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-header-content">
+            <div class="logo">
+                <a href="index.html">Photography Portfolio</a>
+            </div>
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-social">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo">
+                    <a href="index.html">Photography Portfolio</a>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <ul class="nav-links">
+                        <li><a href="../index.html" class="nav-link back-link">← Main Portfolio</a></li>
+                        <li><a href="index.html" class="nav-link">Gallery</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer">IG</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">FB</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">TW</a>
+                    </div>
+                    <p class="copyright">&copy; 2024</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="contact-container">
+        <h1>Get in Touch</h1>
+        
+        <div class="contact-grid">
+            <section class="contact-form">
+                <h2>Send a Message</h2>
+                <p class="form-intro">Fill out the form below and I'll get back to you as soon as possible!</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shoot-type">Shoot Type</label>
+                        <select id="shoot-type" name="shoot-type">
+                            <option value="">Select a type...</option>
+                            <option value="portrait">Portrait Session</option>
+                            <option value="event">Event Photography</option>
+                            <option value="nature">Nature/Landscape</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+
+            <section class="contact-info">
+                <div class="info-block">
+                    <h2>Business Hours</h2>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+
+                <div class="info-block">
+                    <h2>Response Time</h2>
+                    <p>I typically respond to inquiries within 24-48 business hours.</p>
+                </div>
+
+                <div class="info-block">
+                    <h2>Location</h2>
+                    <p>Based in Southeast Michigan</p>
+                    <p>Available for travel worldwide</p>
+                </div>
+
+                <div class="info-block social-media">
+                    <h2>Social Media</h2>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link instagram">Instagram</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link facebook">Facebook</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link twitter">Twitter</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+</body>
+</html> 
