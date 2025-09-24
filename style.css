@@ -616,20 +616,19 @@ footer p    {
 }
 
 .photo-grid {
-    column-count: 3;
-    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .photo-item {
-    break-inside: avoid;
-    margin-bottom: 1rem;
+    aspect-ratio: 1;
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 300ms ease;
-    cursor: pointer;
 }
 
 .photo-item:hover {
@@ -639,21 +638,8 @@ footer p    {
 
 .photo-item img {
     width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Responsive masonry layout */
-@media screen and (max-width: 768px) {
-    .photo-grid {
-        column-count: 2;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .photo-grid {
-        column-count: 1;
-    }
+    height: 100%;
+    object-fit: cover;
 }
 
 .photography-arrow {

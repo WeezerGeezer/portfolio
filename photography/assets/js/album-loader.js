@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadAlbumData() {
         try {
             showLoading(true);
-            const response = await fetch('data/albums.json');
+            const response = await fetch('/data/albums.json');
             const data = await response.json();
             
             const album = data[albumId];
