@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch images from the server
     async function fetchImages(filter = 'all', page = 1) {
         try {
-            const response = await fetch(`/data/albums.json`);
+            const response = await fetch(`data/albums.json`);
             const data = await response.json();
             
             // Flatten all images from albums if filter is 'all'
