@@ -1751,6 +1751,14 @@ body {
     background: white;
 }
 
+.timeline-box .organization-logo[data-org="mortar-creek"] .logo-img {
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    border-radius: 0;
+    transform: translate(-16.5%, -16.5%);
+}
+
 /* ===== TIMELINE FULL-WIDTH SECTION (HIDDEN ON DESKTOP) ===== */
 .timeline-full-width {
     display: none; /* Hidden on desktop by default */
@@ -2598,6 +2606,14 @@ footer p    {
 }
 .organization-logo[data-org="mortar-creek"] {
     background: white;
+}
+
+.organization-logo[data-org="mortar-creek"] .logo-img {
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    border-radius: 0;
+    transform: translate(-16.5%, -16.5%);
 }
 
 /* Timeline Modal */
