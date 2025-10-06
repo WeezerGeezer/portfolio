@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Local Development - Mitchell Carter</title>
+    <meta name="description" content="Exploring Apple's MLX framework for running LLMs locally on Apple Silicon.">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+</head>
+<body>
+    <!-- Top Bar Navigation -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-separator">→</span>
+            <a href="../blog.html">Blog</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">AI-Powered Local Development</span>
+        </div>
+    </section>
+
+    <!-- Blog Post Content -->
+    <article class="project-section">
+        <div class="project-content">
+            <header style="margin-bottom: 2rem;">
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">November 28, 2024</p>
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">AI-Powered Local Development</h1>
+                <p style="color: #888; font-size: 1.1rem;">Exploring Apple's MLX framework for running large language models locally on Apple Silicon</p>
+            </header>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Local AI Revolution</h2>
+                <p>Running large language models locally seemed impossible just a few years ago. These models require massive computational resources, typically running on expensive cloud infrastructure with powerful GPUs. But Apple Silicon changed everything.</p>
+                <p>With unified memory architecture and Metal Performance Shaders, M-series chips can run sophisticated AI models entirely on-device. No cloud dependencies, no privacy concerns, and surprisingly fast inference speeds.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Why MLX?</h2>
+                <p>Apple's MLX framework is purpose-built for machine learning on Apple Silicon. Unlike PyTorch or TensorFlow, MLX is designed from the ground up to leverage the unique advantages of Apple's unified memory architecture.</p>
+                <p>Key benefits include:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
+                    <li><strong>Unified Memory:</strong> CPU and GPU share the same memory pool, eliminating expensive data transfers</li>
+                    <li><strong>Metal Integration:</strong> Direct access to Apple's graphics framework for optimal performance</li>
+                    <li><strong>Familiar API:</strong> NumPy-like interface makes it accessible to Python developers</li>
+                    <li><strong>Lazy Evaluation:</strong> Computations only execute when needed, optimizing memory usage</li>
+                </ul>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Building the Toolkit</h2>
+                <p>I developed a comprehensive toolkit for running language models with MLX, addressing common pain points developers face when working with local AI:</p>
+                <p><strong>Model Comparison Dashboard:</strong> Built with Gradio, allowing side-by-side evaluation of different models. Testing 20+ quantized versions of popular models helped identify the sweet spot between quality and performance.</p>
+                <p><strong>Advanced Caching:</strong> The biggest innovation was implementing KV cache persistence using SafeTensors. Traditional approaches recompute everything on each request. My caching system reduces time-to-first-token by 30-80% for repeated queries or long contexts.</p>
+                <p><strong>LoRA Fine-tuning:</strong> Low-Rank Adaptation enables model customization without retraining the entire network. This makes domain-specific models feasible on consumer hardware.</p>
+                <p><strong>Production API:</strong> An OpenAI-compatible FastAPI server with streaming responses. Drop-in replacement for cloud APIs, but running entirely on your Mac.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Performance Insights</h2>
+                <p>Testing revealed surprising results. A Mac Studio with M2 Ultra can run 70B parameter models at interactive speeds—roughly 20-30 tokens per second. Smaller 13B models fly, generating 80-100 tokens per second.</p>
+                <p>Memory usage scales linearly with model size. A 7B model uses about 5GB RAM, 13B uses 9GB, and 70B uses around 40GB. Quantization helps tremendously—4-bit quantized models use roughly 1/4 the memory of full precision versions with minimal quality loss.</p>
+                <p>The caching system transformed user experience. Without caching, loading a 70B model and generating a response takes 30+ seconds. With proper cache utilization, subsequent queries in the same context drop to 3-5 seconds.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Privacy and Control</h2>
+                <p>Running models locally offers underappreciated benefits beyond performance. Your data never leaves your device. No API keys, no usage limits, no service outages. You control everything.</p>
+                <p>This matters for sensitive work—legal documents, medical records, proprietary code. Cloud APIs require absolute trust in the provider. Local inference eliminates that trust requirement.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Real-World Applications</h2>
+                <p>I've integrated local models into several workflows:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
+                    <li><strong>Code Review:</strong> Automated PR analysis without exposing proprietary code to third parties</li>
+                    <li><strong>Document Processing:</strong> Extracting insights from PDFs and long-form content</li>
+                    <li><strong>Content Generation:</strong> Drafting blog posts, documentation, and technical writing</li>
+                    <li><strong>Research Assistant:</strong> Summarizing papers and answering domain-specific questions</li>
+                </ul>
+                <p>The combination of speed, privacy, and unlimited usage makes local models practical for production work.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Challenges and Limitations</h2>
+                <p>Local AI isn't perfect. Model selection matters tremendously—different models excel at different tasks. There's no one-size-fits-all solution.</p>
+                <p>Hardware requirements are real. While Apple Silicon performs admirably, you need at least 16GB unified memory for comfortable 7B model usage. 32GB opens up 13B models, and 64GB+ enables 70B models.</p>
+                <p>Model quality varies. Open-source models sometimes lag behind proprietary alternatives like GPT-4. The gap is closing, but it exists.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Future</h2>
+                <p>Local AI development is accelerating. New models drop weekly, each improving on the last. Hardware continues getting better—M3 chips are even faster than M2.</p>
+                <p>The MLX ecosystem is growing. More developers are building tools, sharing fine-tuned models, and pushing the boundaries of what's possible on consumer hardware.</p>
+                <p>We're witnessing a fundamental shift. AI development is moving from exclusive cloud infrastructure to anyone's laptop. That democratization matters.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Getting Started</h2>
+                <p>If you're interested in local AI development, start small. Download MLX, try running a 7B model, and experiment. The barrier to entry has never been lower.</p>
+                <p>My toolkit provides a starting point, but the real learning comes from building your own solutions. Every use case is unique, and the flexibility of local models lets you customize everything.</p>
+                <p>The future of AI isn't just in massive datacenters—it's also on the device in your pocket. And that's incredibly exciting.</p>
+            </section>
+        </div>
+    </article>
+
+    <!-- Back to Blog -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>Read More</h2>
+            <p>Explore more articles and project deep-dives</p>
+            <div class="cta-buttons">
+                <a href="../blog.html" class="btn btn-color-2">Back to Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

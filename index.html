@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Mitchell Carter</div>
-        <div>
+    <!-- Top Bar Navigation for Desktop -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Mitchell Carter</a></div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
             </ul>
         </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Mitchell Carter</div>
+        <div class="logo"><a href="index.html">Mitchell Carter</a></div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onClick="toggleMenu()">
                 <span></span>
@@ -28,446 +28,524 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="#about" onClick="toggleMenu()">About</a></li>
-                <li><a href="#projects" onClick="toggleMenu()">Projects</a></li>
-                <li><a href="#experience" onClick="toggleMenu()">Experience</a></li>
-                <li><a href="#contact" onClick="toggleMenu()">Contact</a></li>
+                <li><a href="projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
             </div>
         </div>
     </nav>
-    <section id="profile">
-        <div class="prof-section-pic-container">
-            <img src="./assets/profile-pic.PNG" 
-            alt="Headshot of a handsome young man, look at those stunning curls and his friendly smile!"/>
-        </div>
-        <div class="section-text">
-            <p class="section-text-p1"> Hello, I'm</p>
-            <h1 class="title"> Mitchell Carter</h1>
-            <p class="section-text-p2">Full Stack Developer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" 
-                onClick="window.open('./assets/resume.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" 
-                onClick="location.href='./#contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div class="socials-container">
-                <img src="./assets/linkedin.png" 
-                    alt="My Linkedin profile" 
-                    class="icon" 
-                    onClick="location.href='https://linkedin.com/in/mitchell-carter-128805256/'"
-                />
-                <img src="./assets/github.png" 
-                    alt="My Github profile" 
-                    class="icon" 
-                    onClick="location.href='https://github.com/WeezerGeezer'"
-                />
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="section-text-p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="about-section-pic-container">
-                <img src="./assets/about-pic.JPEG" 
-                alt="Handsome young man stuns in amazing photo"
-                class="about-pic"/>
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container clickable" onclick="location.href='#experience'">
-                        <img src="./assets/experience.png" 
-                        alt="Experience icon"
-                        class="icon"
-                        />
-                        <h3>Industry Experience</h3>
-                        <p>12 months Full Stack Development</p>
-                        <p class="highlight-text">Click to learn more!</p>
+    <!-- Dashboard Layout Section -->
+    <section id="bento-showcase">
+        <div class="bento-container">
+            <!-- Profile Box (Top-Left) -->
+            <div class="bento-box profile-box">
+                <div class="profile-content">
+                    <div class="profile-header">
+                        <img src="./assets/about-pic.JPEG" alt="Mitchell Carter Profile Picture" class="profile-image">
+                        <div class="profile-greeting">Hello! Caught you 📸</div>
                     </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" 
-                        alt="Education icon"
-                        class="icon"
-                        />
-                        <h3>Education</h3>
-                        <p>Bachelor of Science in Informatics</p>
-                        <p class="university-name">University of Michigan</p>
+                    <div class="social-links">
+                        <a href="https://github.com/WeezerGeezer" target="_blank" class="social-link">
+                            <svg class="social-icon" width="20" height="20" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" fill="currentColor"/>
+                            </svg>
+                            <span class="social-label">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/mitchell-carter-dev" target="_blank" class="social-link">
+                            <svg class="social-icon" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="#0A66C2"/>
+                            </svg>
+                            <span class="social-label">LinkedIn</span>
+                        </a>
                     </div>
                 </div>
-                <div class="education-details">
-                    <div class="details-container">
-                        <h3 class="education-title">Academic Background</h3>
-                        <div class="education-content">
-                            <div class="coursework">
-                                <h4>Key Coursework:</h4>
-                                <ul>
-                                    <li>Web Systems (EECS 485)</li>
-                                    <li>Data Structures and Algorithms (EECS 281)</li>
-                                    <li>Programming and Data Structures (EECS 280)</li>
-                                    <li>Elementary Programming Concepts (EECS 183)</li>
-                                    <li>Discrete Math (EECS 203)</li>
-                                    <li>Applied Statistical Methods (STATS 401)</li>
-                                </ul>
+            </div>
+
+            <!-- Recent Blog Posts Box -->
+            <div class="bento-box bio-box recent-posts-box">
+                <h3>Recent Posts</h3>
+                <div class="blog-posts-list">
+                    <a href="blog/post-1.html" class="blog-post-item">
+                        <div class="post-date">Dec 15, 2024</div>
+                        <div class="post-title">Building a Modern Portfolio Site</div>
+                        <div class="post-excerpt">A deep dive into creating a responsive, interactive portfolio...</div>
+                    </a>
+                    <a href="blog/post-2.html" class="blog-post-item">
+                        <div class="post-date">Nov 28, 2024</div>
+                        <div class="post-title">AI-Powered Local Development</div>
+                        <div class="post-excerpt">Exploring Apple's MLX framework for running LLMs locally...</div>
+                    </a>
+                    <a href="blog/post-3.html" class="blog-post-item">
+                        <div class="post-date">Nov 10, 2024</div>
+                        <div class="post-title">Hardware Meets Software</div>
+                        <div class="post-excerpt">Creating custom Arduino devices with companion mobile apps...</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Combined Skills & Projects Filter Box -->
+            <div class="bento-box combined-filter-box">
+                <div class="filter-sections">
+                    <!-- Unified Filter Section -->
+                    <div class="unified-filter-section">
+                        <h3>Filter Projects by Technology</h3>
+                        <div class="compact-search-container">
+                            <input type="text" id="bento-project-search" placeholder="Search projects..." class="compact-search-input">
+                        </div>
+                        <div class="skills-filter-list">
+                            <div class="filter-item" data-skills-filter="all">
+                                <span class="filter-dot active"></span>
+                                <span class="filter-text">All</span>
                             </div>
-                            <div class="achievements">
-                                <h4>Leadership:</h4>
-                                <ul>
-                                    <li><a href="https://icc.coop">Inter-Cooperative Council (2021-2024)</a></li>
-                                    <li>Nakamura House President (2023-2024)</li>
-                                    <li>Nakamura House Sustainability Steward (2022-2023)</li>
-                                    <li>Nakamura House Maintainence Manager (2021-2022)</li>
-                                </ul>
+                            <div class="filter-item" data-skills-filter="front-end">
+                                <span class="filter-dot"></span>
+                                <span class="filter-text">Front-End</span>
+                            </div>
+                            <div class="filter-item" data-skills-filter="back-end">
+                                <span class="filter-dot"></span>
+                                <span class="filter-text">Back-End</span>
+                            </div>
+                            <div class="filter-item" data-skills-filter="general">
+                                <span class="filter-dot"></span>
+                                <span class="filter-text">General</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" 
-        alt="arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='#projects'">
-    </section>
-    <section id="projects">
-        <p class="section-text-p1"> View my latest</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-6.jpeg" alt="Time Crisis Search Engine"
-                        class="project-img">
-                    </div>
-                    <h2 class="experience-subtitle project-title"> Time Crisis Search<p class="project-sub-title">w/ Whoosh, Google Cloud, & OpenAI Whisper</p></h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://tc-search.com'">Site</button>
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://github.com/WeezerGeezer/tc-search'">Github</button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-5.jpeg" alt="Arduino "Catchphrase" Device"
-                        class="project-img">
-                    </div>
-                    <h2 class="experience-subtitle project-title"> Arduino "Catchphrase" Device<p class="project-sub-title">w/ C++ & Swift App</p></h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://www.youtube.com/shorts/hS1pL4IaIuI'">Video</button>
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://github.com/WeezerGeezer/catchphrase'">Github</button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-1.jpeg" alt="M-Event Mobile App"
-                        class="project-img">
-                    </div>
-                    <h2 class="experience-subtitle project-title"> M-Event Mobile App<p class="project-sub-title">w/ React Native & PostgreSQL</p></h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://www.youtube.com/watch?v=pVt3-H-_ns0'">Live Demo</button>
-                        <button class="btn btn-color-2 project-btn" 
-                        onclick="location.href='https://docs.google.com/presentation/d/1G6IULeW_Sf3MmnjrImDCt90rcZ-KoJnMQaO8ebDHy5c/edit?pli=1#slide=id.p'">Slide Deck</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" 
-        alt="arrow icon" 
-        class="icon project-arrow arrow" 
-        onclick="location.href='#experience'"/>
-    </section>
-    <section id="experience">
-        <p class="section-text-p1">Learn more about my</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <!-- Professional Experience -->
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">University of Michigan ITS</h2>
-                    <h3 class="role-title">Full Stack Development Internship</h3>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Developed Python code within the Django framework as a part of a cross-functional team, improving the security of the university's account management web application which serves over 60,000 students, faculty, and employees</li>
-                            <li>Enhanced the security and user accessibility of the university's account management web app by utilizing Javascript and HTML/CSS to improve the two-factor authentication system</li>
-                            <li>Facilitated an intern project team in the development of a Minimum Viable Prototype mobile application using React Native, following the Agile framework</li>
-                        </ul>
-                    </div>
-                    <div class="tools-container">
-                        <h4>Tools & Technologies:</h4>
-                        <div class="tools-grid">
-                            <span class="tool-tag">Python</span>
-                            <span class="tool-tag">Django</span>
-                            <span class="tool-tag">JavaScript</span>
-                            <span class="tool-tag">HTML/CSS</span>
-                            <span class="tool-tag">React Native</span>
-                            <span class="tool-tag">Agile</span>
+                        <div class="skills-cloud-compact" id="filtered-skills">
+                            <!-- Front-End Skills -->
+                            <span class="skill-tag primary clickable-skill" data-skill-category="front-end" data-skill="HTML">HTML</span>
+                            <span class="skill-tag primary clickable-skill" data-skill-category="front-end" data-skill="CSS">CSS</span>
+                            <span class="skill-tag primary clickable-skill" data-skill-category="front-end" data-skill="JavaScript">JavaScript</span>
+                            <span class="skill-tag secondary clickable-skill" data-skill-category="front-end" data-skill="React Native">React Native</span>
+                            <span class="skill-tag secondary clickable-skill" data-skill-category="front-end" data-skill="React">React</span>
+
+                            <!-- Back-End Skills -->
+                            <span class="skill-tag primary clickable-skill" data-skill-category="back-end" data-skill="Python">Python</span>
+                            <span class="skill-tag primary clickable-skill" data-skill-category="back-end" data-skill="C++">C++</span>
+                            <span class="skill-tag secondary clickable-skill" data-skill-category="back-end" data-skill="Flask">Flask</span>
+                            <span class="skill-tag secondary clickable-skill" data-skill-category="back-end" data-skill="Node.js">Node.js</span>
+                            <span class="skill-tag secondary clickable-skill" data-skill-category="back-end" data-skill="PostgreSQL">PostgreSQL</span>
+                            <span class="skill-tag secondary clickable-skill" data-skill-category="back-end" data-skill="Google Cloud">Google Cloud</span>
+                            <span class="skill-tag secondary clickable-skill" data-skill-category="back-end" data-skill="Express">Express</span>
+                            <span class="skill-tag tertiary clickable-skill" data-skill-category="back-end" data-skill="Arduino">Arduino</span>
+                            <span class="skill-tag tertiary clickable-skill" data-skill-category="back-end" data-skill="MLX">MLX</span>
+                            <span class="skill-tag tertiary clickable-skill" data-skill-category="back-end" data-skill="Gradio">Gradio</span>
+
+                            <!-- General Skills -->
+                            <span class="skill-tag tertiary clickable-skill" data-skill-category="general" data-skill="Machine Learning">ML/AI</span>
+                            <span class="skill-tag tertiary clickable-skill" data-skill-category="general" data-skill="Hardware">Hardware</span>
+                            <span class="skill-tag tertiary clickable-skill" data-skill-category="general" data-skill="Git">Git</span>
+                            <span class="skill-tag tertiary clickable-skill" data-skill-category="general" data-skill="Docker">Docker</span>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Nar Cannabis</h2>
-                    <h3 class="role-title">Inventory Automation Specialist</h3>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Engineered automation solutions using Python and Openpyxl, reducing manual inventory and compliance reporting time by 20+ hours monthly through streamlined CSV/Excel processing</li>
-                            <li>Developed and deployed Flask-based web applications integrated with Google Cloud APIs for automated report generation and data processing</li>
-                            <li>Documented standard operating procedures for back-of-house operations, focusing on digital tool adoption and process optimization</li>
-                        </ul>
-                    </div>
-                    <div class="tools-container">
-                        <h4>Tools & Technologies:</h4>
-                        <div class="tools-grid">
-                            <span class="tool-tag">Python</span>
-                            <span class="tool-tag">Flask</span>
-                            <span class="tool-tag">Google Cloud</span>
-                            <span class="tool-tag">Openpyxl</span>
-                            <span class="tool-tag">Automation Scripts</span>
+                        <div class="filter-results-preview">
+                            <span id="compact-project-count">4 projects</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Technical Skills -->
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Javascript</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>React</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>SwiftUI</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
+
+
+            <!-- Featured Projects Box (Large) -->
+            <div class="bento-box projects-box">
+                <div class="projects-header">
+                    <h3>Featured Projects</h3>
+                    <button class="filter-toggle-btn" id="filter-toggle">
+                        <span class="filter-toggle-text">Filter Projects</span>
+                        <span class="filter-toggle-icon">▼</span>
+                    </button>
+                    <a href="projects.html" class="view-all-link">View All →</a>
+                </div>
+
+                <!-- Collapsible Filter Section -->
+                <div class="projects-filter-collapse" id="projects-filter">
+                    <div class="compact-search-container">
+                        <input type="text" id="bento-project-search-inline" placeholder="Search projects..." class="compact-search-input">
+                    </div>
+                    <div class="skills-cloud-compact inline-skills-filter">
+                        <!-- Skills will be copied here by JavaScript -->
                     </div>
                 </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Backend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Python</h3>
-                                <p>Experienced</p>
+
+                <div class="featured-projects-grid" id="bento-projects-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Bio Box -->
+            <div class="bento-box bio-box">
+                <h3>About Me</h3>
+                <div class="bio-content">
+                    <p>Computer Science graduate from the University of Michigan with a passion for building innovative solutions. Experienced in full-stack development, AI/ML, and hardware projects. Always exploring new technologies and creating meaningful applications.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="./assets/resume.pdf" class="cta-btn secondary" target="_blank">Download Resume</a>
+                </div>
+            </div>
+
+            <!-- Career Timeline Box (Full Width) -->
+            <div class="bento-box timeline-box">
+                <div class="timeline-header">
+                    <h3>Career Journey</h3>
+                    <p class="timeline-subtitle">Click to learn more</p>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-wrapper">
+                        <!-- Timeline Nodes -->
+                        <div class="timeline-nodes">
+                            <!-- High School / Eagle Scout Node -->
+                            <div class="timeline-node" data-timeline="eagle-scout" data-position="10">
+                                <div class="node-circle">
+                                    <div class="node-inner"></div>
+                                </div>
+                                <div class="node-content">
+                                    <div class="node-year">2013-2018</div>
+                                    <div class="node-title">Eagle Scout</div>
+                                </div>
+                                <div class="organization-logo" data-org="boy-scouts">
+                                    <img src="./assets/logos/bsa.webp" alt="Boy Scouts of America Eagle Scout Logo" class="logo-img">
+                                </div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>C++</h3>
-                                <p>Experienced</p>
+
+                            <!-- Education Node -->
+                            <div class="timeline-node" data-timeline="education" data-position="30">
+                                <div class="node-circle">
+                                    <div class="node-inner"></div>
+                                </div>
+                                <div class="node-content">
+                                    <div class="node-year">2020-2024</div>
+                                    <div class="node-title">University of Michigan</div>
+                                </div>
+                                <div class="organization-logo" data-org="umich">
+                                    <img src="./assets/logos/um.png" alt="University of Michigan Logo" class="logo-img">
+                                </div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Flask</h3>
-                                <p>Intermediate</p>
+
+                            <!-- ICC Leadership Node -->
+                            <div class="timeline-node" data-timeline="icc" data-position="50">
+                                <div class="node-circle">
+                                    <div class="node-inner"></div>
+                                </div>
+                                <div class="node-content">
+                                    <div class="node-year">2021-2024</div>
+                                    <div class="node-title">ICC Leadership</div>
+                                </div>
+                                <div class="organization-logo" data-org="icc">
+                                    <img src="./assets/logos/icc.png" alt="Inter-Cooperative Council Logo" class="logo-img">
+                                </div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Django</h3>
-                                <p>Basic</p>
+
+                            <!-- UM ITS Node -->
+                            <div class="timeline-node" data-timeline="umits" data-position="70">
+                                <div class="node-circle">
+                                    <div class="node-inner"></div>
+                                </div>
+                                <div class="node-content">
+                                    <div class="node-year">2023-2024</div>
+                                    <div class="node-title">UM ITS Internship</div>
+                                </div>
+                                <div class="organization-logo" data-org="umits">
+                                    <img src="./assets/logos/um-its.jpg" alt="UM ITS Logo" class="logo-img">
+                                </div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Shell Scripts</h3>
-                                <p>Basic</p>
+
+                            <!-- Nar Cannabis Node -->
+                            <div class="timeline-node" data-timeline="nar" data-position="75">
+                                <div class="node-circle">
+                                    <div class="node-inner"></div>
+                                </div>
+                                <div class="node-content">
+                                    <div class="node-year">2024</div>
+                                    <div class="node-title">Nar Cannabis</div>
+                                </div>
+                                <div class="organization-logo" data-org="nar">
+                                    <img src="./assets/logos/nar.avif" alt="Nar Cannabis Logo" class="logo-img">
+                                </div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>SQL</h3>
-                                <p>Experienced</p>
+
+                            <!-- Mortar Creek Labs Node -->
+                            <div class="timeline-node" data-timeline="mortar-creek" data-position="92">
+                                <div class="node-circle">
+                                    <div class="node-inner"></div>
+                                </div>
+                                <div class="node-content">
+                                    <div class="node-year">2024-2025</div>
+                                    <div class="node-title">Mortar Creek Labs</div>
+                                </div>
+                                <div class="organization-logo" data-org="mortar-creek">
+                                    <img src="./assets/logos/mortar-creek.png" alt="Mortar Creek Labs Logo" class="logo-img">
+                                </div>
                             </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Git</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Google Cloud Platform</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Add this after the Backend Development container in the experience section -->
-            <div class="details-container">
-                <h2 class="experience-sub-title">General Technical Skills</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Google Workspace</h3>
-                            <p>Experienced</p>
+
+            <!-- Interactive Timeline Section (Full Width) - Hidden on Desktop -->
+            <div class="timeline-full-width desktop-hidden">
+        <div class="timeline-container">
+            <h3>Career Journey</h3>
+            <p class="timeline-subtitle">Click to learn more</p>
+            <div class="timeline-wrapper">
+                <svg class="timeline-line" viewBox="0 0 800 100">
+                    <!-- Timeline Base Line -->
+                    <line x1="100" y1="50" x2="700" y2="50" stroke="#e0e0e0" stroke-width="3" class="timeline-base"/>
+                    <!-- Progress Line (animated) -->
+                    <line x1="100" y1="50" x2="100" y2="50" stroke="#4a90e2" stroke-width="3" class="timeline-progress" id="timelineProgress"/>
+                </svg>
+
+                <!-- Timeline Nodes -->
+                <div class="timeline-nodes">
+                    <!-- High School / Eagle Scout Node -->
+                    <div class="timeline-node" data-timeline="eagle-scout" data-position="10">
+                        <div class="node-circle">
+                            <div class="node-inner"></div>
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Adobe Creative Suite</h3>
-                            <p>Intermediate</p>
+                        <div class="node-content">
+                            <div class="node-year">2013-2018</div>
+                            <div class="node-title">Eagle Scout</div>
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>macOS</h3>
-                            <p>Experienced</p>
+                        <div class="organization-logo" data-org="boy-scouts">
+                            <img src="./assets/logos/bsa.webp" alt="Boy Scouts of America Eagle Scout Logo" class="logo-img">
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Windows</h3>
-                            <p>Experienced</p>
+                    </div>
+
+                    <!-- Education Node -->
+                    <div class="timeline-node" data-timeline="education" data-position="30">
+                        <div class="node-circle">
+                            <div class="node-inner"></div>
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Command Line</h3>
-                            <p>Experienced</p>
+                        <div class="node-content">
+                            <div class="node-year">2020-2024</div>
+                            <div class="node-title">University of Michigan</div>
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Docker</h3>
-                            <p>Basic</p>
+                        <div class="organization-logo" data-org="umich">
+                            <img src="./assets/logos/um.png" alt="University of Michigan Logo" class="logo-img">
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>AWS/Cloud Services</h3>
-                            <p>Basic</p>
+                    </div>
+
+                    <!-- ICC Leadership Node -->
+                    <div class="timeline-node" data-timeline="icc" data-position="50">
+                        <div class="node-circle">
+                            <div class="node-inner"></div>
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Version Control</h3>
-                            <p>Experienced</p>
+                        <div class="node-content">
+                            <div class="node-year">2021-2024</div>
+                            <div class="node-title">ICC Leadership</div>
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Agile</h3>
-                            <p>Intermediate</p>
+                        <div class="organization-logo" data-org="icc">
+                            <img src="./assets/logos/icc.png" alt="Inter-Cooperative Council Logo" class="logo-img">
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Microsoft Office</h3>
-                            <p>Experienced</p>
+                    </div>
+
+                    <!-- UM ITS Node -->
+                    <div class="timeline-node" data-timeline="umits" data-position="70">
+                        <div class="node-circle">
+                            <div class="node-inner"></div>
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Database Design</h3>
-                            <p>Intermediate</p>
+                        <div class="node-content">
+                            <div class="node-year">2023-2024</div>
+                            <div class="node-title">UM ITS Internship</div>
                         </div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                        <div>
-                            <h3>Technical Writing</h3>
-                            <p>Experienced</p>
+                        <div class="organization-logo" data-org="umits">
+                            <img src="./assets/logos/um-its.jpg" alt="UM ITS Logo" class="logo-img">
                         </div>
-                    </article>
+                    </div>
+
+                    <!-- Nar Cannabis Node -->
+                    <div class="timeline-node" data-timeline="nar" data-position="90">
+                        <div class="node-circle">
+                            <div class="node-inner"></div>
+                        </div>
+                        <div class="node-content">
+                            <div class="node-year">2024</div>
+                            <div class="node-title">Nar Cannabis</div>
+                        </div>
+                        <div class="organization-logo" data-org="nar">
+                            <img src="./assets/logos/nar.avif" alt="Nar Cannabis Logo" class="logo-img">
+                        </div>
+                    </div>
+
+                    <!-- Mortar Creek Labs Node -->
+                    <div class="timeline-node" data-timeline="mortar-creek" data-position="92">
+                        <div class="node-circle">
+                            <div class="node-inner"></div>
+                        </div>
+                        <div class="node-content">
+                            <div class="node-year">2024-2025</div>
+                            <div class="node-title">Mortar Creek Labs</div>
+                        </div>
+                        <div class="organization-logo" data-org="mortar-creek">
+                            <img src="./assets/logos/mortar-creek.png" alt="Mortar Creek Labs Logo" class="logo-img">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" 
-        alt="arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='#contact'"/>
-    </section>
-    <section id="contact">
-        <p class="section-text-p1"> Get in Touch</p>
-        <h1 class="title">Contact Me!</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img 
-                src="./assets/email.png"
-                alt="Email icon"
-                class="icon contact-icon email-icon"
-                />
-            <p><a href="mailto:macarter800@gmail.com">macarter800@gmail.com</a></p>
+
+        <!-- Hidden Timeline Detail Content -->
+        <div class="timeline-detail" data-id="eagle-scout" style="display: none;">
+            <div class="detail-header">
+                <h2 class="experience-sub-title">Eagle Scout Achievement</h2>
+                <p class="experience-period">2016 - 2020</p>
             </div>
-            <div class="contact-info-container">
-                <img 
-                src="./assets/linkedin.png"
-                alt="Linkedin icon"
-                class="icon contact-icon"
-                />
-            <p><a href="https://linkedin.com/in/mitchell-carter-128805256/">Linkedin</a></p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <div class="experience-description">
+                <ul>
+                    <li>Achieved the rank of Eagle Scout, the highest achievement in Boy Scouts of America</li>
+                    <li>Led a community service project benefiting local wildlife preservation</li>
+                    <li>Developed leadership skills through mentoring younger scouts</li>
+                    <li>Earned over 25 merit badges covering diverse skills and interests</li>
                 </ul>
             </div>
-        </nav>
+            <div class="tools-container">
+                <h4>Skills Developed:</h4>
+                <div class="tools-grid">
+                    <span class="tool-tag">Leadership</span>
+                    <span class="tool-tag">Project Management</span>
+                    <span class="tool-tag">Community Service</span>
+                    <span class="tool-tag">Outdoor Skills</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-detail" data-id="education" style="display: none;">
+            <div class="detail-header">
+                <h2 class="experience-sub-title">University of Michigan</h2>
+                <p class="experience-period">2020 - 2024</p>
+            </div>
+            <div class="experience-description">
+                <ul>
+                    <li>Bachelor of Science in Computer Science Engineering</li>
+                    <li>Focus on software development and system architecture</li>
+                    <li>Completed coursework in algorithms, data structures, and software engineering</li>
+                    <li>Participated in various programming projects and hackathons</li>
+                </ul>
+            </div>
+            <div class="tools-container">
+                <h4>Key Courses:</h4>
+                <div class="tools-grid">
+                    <span class="tool-tag">Data Structures</span>
+                    <span class="tool-tag">Algorithms</span>
+                    <span class="tool-tag">Software Engineering</span>
+                    <span class="tool-tag">Computer Architecture</span>
+                    <span class="tool-tag">Database Systems</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-detail" data-id="icc" style="display: none;">
+            <div class="detail-header">
+                <h2 class="experience-sub-title">ICC Leadership</h2>
+                <p class="experience-period">2021 - 2024</p>
+            </div>
+            <div class="experience-description">
+                <ul>
+                    <li>Served in leadership roles within the Inter-Cooperative Council</li>
+                    <li>Managed budgets and coordinated community events</li>
+                    <li>Facilitated communication between student organizations</li>
+                    <li>Organized volunteer activities and community outreach programs</li>
+                </ul>
+            </div>
+            <div class="tools-container">
+                <h4>Responsibilities:</h4>
+                <div class="tools-grid">
+                    <span class="tool-tag">Budget Management</span>
+                    <span class="tool-tag">Event Planning</span>
+                    <span class="tool-tag">Team Leadership</span>
+                    <span class="tool-tag">Communication</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-detail" data-id="umits" style="display: none;">
+            <div class="detail-header">
+                <h2 class="experience-sub-title">University of Michigan ITS</h2>
+                <p class="experience-period">2023 - 2024</p>
+            </div>
+            <div class="experience-description">
+                <ul>
+                    <li>Software Development Intern in Information Technology Services</li>
+                    <li>Developed web applications using modern frameworks</li>
+                    <li>Collaborated with cross-functional teams on campus technology solutions</li>
+                    <li>Contributed to improving student-facing digital services</li>
+                </ul>
+            </div>
+            <div class="tools-container">
+                <h4>Technologies Used:</h4>
+                <div class="tools-grid">
+                    <span class="tool-tag">JavaScript</span>
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">React</span>
+                    <span class="tool-tag">SQL</span>
+                    <span class="tool-tag">Git</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-detail" data-id="nar" style="display: none;">
+            <div class="detail-header">
+                <h2 class="experience-sub-title">Nar Cannabis</h2>
+                <p class="experience-period">2024</p>
+            </div>
+            <div class="experience-description">
+                <ul>
+                    <li>Full Stack Developer working on e-commerce and inventory management systems</li>
+                    <li>Built responsive web applications with modern JavaScript frameworks</li>
+                    <li>Implemented database solutions for inventory tracking</li>
+                    <li>Developed mobile-friendly interfaces for retail operations</li>
+                </ul>
+            </div>
+            <div class="tools-container">
+                <h4>Technologies Used:</h4>
+                <div class="tools-grid">
+                    <span class="tool-tag">React Native</span>
+                    <span class="tool-tag">Node.js</span>
+                    <span class="tool-tag">PostgreSQL</span>
+                    <span class="tool-tag">Express</span>
+                    <span class="tool-tag">Mobile Development</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-detail" data-id="mortar-creek" style="display: none;">
+            <div class="detail-header">
+                <h2 class="experience-sub-title">Mortar Creek Labs</h2>
+                <p class="experience-period">2024 - Present</p>
+            </div>
+            <div class="experience-description">
+                <ul>
+                    <li>Co-founded automation and digital tool agency with my brother</li>
+                    <li>Building custom software solutions for small businesses and startups</li>
+                    <li>Specializing in workflow automation, web applications, and AI integration</li>
+                    <li>Developing tools that streamline operations and increase productivity</li>
+                </ul>
+            </div>
+            <div class="tools-container">
+                <h4>Technologies Used:</h4>
+                <div class="tools-grid">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">JavaScript</span>
+                    <span class="tool-tag">React</span>
+                    <span class="tool-tag">Node.js</span>
+                    <span class="tool-tag">AI/ML</span>
+                    <span class="tool-tag">Automation</span>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Timeline Detail Modal -->
+    <div class="timeline-modal" id="timelineModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
         <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>

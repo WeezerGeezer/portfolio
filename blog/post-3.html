@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Meets Software - Mitchell Carter</title>
+    <meta name="description" content="Creating custom Arduino devices with companion mobile apps for seamless hardware-software integration.">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+</head>
+<body>
+    <!-- Top Bar Navigation -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-separator">→</span>
+            <a href="../blog.html">Blog</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">Hardware Meets Software</span>
+        </div>
+    </section>
+
+    <!-- Blog Post Content -->
+    <article class="project-section">
+        <div class="project-content">
+            <header style="margin-bottom: 2rem;">
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">November 10, 2024</p>
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Hardware Meets Software</h1>
+                <p style="color: #888; font-size: 1.1rem;">Creating custom Arduino devices with companion mobile apps for seamless integration</p>
+            </header>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Bridging Two Worlds</h2>
+                <p>Software development is comfortable. Compile, test, iterate—all in the safety of your IDE. Hardware development is different. Once you solder a component, there's no "undo" button. Mistakes cost time and money.</p>
+                <p>But the intersection of hardware and software is where magic happens. Physical devices controlled by custom software create experiences impossible with either alone. That's what drew me to Arduino development.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Arduino Advantage</h2>
+                <p>Arduino boards offer an ideal entry point to hardware development. They're affordable, well-documented, and forgiving of mistakes. The ecosystem is mature, with countless libraries and examples available.</p>
+                <p>More importantly, Arduino uses C++—a language most developers already know. No need to learn assembly or wrestle with bare metal programming. You can focus on building your idea rather than fighting toolchains.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Catchphrase Project</h2>
+                <p>I wanted to build something tangible—a device you could hold and interact with. The idea: a handheld game console running Catchphrase, the classic word-guessing game. But with a twist: wireless content management via a companion iOS app.</p>
+                <p>The hardware requirements were straightforward: Arduino microcontroller, LCD screen for display, buttons for controls, speaker for sound effects, and Bluetooth module for wireless connectivity. Simple components, but the integration proved challenging.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Hardware Challenges</h2>
+                <p>Every hardware project teaches humility. My first prototype looked like a rat's nest—wires everywhere, hot glue holding dubious connections, and mysterious intermittent failures.</p>
+                <p>Power management was the first hurdle. The LCD drew significant current, causing voltage drops that reset the microcontroller. Solution: add a capacitor bank to smooth power delivery. Simple in hindsight, but took hours of debugging to diagnose.</p>
+                <p>Button debouncing was another surprise. Physical buttons don't cleanly transition from off to on—they "bounce" between states for milliseconds. Without software debouncing, a single press registers as multiple inputs. The fix is straightforward code, but finding the problem wasn't obvious.</p>
+                <p>Screen refresh rates matter. Redrawing the entire LCD every loop iteration caused visible flicker. Switching to partial updates—only changing pixels that actually changed—made the display smooth and responsive.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Bluetooth Integration</h2>
+                <p>The companion app needed wireless communication with the device. Bluetooth Low Energy (BLE) offered the right balance of power efficiency and bandwidth.</p>
+                <p>Implementing BLE on Arduino required careful protocol design. Each characteristic served a specific purpose—one for sending word lists, another for game state, a third for device settings. The iOS app mirrored this structure, maintaining a synchronized state machine.</p>
+                <p>Data serialization proved tricky. Sending strings over BLE requires careful encoding and length management. Too much data overwhelms the connection; too little requires multiple round trips. Finding the right packet size involved testing and optimization.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Building the iOS App</h2>
+                <p>The companion app, built with Swift and SwiftUI, needed to be intuitive. Users shouldn't need a manual to upload word lists or configure game settings.</p>
+                <p>CoreBluetooth handles iOS communication with BLE devices. The API is callback-based and sometimes finicky. Device discovery, connection management, and data transfer all require careful state management.</p>
+                <p>I implemented a content management system within the app. Users create custom word categories, add their own terms, and upload collections to the device. The app stores everything locally with CloudKit sync for backup.</p>
+                <p>The UI design emphasized simplicity. Large touch targets, clear feedback, and forgiving interactions. The device might be played at parties where precision touch input isn't guaranteed.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Enclosure Design</h2>
+                <p>3D printing made custom enclosures accessible. I designed the case in Fusion 360, iterating through several revisions based on fit and ergonomics.</p>
+                <p>Early versions were too large—comfortable to hold but impractical to carry. Later iterations prioritized portability while maintaining usability. Button placement required multiple prototypes to feel natural.</p>
+                <p>Ventilation was surprisingly important. The Arduino and LCD generate heat during extended play sessions. Strategic vent placement prevents thermal throttling without exposing internal components.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Lessons from Hardware</h2>
+                <p>Hardware development taught lessons software rarely does:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
+                    <li><strong>Plan for failure:</strong> Components die, connections break, batteries drain. Robust systems handle failures gracefully.</li>
+                    <li><strong>Power matters:</strong> Battery life dictates usability. Every milliamp counts when running on battery power.</li>
+                    <li><strong>Physical constraints are real:</strong> Software can always scale up. Hardware has hard limits—memory, processing power, physical size.</li>
+                    <li><strong>Testing is different:</strong> Unit tests don't help when checking if buttons feel good to press. Physical prototypes are the only validation.</li>
+                    <li><strong>Iteration is expensive:</strong> Software iterations cost time. Hardware iterations cost money and waiting for parts.</li>
+                </ul>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Value of Tangible Creation</h2>
+                <p>There's something special about building physical devices. Software exists in abstraction—pixels on screens, data in databases. Hardware exists in the real world. You can hold it, share it, see people interact with it.</p>
+                <p>That tangibility changes how you think about design. Every decision has consequences you can touch. Is the button positioned correctly? Does the weight feel balanced? Are the edges comfortable to hold?</p>
+                <p>These questions don't exist in pure software development. They force you to think holistically about user experience in ways that screen-based apps don't.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Future Directions</h2>
+                <p>The Catchphrase device was just the beginning. IoT devices, custom sensors, and interactive installations all become possible with hardware skills.</p>
+                <p>Next projects include environmental monitoring systems, custom input devices for music production, and perhaps even custom PCB design. Each step deeper into hardware opens new possibilities.</p>
+                <p>The barrier to entry continues dropping. 3D printers are affordable, Arduino boards cost less than dinner, and online tutorials make learning accessible. There's never been a better time to start.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Why You Should Try Hardware</h2>
+                <p>If you're a software developer, hardware projects will challenge you in new ways. You'll gain appreciation for constraints, learn about power management and signal processing, and create things that exist beyond screens.</p>
+                <p>Start simple. Blink an LED. Read a button press. Display text on a screen. Each small success builds confidence and understanding. Before you know it, you'll be designing complete systems.</p>
+                <p>The combination of hardware skills and software expertise is increasingly valuable. IoT is everywhere, embedded systems power modern devices, and the ability to bridge both worlds opens career opportunities.</p>
+                <p>But beyond practicality, hardware projects are simply fun. There's joy in seeing your code control physical reality. In holding something you designed and built. In sharing a device that friends can actually use.</p>
+                <p>So grab an Arduino starter kit and start building. The intersection of hardware and software is waiting to be explored.</p>
+            </section>
+        </div>
+    </article>
+
+    <!-- Back to Blog -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>Read More</h2>
+            <p>Explore more articles and project deep-dives</p>
+            <div class="cta-buttons">
+                <a href="../blog.html" class="btn btn-color-2">Back to Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

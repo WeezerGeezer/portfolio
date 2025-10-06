@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mitchell Carter</title>
+    <meta name="description" content="Thoughts on software development, AI, hardware projects, and web development.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="assets/css/blog-pages.css">
+</head>
+<body>
+    <!-- Top Bar Navigation for Desktop -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hamburger Navigation for Mobile -->
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section id="blog-header">
+        <div class="blog-header-content">
+            <p class="section-text-p1">Thoughts & Writings</p>
+            <h1 class="title">Blog</h1>
+            <p class="blog-description">Essays on software development, AI, hardware projects, and the craft of building things.</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section id="blog-posts">
+        <div class="blog-container">
+            <div class="blog-posts-grid">
+                <a href="blog/post-1.html" class="blog-card" data-title="Building a Modern Portfolio Site" data-date="2024-12-15">
+                    <div class="blog-card-header">
+                        <div class="blog-card-date">Dec 15, 2024</div>
+                        <div class="blog-card-category">Web Dev</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <h2 class="blog-card-title">Building a Modern Portfolio Site</h2>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">HTML</span>
+                            <span class="blog-tag">CSS</span>
+                            <span class="blog-tag">JavaScript</span>
+                            <span class="blog-tag">Design</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog/post-2.html" class="blog-card" data-title="AI-Powered Local Development" data-date="2024-11-28">
+                    <div class="blog-card-header">
+                        <div class="blog-card-date">Nov 28, 2024</div>
+                        <div class="blog-card-category">AI/ML</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <h2 class="blog-card-title">AI-Powered Local Development</h2>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">MLX</span>
+                            <span class="blog-tag">Python</span>
+                            <span class="blog-tag">AI</span>
+                            <span class="blog-tag">Apple Silicon</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog/post-3.html" class="blog-card" data-title="Hardware Meets Software" data-date="2024-11-10">
+                    <div class="blog-card-header">
+                        <div class="blog-card-date">Nov 10, 2024</div>
+                        <div class="blog-card-category">Hardware</div>
+                    </div>
+                    <div class="blog-card-content">
+                        <h2 class="blog-card-title">Hardware Meets Software</h2>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">Arduino</span>
+                            <span class="blog-tag">C++</span>
+                            <span class="blog-tag">Swift</span>
+                            <span class="blog-tag">IoT</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+                <div class="sidebar-section">
+                    <h3>All Posts</h3>
+                    <ul class="sidebar-posts-list" id="sidebar-posts-list">
+                        <!-- Will be populated by JavaScript -->
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Categories</h3>
+                    <ul class="sidebar-categories">
+                        <li><a href="#" data-category="all">All Posts</a></li>
+                        <li><a href="#" data-category="Web Development">Web Development</a></li>
+                        <li><a href="#" data-category="AI/ML">AI/ML</a></li>
+                        <li><a href="#" data-category="Hardware">Hardware</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+</html>

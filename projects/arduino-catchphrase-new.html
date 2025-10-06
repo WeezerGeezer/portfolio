@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Catchphrase System - Mitchell Carter</title>
+    <meta name="description" content="Complete hardware game system with 60+ hour battery life, wireless content management via iOS app, and professional PCB design for enhanced party gaming.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitchellcarter.dev/projects/arduino-catchphrase.html">
+    <meta property="og:title" content="Arduino Catchphrase System - Hardware Game with iOS Companion">
+    <meta property="og:description" content="Complete hardware game system with 60+ hour battery life, wireless content management via iOS app, and professional PCB design for enhanced party gaming.">
+    <meta property="og:image" content="https://mitchellcarter.dev/assets/project-5.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mitchellcarter.dev/projects/arduino-catchphrase.html">
+    <meta property="twitter:title" content="Arduino Catchphrase System - Hardware Game with iOS Companion">
+    <meta property="twitter:description" content="Complete hardware game system with 60+ hour battery life, wireless content management via iOS app, and professional PCB design for enhanced party gaming.">
+    <meta property="twitter:image" content="https://mitchellcarter.dev/assets/project-5.jpeg">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+    <link rel="canonical" href="https://mitchellcarter.dev/projects/arduino-catchphrase.html">
+</head>
+<body>
+    <!-- Top Bar Navigation -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../projects.html">Projects</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">Arduino Catchphrase System</span>
+        </div>
+    </section>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1 class="project-title">Arduino Catchphrase System</h1>
+            <p class="project-subtitle">Complete Hardware Game with iOS Companion</p>
+            <p class="project-tech-stack">Built with Arduino C++, Swift, Bluetooth LE, and Hardware Design</p>
+            <div class="project-links">
+                <a href="https://github.com/WeezerGeezer/catchphrase-hardware" class="btn btn-color-2" target="_blank">Hardware Code</a>
+                <a href="https://www.youtube.com/shorts/hS1pL4IaIuI" class="btn btn-color-1" target="_blank">Watch Demo</a>
+            </div>
+        </div>
+        <div class="project-hero-image">
+            <picture>
+                <source srcset="../assets/project-5.webp" type="image/webp">
+                <img src="../assets/project-5.jpeg" alt="Arduino Catchphrase Device">
+            </picture>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Project Overview</h2>
+            <p>A complete hardware game system that reimagines the classic Catchphrase party game with modern technology. Features extended battery life, wireless content management through a custom iOS app, and professional hardware design for an enhanced gaming experience that addresses the limitations of commercial alternatives.</p>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="project-section challenge-section">
+        <div class="project-content">
+            <h2>The Challenge</h2>
+            <p>Building a superior party game system required solving multiple hardware and software integration challenges:</p>
+            <ul class="challenge-list">
+                <li><strong>Power Management:</strong> Achieving 60+ hour battery life while maintaining responsive performance and visual feedback</li>
+                <li><strong>Wireless Communication:</strong> Creating reliable Bluetooth LE connection between iOS app and Arduino device</li>
+                <li><strong>Content Management:</strong> Designing intuitive wireless system for adding and organizing game categories and phrases</li>
+                <li><strong>Hardware Integration:</strong> Combining microcontroller, display, storage, and user interface in compact, durable design</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Solution -->
+    <section class="project-section solution-section">
+        <div class="project-content">
+            <h2>Technical Solution</h2>
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <h3>Advanced Power Management</h3>
+                    <p>Implemented deep sleep modes and optimized power circuits achieving 60-80 hour battery life, with intelligent wake/sleep cycles preserving energy during inactive periods.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Bluetooth LE Integration</h3>
+                    <p>Built custom BLE service architecture enabling seamless communication between iOS app and Arduino device with error handling and reconnection protocols.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Modular Hardware Design</h3>
+                    <p>Designed scalable PCB layout with clear pin allocation, replaceable components, and expansion capabilities for future feature additions.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Cross-Platform Development</h3>
+                    <p>Developed synchronized ecosystem spanning C++ firmware, Swift iOS application, and JSON data protocols for unified user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section features-section">
+        <div class="project-content">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>60-80 Hour Battery Life</h3>
+                    <p>Deep sleep power management and efficient hardware design provide weeks of gameplay on a single set of AA batteries</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Wireless Content Management</h3>
+                    <p>SwiftUI iOS app connects via Bluetooth LE to wirelessly add new categories and phrases to the device</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Enhanced Game Experience</h3>
+                    <p>30-second timer with visual countdown, RGB LED indicators, and sound effects for immersive gameplay</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💾</div>
+                    <h3>Expandable Storage</h3>
+                    <p>MicroSD card storage supports unlimited categories with up to 300 phrases each, all searchable and manageable</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Modular Hardware Design</h3>
+                    <p>Custom PCB design with easily replaceable components and clear pin allocation for future modifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="project-section tech-section">
+        <div class="project-content">
+            <h2>Technology Stack</h2>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Hardware Platform</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Seeed XIAO nRF52840</span>
+                        <span class="tech-tag">16x2 LCD Display</span>
+                        <span class="tech-tag">MicroSD Storage</span>
+                        <span class="tech-tag">RGB LEDs</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Firmware & Software</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Arduino C++</span>
+                        <span class="tech-tag">Swift & SwiftUI</span>
+                        <span class="tech-tag">Core Bluetooth</span>
+                        <span class="tech-tag">ArduinoJson</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Communication & Power</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Bluetooth LE</span>
+                        <span class="tech-tag">3x AA Battery Pack</span>
+                        <span class="tech-tag">Deep Sleep Modes</span>
+                        <span class="tech-tag">Power Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="project-section lessons-section">
+        <div class="project-content">
+            <h2>Key Learnings</h2>
+            <div class="lessons-grid">
+                <div class="lesson-item">
+                    <h3>Hardware-Software Integration</h3>
+                    <p>Mastered complex system integration spanning low-level microcontroller programming, Bluetooth LE protocols, and iOS application development for seamless user experience.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Power Management Optimization</h3>
+                    <p>Gained expertise in deep sleep modes, power profiling, and efficient circuit design techniques to achieve professional-grade battery performance in embedded systems.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Real-time Systems Design</h3>
+                    <p>Learned to build precise timing systems and responsive interfaces while managing multiple concurrent processes in resource-constrained embedded environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps / Future Enhancements -->
+    <section class="project-section next-steps-section">
+        <div class="project-content">
+            <h2>Future Enhancements</h2>
+            <ul class="next-steps-list">
+                <li>Design a custom 3D-printed enclosure for a more polished, commercial-grade appearance</li>
+                <li>Add multiplayer features with score tracking and team management through the companion app</li>
+                <li>Implement over-the-air firmware updates for adding new features without physical access</li>
+                <li>Create Android companion app to support the broader mobile ecosystem</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>Explore the Project</h2>
+            <p>See how hardware and software integration creates a complete gaming ecosystem that improves on commercial alternatives.</p>
+            <div class="cta-buttons">
+                <a href="https://www.youtube.com/shorts/hS1pL4IaIuI" class="btn btn-color-1" target="_blank">Watch Demo</a>
+                <a href="https://github.com/WeezerGeezer/catchphrase-hardware" class="btn btn-color-2" target="_blank">View Source Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects -->
+    <section class="more-projects">
+        <div class="project-content">
+            <h2>More Projects</h2>
+            <div class="more-projects-grid">
+                <a href="white-border-tool.html" class="project-card">
+                    <img src="../assets/project-4.jpeg" alt="White Border Tool">
+                    <div class="project-card-content">
+                        <h3>White Border Tool</h3>
+                        <p>Instagram optimization automation with batch processing</p>
+                    </div>
+                </a>
+                <a href="time-crisis-search.html" class="project-card">
+                    <img src="../assets/project-6.jpeg" alt="Time Crisis Search Engine">
+                    <div class="project-card-content">
+                        <h3>Time Crisis Search Engine</h3>
+                        <p>AI-powered podcast search with transcription</p>
+                    </div>
+                </a>
+            </div>
+            <div class="back-to-projects">
+                <a href="../projects.html" class="btn btn-color-2">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

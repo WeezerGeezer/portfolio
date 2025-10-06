@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLX-LM Toolkit - Mitchell Carter</title>
+    <meta name="description" content="Comprehensive toolkit for running language models on Apple Silicon with comparison tools, caching, fine-tuning, and production API.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitchellcarter.dev/projects/mlx-toolkit.html">
+    <meta property="og:title" content="MLX-LM Toolkit - Apple Silicon AI Development Suite">
+    <meta property="og:description" content="Comprehensive toolkit for running language models on Apple Silicon with comparison tools, caching, fine-tuning, and production API.">
+    <meta property="og:image" content="https://mitchellcarter.dev/assets/project-1.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mitchellcarter.dev/projects/mlx-toolkit.html">
+    <meta property="twitter:title" content="MLX-LM Toolkit - Apple Silicon AI Development Suite">
+    <meta property="twitter:description" content="Comprehensive toolkit for running language models on Apple Silicon with comparison tools, caching, fine-tuning, and production API.">
+    <meta property="twitter:image" content="https://mitchellcarter.dev/assets/project-1.jpeg">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+    <link rel="canonical" href="https://mitchellcarter.dev/projects/mlx-toolkit.html">
+</head>
+<body>
+    <!-- Top Bar Navigation -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../projects.html">Projects</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">MLX-LM Toolkit</span>
+        </div>
+    </section>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1 class="project-title">MLX-LM Toolkit</h1>
+            <p class="project-subtitle">Apple Silicon AI Development Suite</p>
+            <p class="project-tech-stack">Built with MLX, Python, FastAPI & Apple Silicon Optimization</p>
+            <div class="project-links">
+                <a href="https://github.com/WeezerGeezer/macllm" class="btn btn-color-2" target="_blank">View Source Code</a>
+            </div>
+        </div>
+        <div class="project-hero-image">
+            <picture>
+                <source srcset="../assets/project-1.webp" type="image/webp">
+                <img src="../assets/project-1.jpeg" alt="MLX-LM Toolkit Interface" />
+            </picture>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Project Overview</h2>
+            <p>A comprehensive toolkit for running large language models on Apple Silicon, featuring five integrated components: model comparison, advanced caching, fine-tuning, interactive chat, and production API deployment. This project demonstrates expertise in Apple's MLX framework and production AI system architecture.</p>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="project-section challenge-section">
+        <div class="project-content">
+            <h2>The Challenge</h2>
+            <p>Building a complete AI development ecosystem for Apple Silicon required solving several technical challenges:</p>
+            <ul class="challenge-list">
+                <li><strong>Performance Optimization:</strong> Maximizing Apple Silicon's unified memory and Metal Performance Shaders for AI workloads</li>
+                <li><strong>Production Deployment:</strong> Creating enterprise-ready APIs with proper error handling and monitoring</li>
+                <li><strong>Model Management:</strong> Handling multiple model formats and sizes efficiently with limited resources</li>
+                <li><strong>Developer Experience:</strong> Building intuitive interfaces for complex AI operations and workflows</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Solution -->
+    <section class="project-section solution-section">
+        <div class="project-content">
+            <h2>Technical Solution</h2>
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <h3>Model Comparison Dashboard</h3>
+                    <p>Built with Gradio for side-by-side model evaluation, supporting 20+ quantized models with real-time performance benchmarking and parameter tuning.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Advanced Prompt Caching</h3>
+                    <p>Implemented KV cache persistence using SafeTensors, achieving 30-80% reduction in time-to-first-token for long contexts and repeated prompts.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>LoRA Fine-tuning Pipeline</h3>
+                    <p>Complete training system using Low-Rank Adaptation for memory-efficient model customization with automated validation and comparison tools.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Production API Service</h3>
+                    <p>OpenAI-compatible FastAPI server with streaming responses, health monitoring, and comprehensive documentation for enterprise deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section features-section">
+        <div class="project-content">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Model Comparison</h3>
+                    <p>Interactive dashboard for comparing model performance and quality side-by-side</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Performance Caching</h3>
+                    <p>Revolutionary caching system reducing inference time by up to 80%</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Custom Fine-tuning</h3>
+                    <p>LoRA-based training pipeline for domain-specific model adaptation</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <h3>Interactive Chat</h3>
+                    <p>Terminal-based chat interface with conversation history and rich formatting</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Production API</h3>
+                    <p>OpenAI-compatible REST API with streaming and health monitoring</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Apple Silicon Optimized</h3>
+                    <p>Leverages unified memory and Metal Performance Shaders for maximum speed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="project-section tech-section">
+        <div class="project-content">
+            <h2>Technology Stack</h2>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Core Framework</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">MLX</span>
+                        <span class="tech-tag">MLX-LM</span>
+                        <span class="tech-tag">Apple Silicon</span>
+                        <span class="tech-tag">Metal Performance</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python 3.9+</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Uvicorn</span>
+                        <span class="tech-tag">Pydantic</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Interfaces</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Gradio</span>
+                        <span class="tech-tag">Rich Terminal</span>
+                        <span class="tech-tag">SafeTensors</span>
+                        <span class="tech-tag">NLTK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="project-section lessons-section">
+        <div class="project-content">
+            <h2>Key Learnings</h2>
+            <div class="lessons-grid">
+                <div class="lesson-item">
+                    <h3>Apple Silicon Architecture</h3>
+                    <p>Gained deep understanding of unified memory architecture and Metal Performance Shaders for optimizing AI workloads on Apple hardware.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Production AI Systems</h3>
+                    <p>Learned to build enterprise-ready AI APIs with proper error handling, monitoring, and OpenAI compatibility for seamless integration.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Advanced Caching Strategies</h3>
+                    <p>Mastered KV cache persistence and optimization techniques that dramatically improve inference performance for repeated or long-context queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps / Future Enhancements -->
+    <section class="project-section next-steps-section">
+        <div class="project-content">
+            <h2>Future Enhancements</h2>
+            <ul class="next-steps-list">
+                <li>Implement distributed inference across multiple Apple devices for enhanced performance</li>
+                <li>Add automatic model quantization with quality preservation analysis</li>
+                <li>Create web-based dashboard to complement existing terminal interfaces</li>
+                <li>Integrate with MLflow and Weights & Biases for comprehensive ML workflow management</li>
+                <li>Add support for custom model architectures and training from scratch</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>Explore the Project</h2>
+            <p>Discover how to harness the full power of Apple Silicon for AI development with this comprehensive toolkit.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/WeezerGeezer/macllm" class="btn btn-color-2" target="_blank">View Source Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects -->
+    <section class="more-projects">
+        <div class="project-content">
+            <h2>More Projects</h2>
+            <div class="more-projects-grid">
+                <a href="time-crisis-search.html" class="project-card">
+                    <img src="../assets/project-6.jpeg" alt="Time Crisis Search Engine">
+                    <div class="project-card-content">
+                        <h3>Time Crisis Search Engine</h3>
+                        <p>AI-powered podcast search with transcription</p>
+                    </div>
+                </a>
+                <a href="arduino-catchphrase.html" class="project-card">
+                    <img src="../assets/project-5.jpeg" alt="Arduino Catchphrase Device">
+                    <div class="project-card-content">
+                        <h3>Arduino Catchphrase System</h3>
+                        <p>Hardware game device with iOS companion app</p>
+                    </div>
+                </a>
+            </div>
+            <div class="back-to-projects">
+                <a href="../projects.html" class="btn btn-color-2">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

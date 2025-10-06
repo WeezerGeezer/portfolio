@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Catchphrase Device - Mitchell Carter</title>
+    <meta name="description" content="Custom hardware recreation of the popular Catchphrase party game using Arduino microcontroller, C++ programming, and Swift iOS app development.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitchellcarter.dev/projects/arduino-catchphrase.html">
+    <meta property="og:title" content="Arduino Catchphrase Device - Custom Hardware Game">
+    <meta property="og:description" content="Custom hardware recreation of the popular Catchphrase party game using Arduino microcontroller, C++ programming, and Swift iOS app development.">
+    <meta property="og:image" content="https://mitchellcarter.dev/assets/project-5.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mitchellcarter.dev/projects/arduino-catchphrase.html">
+    <meta property="twitter:title" content="Arduino Catchphrase Device - Custom Hardware Game">
+    <meta property="twitter:description" content="Custom hardware recreation of the popular Catchphrase party game using Arduino microcontroller, C++ programming, and Swift iOS app development.">
+    <meta property="twitter:image" content="https://mitchellcarter.dev/assets/project-5.jpeg">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+    <link rel="canonical" href="https://mitchellcarter.dev/projects/arduino-catchphrase.html">
+</head>
+<body>
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-separator">→</span>
+            <a href="../index.html#projects">Projects</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">Arduino Catchphrase Device</span>
+        </div>
+    </section>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1 class="project-title">Arduino "Catchphrase" Device</h1>
+            <p class="project-subtitle">Custom Hardware Game Recreation</p>
+            <p class="project-tech-stack">Built with C++ & Swift App</p>
+            <div class="project-links">
+                <a href="https://www.youtube.com/shorts/hS1pL4IaIuI" class="btn btn-color-1" target="_blank">Watch Demo</a>
+                <a href="https://github.com/WeezerGeezer/catchphrase" class="btn btn-color-2" target="_blank">View Code</a>
+            </div>
+        </div>
+        <div class="project-hero-image">
+            <picture>
+                <source srcset="../assets/project-5.webp" type="image/webp">
+                <img src="../assets/project-5.jpeg" alt="Arduino Catchphrase Device Hardware" />
+            </picture>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Project Overview</h2>
+            <p>A physical recreation of the popular Catchphrase party game using Arduino hardware, featuring custom electronics and a companion iOS app for game management. This project combines embedded systems programming, hardware design, and mobile app development to create an engaging party game experience.</p>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="project-section challenge-section">
+        <div class="project-content">
+            <h2>The Challenge</h2>
+            <p>Recreating a beloved party game in hardware form presented several unique engineering challenges:</p>
+            <ul class="challenge-list">
+                <li><strong>Hardware Design:</strong> Creating reliable custom electronics that could handle rapid button presses and game timing</li>
+                <li><strong>Real-Time Performance:</strong> Ensuring the device could maintain accurate timing and responsive user interactions</li>
+                <li><strong>Power Management:</strong> Designing for portable use with efficient battery consumption</li>
+                <li><strong>User Experience:</strong> Maintaining the fast-paced, intuitive gameplay of the original while adding new functionality</li>
+                <li><strong>Durability:</strong> Building hardware robust enough for enthusiastic party game sessions</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Solution -->
+    <section class="project-section solution-section">
+        <div class="project-content">
+            <h2>Technical Solution</h2>
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <h3>Arduino Hardware</h3>
+                    <p>Custom-built Arduino-based device with carefully selected components for optimal performance, including buttons, display, speaker, and LED indicators.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>C++ Firmware</h3>
+                    <p>Low-level C++ programming for Arduino microcontroller, handling game logic, timer management, and real-time user input processing.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>iOS Companion App</h3>
+                    <p>Swift-based iOS application for game configuration, word database management, and device communication via Bluetooth.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Game Logic Engine</h3>
+                    <p>Sophisticated state machine managing game flow, randomization, scoring, and timer functionality for seamless gameplay.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Design -->
+    <section class="project-section hardware-section">
+        <div class="project-content">
+            <h2>Hardware Components</h2>
+            <div class="hardware-grid">
+                <div class="hardware-item">
+                    <h3>Arduino Microcontroller</h3>
+                    <p>Arduino Uno as the main processing unit, chosen for reliability and extensive documentation support</p>
+                </div>
+                <div class="hardware-item">
+                    <h3>LCD Display</h3>
+                    <p>16x2 character LCD for displaying words, timer, and game status information</p>
+                </div>
+                <div class="hardware-item">
+                    <h3>Input Controls</h3>
+                    <p>Tactile push buttons for game control, start/stop functionality, and team switching</p>
+                </div>
+                <div class="hardware-item">
+                    <h3>Audio Output</h3>
+                    <p>Piezo buzzer for timer alerts, sound effects, and audio feedback during gameplay</p>
+                </div>
+                <div class="hardware-item">
+                    <h3>Visual Indicators</h3>
+                    <p>RGB LEDs for game state indication, team colors, and timer countdown visualization</p>
+                </div>
+                <div class="hardware-item">
+                    <h3>Power Management</h3>
+                    <p>Battery pack with power regulation for portable operation and consistent performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section features-section">
+        <div class="project-content">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-Time Gaming</h3>
+                    <p>Precise timer control and instant response to user inputs for smooth gameplay</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎲</div>
+                    <h3>Random Word Selection</h3>
+                    <p>Algorithmic word randomization from extensive database ensuring unique gameplay</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔊</div>
+                    <h3>Audio Feedback</h3>
+                    <p>Sound effects and audio cues for timer warnings, game events, and user interactions</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💡</div>
+                    <h3>Visual Indicators</h3>
+                    <p>LED status lights and LCD display for clear game state communication</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile App Integration</h3>
+                    <p>Companion iOS app for word management and device configuration</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔋</div>
+                    <h3>Portable Design</h3>
+                    <p>Battery-powered operation optimized for party environments and group settings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="project-section process-section">
+        <div class="project-content">
+            <h2>Development Process</h2>
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Concept & Planning</h3>
+                        <p>Research original game mechanics, define technical requirements, and create hardware specifications</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Hardware Prototyping</h3>
+                        <p>Breadboard testing, component selection, and circuit design validation</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Firmware Development</h3>
+                        <p>C++ programming for Arduino, implementing game logic and hardware control</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>iOS App Creation</h3>
+                        <p>Swift development for companion app with Bluetooth communication capabilities</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3>Integration & Testing</h3>
+                        <p>Hardware-software integration, user testing, and gameplay refinement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="project-section tech-section">
+        <div class="project-content">
+            <h2>Technology Stack</h2>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Hardware</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Electronics</span>
+                        <span class="tech-tag">Circuit Design</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Mobile</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">iOS Development</span>
+                        <span class="tech-tag">Bluetooth</span>
+                        <span class="tech-tag">UIKit</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Development</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Arduino IDE</span>
+                        <span class="tech-tag">Xcode</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">Hardware Testing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="project-section lessons-section">
+        <div class="project-content">
+            <h2>Key Learnings</h2>
+            <div class="lessons-grid">
+                <div class="lesson-item">
+                    <h3>Hardware Prototyping</h3>
+                    <p>Gained hands-on experience with iterative hardware design, component testing, and the importance of robust electrical connections in consumer devices.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Embedded Programming</h3>
+                    <p>Learned embedded C++ programming principles, memory management constraints, and real-time system requirements for responsive user interfaces.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Cross-Platform Integration</h3>
+                    <p>Developed skills in hardware-software communication, Bluetooth protocols, and creating seamless user experiences across different platforms.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>User-Centered Design</h3>
+                    <p>Understanding the importance of physical ergonomics, intuitive controls, and user testing in creating engaging interactive devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Enhancements -->
+    <section class="project-section next-steps-section">
+        <div class="project-content">
+            <h2>Future Enhancements</h2>
+            <ul class="next-steps-list">
+                <li>WiFi connectivity for online word database updates and multiplayer features</li>
+                <li>Custom PCB design for more reliable and compact hardware</li>
+                <li>Android app version for broader mobile platform support</li>
+                <li>Advanced game modes with different difficulty levels and categories</li>
+                <li>Score tracking and game statistics with cloud synchronization</li>
+                <li>3D-printed custom enclosure for professional finish and protection</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>See It in Action</h2>
+            <p>Watch the device in action and explore the intersection of hardware engineering and software development.</p>
+            <div class="cta-buttons">
+                <a href="https://www.youtube.com/shorts/hS1pL4IaIuI" class="btn btn-color-1" target="_blank">Watch Demo Video</a>
+                <a href="https://github.com/WeezerGeezer/catchphrase" class="btn btn-color-2" target="_blank">Explore Source Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects -->
+    <section class="more-projects">
+        <div class="project-content">
+            <h2>More Projects</h2>
+            <div class="more-projects-grid">
+                <a href="time-crisis-search.html" class="project-card">
+                    <img src="../assets/project-6.jpeg" alt="Time Crisis Search Engine">
+                    <div class="project-card-content">
+                        <h3>Time Crisis Search</h3>
+                        <p>AI-powered podcast search with Whisper and Whoosh</p>
+                    </div>
+                </a>
+                <a href="m-event-app.html" class="project-card">
+                    <img src="../assets/project-1.jpeg" alt="M-Event Mobile App">
+                    <div class="project-card-content">
+                        <h3>M-Event Mobile App</h3>
+                        <p>React Native app with PostgreSQL backend</p>
+                    </div>
+                </a>
+            </div>
+            <div class="back-to-projects">
+                <a href="../index.html#projects" class="btn btn-color-2">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

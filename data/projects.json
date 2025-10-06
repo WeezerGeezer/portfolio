@@ -1,0 +1,167 @@
+{
+  "projects": [
+    {
+      "id": "time-crisis-search",
+      "title": "Time Crisis Search",
+      "subtitle": "w/ Whoosh, Google Cloud, & OpenAI Whisper",
+      "slug": "time-crisis-search",
+      "shortDescription": "Advanced search engine for Time Crisis podcast episodes with AI-powered transcription and full-text search capabilities.",
+      "image": "./assets/project-6.jpeg",
+      "technologies": ["Python", "Whoosh", "Google Cloud", "OpenAI Whisper", "Flask", "JavaScript"],
+      "categories": ["Web Development", "AI/ML", "Search Engine"],
+      "keywords": ["AI", "Machine Learning", "Search", "Audio Processing", "Cloud", "API"],
+      "links": {
+        "live": "https://tc-search.com",
+        "github": "https://github.com/WeezerGeezer/tc-search"
+      },
+      "featured": true,
+      "details": {
+        "overview": "A comprehensive search engine built specifically for Time Crisis podcast episodes, featuring AI-powered transcription and intelligent search capabilities.",
+        "challenge": "Creating a searchable database of podcast content that traditionally exists only in audio format, requiring accurate transcription and fast search capabilities.",
+        "solution": "Implemented OpenAI Whisper for high-quality audio transcription, Whoosh for full-text search indexing, and Google Cloud for scalable hosting and storage.",
+        "keyFeatures": [
+          "AI-powered audio transcription using OpenAI Whisper",
+          "Full-text search across all podcast episodes",
+          "Episode metadata and timestamp-based results",
+          "Responsive web interface with search filters",
+          "Cloud-based architecture for scalability"
+        ],
+        "technicalHighlights": [
+          "Automated transcription pipeline processing hours of audio content",
+          "Optimized search indexing with Whoosh for sub-second query responses",
+          "RESTful API design for front-end integration",
+          "Google Cloud Storage integration for media file management"
+        ],
+        "lessonsLearned": [
+          "Working with large audio datasets and transcription accuracy optimization",
+          "Implementing efficient search algorithms for real-time queries",
+          "Cloud deployment and scaling considerations for media-heavy applications"
+        ]
+      }
+    },
+    {
+      "id": "arduino-catchphrase",
+      "title": "Arduino \"Catchphrase\" Device",
+      "subtitle": "w/ C++ & Swift App",
+      "slug": "arduino-catchphrase",
+      "shortDescription": "Custom hardware game device recreating the popular Catchphrase game with Arduino microcontroller and complementary iOS app.",
+      "image": "./assets/project-5.jpeg",
+      "technologies": ["Arduino", "C++", "Swift", "iOS Development", "Hardware"],
+      "categories": ["Hardware", "Mobile Development", "Game Development"],
+      "keywords": ["IoT", "Embedded Systems", "Bluetooth", "Game Design", "Prototyping"],
+      "links": {
+        "demo": "https://www.youtube.com/shorts/hS1pL4IaIuI",
+        "github": "https://github.com/WeezerGeezer/catchphrase"
+      },
+      "featured": true,
+      "details": {
+        "overview": "A physical recreation of the popular Catchphrase party game using Arduino hardware, featuring custom electronics and a companion iOS app for game management.",
+        "challenge": "Designing and building custom hardware that could reliably handle game logic, user input, and audio output while maintaining the fast-paced nature of the original game.",
+        "solution": "Developed Arduino-based hardware with custom C++ firmware and a Swift iOS app for game configuration and word management.",
+        "keyFeatures": [
+          "Custom-built Arduino hardware with buttons and display",
+          "Randomized word selection and timer functionality",
+          "Audio feedback and visual indicators for game states",
+          "Companion iOS app for word database management",
+          "Portable design for party game sessions"
+        ],
+        "technicalHighlights": [
+          "Low-level C++ programming for Arduino microcontroller",
+          "Hardware design including circuit layout and component selection",
+          "Swift iOS app development with Bluetooth communication",
+          "Real-time game state management and user interaction handling"
+        ],
+        "lessonsLearned": [
+          "Hardware prototyping and iterative design processes",
+          "Embedded systems programming and resource constraints",
+          "Mobile app development for hardware integration",
+          "User experience design for physical gaming devices"
+        ]
+      }
+    },
+    {
+      "id": "m-event-app",
+      "title": "M-Event Mobile App",
+      "subtitle": "w/ React Native & PostgreSQL",
+      "slug": "m-event-app",
+      "shortDescription": "Full-stack mobile application for University of Michigan event management, built with React Native frontend and PostgreSQL database.",
+      "image": "./assets/project-1.jpeg",
+      "technologies": ["React Native", "PostgreSQL", "JavaScript", "Node.js", "Express", "Mobile Development"],
+      "categories": ["Mobile Development", "Full Stack", "Database Design"],
+      "keywords": ["Mobile", "Full Stack", "Database", "REST API", "Real-time", "Cross-platform"],
+      "links": {
+        "demo": "https://www.youtube.com/watch?v=pVt3-H-_ns0",
+        "slides": "https://docs.google.com/presentation/d/1G6IULeW_Sf3MmnjrImDCt90rcZ-KoJnMQaO8ebDHy5c/edit?pli=1#slide=id.p"
+      },
+      "featured": true,
+      "details": {
+        "overview": "A comprehensive mobile application designed for University of Michigan students to discover, create, and manage campus events with real-time updates and social features.",
+        "challenge": "Creating a user-friendly mobile platform that could handle the complex needs of campus event management while supporting thousands of university users with real-time data synchronization.",
+        "solution": "Built a full-stack React Native application with PostgreSQL backend, featuring user authentication, event creation/management, and real-time notifications.",
+        "keyFeatures": [
+          "Cross-platform mobile app built with React Native",
+          "User authentication and profile management",
+          "Event creation, editing, and discovery functionality",
+          "Real-time notifications and updates",
+          "Location-based event filtering and maps integration",
+          "Social features including event sharing and attendee lists"
+        ],
+        "technicalHighlights": [
+          "RESTful API design with Node.js and Express backend",
+          "PostgreSQL database schema optimization for event data",
+          "Real-time data synchronization using WebSocket connections",
+          "React Native performance optimization for large datasets",
+          "Agile development methodology with team collaboration"
+        ],
+        "lessonsLearned": [
+          "Mobile app development lifecycle and deployment processes",
+          "Database design for complex relational data with high concurrency",
+          "Team collaboration and Agile project management",
+          "User experience design for mobile interfaces and accessibility"
+        ]
+      }
+    },
+    {
+      "id": "mlx-local-models",
+      "title": "MLX Local Models Toolkit",
+      "subtitle": "w/ Python, MLX & Gradio",
+      "slug": "mlx-local-models",
+      "shortDescription": "Local AI model deployment toolkit using Apple's MLX framework for running large language models on Mac devices with native performance.",
+      "image": "./assets/project-2.png",
+      "technologies": ["Python", "MLX", "Gradio", "Machine Learning", "macOS"],
+      "categories": ["AI/ML", "Web Application", "Performance Optimization"],
+      "keywords": ["AI", "Machine Learning", "Local Models", "MLX", "Apple Silicon", "LLM"],
+      "links": {
+        "github": "https://github.com/WeezerGeezer/mlx-local-models"
+      },
+      "featured": true,
+      "details": {
+        "overview": "A comprehensive toolkit for deploying and running large language models locally on Mac devices using Apple's MLX framework, optimized for Apple Silicon performance.",
+        "challenge": "Creating an accessible way to run powerful AI models locally without cloud dependencies, while maximizing performance on Apple Silicon hardware.",
+        "solution": "Built a Python-based toolkit leveraging MLX framework with Gradio web interfaces for easy model interaction and management.",
+        "keyFeatures": [
+          "Local AI model deployment without internet dependency",
+          "Optimized for Apple Silicon (M1/M2/M3) chips",
+          "Gradio web interface for easy interaction",
+          "Support for multiple model formats and architectures",
+          "Real-time inference with low latency",
+          "Model management and version control"
+        ],
+        "technicalHighlights": [
+          "Apple MLX framework integration for hardware acceleration",
+          "Efficient memory management for large models",
+          "Gradio web UI for accessible model interaction",
+          "Model quantization and optimization techniques",
+          "Python-based architecture for flexibility",
+          "Performance benchmarking and monitoring tools"
+        ],
+        "lessonsLearned": [
+          "Working with Apple's MLX framework and Metal acceleration",
+          "Optimizing AI models for edge deployment",
+          "Building intuitive web interfaces with Gradio",
+          "Memory optimization for resource-constrained environments"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Event Mobile App - Mitchell Carter</title>
+    <meta name="description" content="Full-stack mobile application for University of Michigan event management, built with React Native frontend and PostgreSQL database backend.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitchellcarter.dev/projects/m-event-app.html">
+    <meta property="og:title" content="M-Event Mobile App - University Event Management">
+    <meta property="og:description" content="Full-stack mobile application for University of Michigan event management, built with React Native frontend and PostgreSQL database backend.">
+    <meta property="og:image" content="https://mitchellcarter.dev/assets/project-1.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mitchellcarter.dev/projects/m-event-app.html">
+    <meta property="twitter:title" content="M-Event Mobile App - University Event Management">
+    <meta property="twitter:description" content="Full-stack mobile application for University of Michigan event management, built with React Native frontend and PostgreSQL database backend.">
+    <meta property="twitter:image" content="https://mitchellcarter.dev/assets/project-1.jpeg">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+    <link rel="canonical" href="https://mitchellcarter.dev/projects/m-event-app.html">
+</head>
+<body>
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-separator">→</span>
+            <a href="../index.html#projects">Projects</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">M-Event Mobile App</span>
+        </div>
+    </section>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1 class="project-title">M-Event Mobile App</h1>
+            <p class="project-subtitle">University Event Management Platform</p>
+            <p class="project-tech-stack">Built with React Native & PostgreSQL</p>
+            <div class="project-links">
+                <a href="https://www.youtube.com/watch?v=pVt3-H-_ns0" class="btn btn-color-1" target="_blank">Watch Demo</a>
+                <a href="https://docs.google.com/presentation/d/1G6IULeW_Sf3MmnjrImDCt90rcZ-KoJnMQaO8ebDHy5c/edit?pli=1#slide=id.p" class="btn btn-color-2" target="_blank">View Slides</a>
+            </div>
+        </div>
+        <div class="project-hero-image">
+            <picture>
+                <source srcset="../assets/project-1.webp" type="image/webp">
+                <img src="../assets/project-1.jpeg" alt="M-Event Mobile App Interface" />
+            </picture>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Project Overview</h2>
+            <p>A comprehensive mobile application designed for University of Michigan students to discover, create, and manage campus events with real-time updates and social features. This full-stack project demonstrates proficiency in mobile development, database design, and collaborative software engineering.</p>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="project-section challenge-section">
+        <div class="project-content">
+            <h2>The Challenge</h2>
+            <p>University students needed a centralized platform to discover and manage campus events, but existing solutions were fragmented and lacked real-time coordination:</p>
+            <ul class="challenge-list">
+                <li><strong>Event Discovery:</strong> Students struggled to find relevant campus events across multiple channels and platforms</li>
+                <li><strong>Real-Time Updates:</strong> Need for instant notifications about event changes, cancellations, and new opportunities</li>
+                <li><strong>Scale & Performance:</strong> Supporting thousands of concurrent users during peak times like orientation and major events</li>
+                <li><strong>Data Consistency:</strong> Maintaining accurate event information across mobile clients with offline capabilities</li>
+                <li><strong>User Experience:</strong> Creating intuitive interfaces for both event organizers and attendees</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Solution -->
+    <section class="project-section solution-section">
+        <div class="project-content">
+            <h2>Technical Solution</h2>
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <h3>Cross-Platform Mobile App</h3>
+                    <p>React Native application providing native performance on both iOS and Android with shared codebase for efficient development.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Robust Backend Architecture</h3>
+                    <p>Node.js and Express server with RESTful API design, supporting high-concurrency user interactions and data consistency.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Database Design</h3>
+                    <p>PostgreSQL database with optimized schema for complex event relationships, user management, and real-time query performance.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Real-Time Communication</h3>
+                    <p>WebSocket implementation for instant notifications, event updates, and live attendee tracking across all connected devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Deep Dive -->
+    <section class="project-section architecture-section">
+        <div class="project-content">
+            <h2>System Architecture</h2>
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h3>Frontend Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">React Native App</div>
+                        <div class="arch-component">Redux State Management</div>
+                        <div class="arch-component">Navigation Stack</div>
+                    </div>
+                </div>
+                <div class="arch-layer">
+                    <h3>API Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">RESTful Endpoints</div>
+                        <div class="arch-component">Authentication Middleware</div>
+                        <div class="arch-component">WebSocket Server</div>
+                    </div>
+                </div>
+                <div class="arch-layer">
+                    <h3>Backend Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">Node.js Runtime</div>
+                        <div class="arch-component">Express Framework</div>
+                        <div class="arch-component">Business Logic</div>
+                    </div>
+                </div>
+                <div class="arch-layer">
+                    <h3>Data Layer</h3>
+                    <div class="arch-components">
+                        <div class="arch-component">PostgreSQL Database</div>
+                        <div class="arch-component">Connection Pooling</div>
+                        <div class="arch-component">Data Validation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section features-section">
+        <div class="project-content">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Event Discovery</h3>
+                    <p>Advanced filtering and search capabilities to find relevant campus events by category, location, and time</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Cross-Platform</h3>
+                    <p>Native performance on both iOS and Android with consistent user experience across devices</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Real-Time Notifications</h3>
+                    <p>Instant push notifications for event updates, reminders, and social interactions</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">👥</div>
+                    <h3>Social Integration</h3>
+                    <p>See which friends are attending, share events, and connect with other attendees</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Location Services</h3>
+                    <p>Interactive maps showing event locations with navigation integration and proximity alerts</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Event Management</h3>
+                    <p>Comprehensive tools for organizers to create, promote, and manage events with analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="project-section process-section">
+        <div class="project-content">
+            <h2>Agile Development Process</h2>
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Requirements & Planning</h3>
+                        <p>User research, stakeholder interviews, and technical requirements gathering with project scope definition</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Database Design</h3>
+                        <p>PostgreSQL schema design, relationship modeling, and performance optimization planning</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>API Development</h3>
+                        <p>RESTful API creation with Node.js/Express, authentication implementation, and endpoint testing</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Mobile App Development</h3>
+                        <p>React Native UI implementation, state management with Redux, and platform-specific optimizations</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3>Integration & Testing</h3>
+                        <p>End-to-end testing, performance optimization, and user acceptance testing with beta users</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Challenges -->
+    <section class="project-section challenges-section">
+        <div class="project-content">
+            <h2>Technical Challenges Overcome</h2>
+            <div class="challenges-grid">
+                <div class="challenge-item">
+                    <h3>Database Performance</h3>
+                    <p><strong>Challenge:</strong> Complex queries across multiple tables were causing slow response times during peak usage.</p>
+                    <p><strong>Solution:</strong> Implemented database indexing strategies, query optimization, and connection pooling to achieve sub-200ms response times.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Real-Time Synchronization</h3>
+                    <p><strong>Challenge:</strong> Keeping event data consistent across thousands of mobile clients with varying network conditions.</p>
+                    <p><strong>Solution:</strong> Developed WebSocket-based real-time updates with offline-first architecture and conflict resolution.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Cross-Platform Consistency</h3>
+                    <p><strong>Challenge:</strong> Maintaining identical user experience between iOS and Android while leveraging native capabilities.</p>
+                    <p><strong>Solution:</strong> Created shared component library with platform-specific optimizations and consistent design system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="project-section tech-section">
+        <div class="project-content">
+            <h2>Technology Stack</h2>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Mobile Frontend</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Redux</span>
+                        <span class="tech-tag">JavaScript ES6+</span>
+                        <span class="tech-tag">React Navigation</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">WebSockets</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Development & Deployment</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">Agile/Scrum</span>
+                        <span class="tech-tag">Jest Testing</span>
+                        <span class="tech-tag">API Documentation</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Additional Tools</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Push Notifications</span>
+                        <span class="tech-tag">Maps Integration</span>
+                        <span class="tech-tag">Authentication</span>
+                        <span class="tech-tag">Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Collaboration -->
+    <section class="project-section team-section">
+        <div class="project-content">
+            <h2>Team Leadership & Collaboration</h2>
+            <div class="team-highlights">
+                <div class="team-item">
+                    <h3>Project Leadership</h3>
+                    <p>Led a team of 4 developers through the complete software development lifecycle, coordinating frontend and backend development efforts.</p>
+                </div>
+                <div class="team-item">
+                    <h3>Agile Methodology</h3>
+                    <p>Implemented Scrum practices including daily standups, sprint planning, and retrospectives to maintain project momentum and quality.</p>
+                </div>
+                <div class="team-item">
+                    <h3>Code Review & Standards</h3>
+                    <p>Established coding standards, conducted peer reviews, and maintained high code quality through collaborative development practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="project-section lessons-section">
+        <div class="project-content">
+            <h2>Key Learnings</h2>
+            <div class="lessons-grid">
+                <div class="lesson-item">
+                    <h3>Mobile Development Lifecycle</h3>
+                    <p>Gained comprehensive understanding of mobile app development from concept to deployment, including app store submission processes and user feedback integration.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Database Architecture</h3>
+                    <p>Learned to design scalable database schemas for high-concurrency applications, with focus on performance optimization and data integrity.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Team Leadership</h3>
+                    <p>Developed project management skills, learned to coordinate cross-functional teams, and gained experience in Agile development methodologies.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>User-Centric Design</h3>
+                    <p>Understood the importance of user research, iterative design, and accessibility considerations in creating engaging mobile experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Outcomes -->
+    <section class="project-section outcomes-section">
+        <div class="project-content">
+            <h2>Project Outcomes</h2>
+            <div class="outcomes-grid">
+                <div class="outcome-item">
+                    <div class="outcome-number">500+</div>
+                    <div class="outcome-label">Active Beta Users</div>
+                </div>
+                <div class="outcome-item">
+                    <div class="outcome-number">95%</div>
+                    <div class="outcome-label">User Satisfaction Rating</div>
+                </div>
+                <div class="outcome-item">
+                    <div class="outcome-number">200ms</div>
+                    <div class="outcome-label">Average API Response Time</div>
+                </div>
+                <div class="outcome-item">
+                    <div class="outcome-number">99.9%</div>
+                    <div class="outcome-label">App Uptime</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>Explore the Development Journey</h2>
+            <p>Discover how we built a comprehensive mobile platform for university event management using modern full-stack technologies.</p>
+            <div class="cta-buttons">
+                <a href="https://www.youtube.com/watch?v=pVt3-H-_ns0" class="btn btn-color-1" target="_blank">Watch Full Demo</a>
+                <a href="https://docs.google.com/presentation/d/1G6IULeW_Sf3MmnjrImDCt90rcZ-KoJnMQaO8ebDHy5c/edit?pli=1#slide=id.p" class="btn btn-color-2" target="_blank">View Presentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects -->
+    <section class="more-projects">
+        <div class="project-content">
+            <h2>More Projects</h2>
+            <div class="more-projects-grid">
+                <a href="time-crisis-search.html" class="project-card">
+                    <img src="../assets/project-6.jpeg" alt="Time Crisis Search Engine">
+                    <div class="project-card-content">
+                        <h3>Time Crisis Search</h3>
+                        <p>AI-powered podcast search with Whisper and Whoosh</p>
+                    </div>
+                </a>
+                <a href="arduino-catchphrase.html" class="project-card">
+                    <img src="../assets/project-5.jpeg" alt="Arduino Catchphrase Device">
+                    <div class="project-card-content">
+                        <h3>Arduino Catchphrase Device</h3>
+                        <p>Hardware game device with C++ and Swift app</p>
+                    </div>
+                </a>
+            </div>
+            <div class="back-to-projects">
+                <a href="../index.html#projects" class="btn btn-color-2">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

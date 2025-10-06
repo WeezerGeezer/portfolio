@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio - Mitchell Carter</title>
+    <meta name="description" content="Professional photography portfolio with AI-powered categorization, intelligent masonry layout, and advanced image optimization.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitchellcarter.dev/projects/photography-portfolio.html">
+    <meta property="og:title" content="Photography Portfolio - AI-Powered Photo Gallery">
+    <meta property="og:description" content="Professional photography portfolio with AI-powered categorization, intelligent masonry layout, and advanced image optimization.">
+    <meta property="og:image" content="https://mitchellcarter.dev/assets/project-7.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mitchellcarter.dev/projects/photography-portfolio.html">
+    <meta property="twitter:title" content="Photography Portfolio - AI-Powered Photo Gallery">
+    <meta property="twitter:description" content="Professional photography portfolio with AI-powered categorization, intelligent masonry layout, and advanced image optimization.">
+    <meta property="twitter:image" content="https://mitchellcarter.dev/assets/project-7.jpeg">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+    <link rel="canonical" href="https://mitchellcarter.dev/projects/photography-portfolio.html">
+</head>
+<body>
+    <!-- Top Bar Navigation -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../projects.html">Projects</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">Photography Portfolio</span>
+        </div>
+    </section>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1 class="project-title">Photography Portfolio</h1>
+            <p class="project-subtitle">AI-Powered Photo Gallery Website</p>
+            <p class="project-tech-stack">Built with HTML, CSS, JavaScript & AI Categorization</p>
+            <div class="project-links">
+                <a href="https://github.com/WeezerGeezer/photography-portfolio-standalone" class="btn btn-color-2" target="_blank">View Source Code</a>
+            </div>
+        </div>
+        <div class="project-hero-image">
+            <picture>
+                <source srcset="../assets/project-7.webp" type="image/webp">
+                <img src="../assets/project-7.jpeg" alt="Photography Portfolio Interface" />
+            </picture>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Project Overview</h2>
+            <p>A professional photography portfolio website featuring AI-powered image categorization, intelligent masonry layout, and advanced performance optimization. The site showcases photography through smart filtering and responsive design optimized for both desktop and mobile viewing experiences.</p>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="project-section challenge-section">
+        <div class="project-content">
+            <h2>The Challenge</h2>
+            <p>Creating a photography portfolio that stands out required solving several technical and design challenges:</p>
+            <ul class="challenge-list">
+                <li><strong>Intelligent Organization:</strong> Automatically categorizing hundreds of photos without manual tagging</li>
+                <li><strong>Performance Optimization:</strong> Loading high-resolution images efficiently across different devices and connections</li>
+                <li><strong>Responsive Gallery Layout:</strong> Creating a masonry layout that adapts beautifully from mobile to desktop</li>
+                <li><strong>Professional Presentation:</strong> Balancing visual impact with fast loading times and accessibility</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Solution -->
+    <section class="project-section solution-section">
+        <div class="project-content">
+            <h2>Technical Solution</h2>
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <h3>AI-Powered Categorization</h3>
+                    <p>Implemented Ollama for sophisticated photo analysis, automatically categorizing images into 7 intelligent categories like Maritime, Golden Hour, and Candid photography.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Intelligent Masonry Layout</h3>
+                    <p>Built advanced JavaScript masonry system where landscape images automatically span 2 columns on desktop for enhanced visual impact.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Performance Optimization</h3>
+                    <p>Utilized WebP format with JPEG fallbacks, lazy loading with Intersection Observer, and CDN optimization for maximum performance.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Professional Metadata System</h3>
+                    <p>Automated extraction of camera settings, geographic data, and technical specifications with AI-generated alt-text for accessibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section features-section">
+        <div class="project-content">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Categorization</h3>
+                    <p>Automatic photo categorization into 7 intelligent categories using advanced AI analysis</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Smart Masonry Layout</h3>
+                    <p>Responsive 1-5 column layout with landscape images spanning multiple columns</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Optimized</h3>
+                    <p>Touch-friendly interface with hamburger menu and collapsible filters</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Performance Optimized</h3>
+                    <p>WebP format, lazy loading, and hardware acceleration for fast loading</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔍</div>
+                    <h3>SEO Excellence</h3>
+                    <p>JSON-LD structured data, complete sitemap, and accessibility features</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Professional Features</h3>
+                    <p>EXIF metadata extraction, geographic integration, and professional typography</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="project-section tech-section">
+        <div class="project-content">
+            <h2>Technology Stack</h2>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Vanilla JavaScript</span>
+                        <span class="tech-tag">WebP Images</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>AI & Processing</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Ollama</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Sharp Library</span>
+                        <span class="tech-tag">ExifTool</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Infrastructure</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Cloudflare Pages</span>
+                        <span class="tech-tag">Static Hosting</span>
+                        <span class="tech-tag">CDN Optimization</span>
+                        <span class="tech-tag">JSON Storage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="project-section lessons-section">
+        <div class="project-content">
+            <h2>Key Learnings</h2>
+            <div class="lessons-grid">
+                <div class="lesson-item">
+                    <h3>AI Integration in Web Development</h3>
+                    <p>Learned to integrate AI photo analysis seamlessly into web workflows, creating automated content management that scales with portfolio growth.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Advanced CSS Layout Techniques</h3>
+                    <p>Mastered complex masonry layouts using JavaScript algorithms, CSS Grid, and responsive design principles for optimal visual presentation.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Performance-First Development</h3>
+                    <p>Gained expertise in modern web performance optimization including WebP conversion, lazy loading, and hardware acceleration for image-heavy applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps / Future Enhancements -->
+    <section class="project-section next-steps-section">
+        <div class="project-content">
+            <h2>Future Enhancements</h2>
+            <ul class="next-steps-list">
+                <li>Implement progressive web app features for offline viewing and mobile app-like experience</li>
+                <li>Add client booking system with calendar integration and automated workflow management</li>
+                <li>Create advanced filtering options including date ranges, camera settings, and location-based searches</li>
+                <li>Build admin panel for batch photo management and metadata editing</li>
+                <li>Integrate social sharing features and client gallery access with password protection</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>Explore the Project</h2>
+            <p>See how AI and modern web technologies come together to create a stunning photography showcase with intelligent organization.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/WeezerGeezer/photography-portfolio-standalone" class="btn btn-color-2" target="_blank">View Source Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects -->
+    <section class="more-projects">
+        <div class="project-content">
+            <h2>More Projects</h2>
+            <div class="more-projects-grid">
+                <a href="time-crisis-search.html" class="project-card">
+                    <img src="../assets/project-6.jpeg" alt="Time Crisis Search Engine">
+                    <div class="project-card-content">
+                        <h3>Time Crisis Search Engine</h3>
+                        <p>AI-powered podcast search with transcription</p>
+                    </div>
+                </a>
+                <a href="mlx-toolkit.html" class="project-card">
+                    <img src="../assets/project-1.jpeg" alt="MLX-LM Toolkit">
+                    <div class="project-card-content">
+                        <h3>MLX-LM Toolkit</h3>
+                        <p>Apple Silicon AI development suite</p>
+                    </div>
+                </a>
+            </div>
+            <div class="back-to-projects">
+                <a href="../projects.html" class="btn btn-color-2">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

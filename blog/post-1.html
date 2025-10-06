@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Modern Portfolio Site - Mitchell Carter</title>
+    <meta name="description" content="A deep dive into creating a responsive, interactive portfolio with modern web technologies.">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+</head>
+<body>
+    <!-- Top Bar Navigation -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-separator">→</span>
+            <a href="../blog.html">Blog</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">Building a Modern Portfolio Site</span>
+        </div>
+    </section>
+
+    <!-- Blog Post Content -->
+    <article class="project-section">
+        <div class="project-content">
+            <header style="margin-bottom: 2rem;">
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">December 15, 2024</p>
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Building a Modern Portfolio Site</h1>
+                <p style="color: #888; font-size: 1.1rem;">A deep dive into creating a responsive, interactive portfolio with modern web technologies</p>
+            </header>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Challenge</h2>
+                <p>Creating a portfolio site in 2024 comes with unique challenges. Users expect fast load times, beautiful animations, and seamless experiences across all devices. Traditional template-based approaches often fall short, leading to generic-looking sites that don't stand out.</p>
+                <p>I wanted to build something different—a portfolio that showcased both my technical skills and design sensibility while remaining maintainable and performant.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Design Philosophy</h2>
+                <p>I embraced a bento box layout—a design pattern popularized by modern applications. This grid-based approach allows for flexible content organization while maintaining visual hierarchy. Each "box" in the layout serves a specific purpose, from showcasing recent projects to highlighting technical skills.</p>
+                <p>The color palette draws from nature: earthy greens (#656D4A) paired with clean whites and grays. This creates a professional yet approachable aesthetic that doesn't overwhelm visitors.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Technical Implementation</h2>
+                <p>Rather than reaching for heavy frameworks, I built the site with vanilla HTML, CSS, and JavaScript. This decision paid dividends in performance—the entire site loads in under 2 seconds, even on slow connections.</p>
+                <p>Key technical highlights include:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
+                    <li><strong>CSS Grid and Flexbox:</strong> The bento layout uses CSS Grid for the overall structure, with Flexbox handling internal component layout.</li>
+                    <li><strong>Progressive Enhancement:</strong> The site works perfectly without JavaScript, but enhanced interactions activate when available.</li>
+                    <li><strong>WebP Images:</strong> All images use modern WebP format with JPEG fallbacks for older browsers.</li>
+                    <li><strong>Custom Filtering System:</strong> The projects page features a real-time filtering system built from scratch, no libraries needed.</li>
+                </ul>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Responsive Design</h2>
+                <p>Mobile-first design is non-negotiable in 2024. The site transforms dramatically at different breakpoints, switching from a complex grid layout on desktop to a clean, stacked layout on mobile. The bento boxes flatten into full-width cards, making content scannable on any device.</p>
+                <p>Special attention went into the hamburger menu and touch interactions. Every button is adequately sized for thumb navigation, and hover effects gracefully degrade on touch devices.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Performance Optimization</h2>
+                <p>Performance wasn't an afterthought—it was baked into every decision. The CSS uses hardware-accelerated transforms for animations, ensuring smooth 60fps interactions. Images are lazy-loaded using the Intersection Observer API, reducing initial page weight.</p>
+                <p>The result? A Lighthouse score of 98+ on all metrics. Fast, accessible, and delightful to use.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Lessons Learned</h2>
+                <p>Building this portfolio reinforced several principles:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
+                    <li>Start with content, not design. Know what you want to say before deciding how to say it.</li>
+                    <li>Constraints breed creativity. Limiting myself to vanilla JavaScript forced elegant solutions.</li>
+                    <li>Details matter. Small touches like smooth transitions and thoughtful spacing elevate the entire experience.</li>
+                    <li>Test relentlessly. What works on your laptop might break on someone's phone.</li>
+                </ul>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>What's Next</h2>
+                <p>The site continues to evolve. Future plans include adding a full blog with RSS support, implementing view transitions for smoother page navigation, and exploring more interactive timeline features. The beauty of owning your codebase is the freedom to experiment and iterate.</p>
+            </section>
+        </div>
+    </article>
+
+    <!-- Back to Blog -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>Read More</h2>
+            <p>Explore more articles and project deep-dives</p>
+            <div class="cta-buttons">
+                <a href="../blog.html" class="btn btn-color-2">Back to Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

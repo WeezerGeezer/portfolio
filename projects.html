@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Mitchell's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <!-- Top Bar Navigation for Desktop -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="projects">
+        <p class="section-text-p1">View my latest</p>
+        <h1 class="title">Projects</h1>
+
+        <!-- Project Filter Controls -->
+        <div class="project-filter-container">
+            <div class="filter-search-section">
+                <div class="search-container">
+                    <input type="text" id="project-search" placeholder="Search projects..." class="search-input">
+                    <div class="search-icon">🔍</div>
+                </div>
+            </div>
+
+            <div class="filter-buttons-section">
+                <div class="filter-label">Filter by Technology:</div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="Python">Python</button>
+                    <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+                    <button class="filter-btn" data-filter="C++">C++</button>
+                    <button class="filter-btn" data-filter="Swift">Swift</button>
+                    <button class="filter-btn" data-filter="Arduino">Arduino</button>
+                    <button class="filter-btn" data-filter="MLX">MLX</button>
+                    <button class="filter-btn" data-filter="FastAPI">FastAPI</button>
+                    <button class="filter-btn" data-filter="AI/ML">AI/ML</button>
+                </div>
+            </div>
+
+            <div class="filter-categories-section">
+                <div class="filter-label">Filter by Category:</div>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="Web Development">Web Development</button>
+                    <button class="filter-btn" data-filter="Mobile Development">Mobile Development</button>
+                    <button class="filter-btn" data-filter="Hardware">Hardware</button>
+                    <button class="filter-btn" data-filter="AI/ML">AI/ML</button>
+                    <button class="filter-btn" data-filter="Audio Processing">Audio Processing</button>
+                    <button class="filter-btn" data-filter="Image Processing">Image Processing</button>
+                    <button class="filter-btn" data-filter="Developer Tools">Developer Tools</button>
+                    <button class="filter-btn" data-filter="API Development">API Development</button>
+                </div>
+            </div>
+
+            <div class="project-count-display">
+                <span id="project-count">Showing 7 of 7 projects</span>
+                <button id="clear-filters" class="clear-filters-btn" style="display: none;">Clear All Filters</button>
+            </div>
+        </div>
+
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container project-card"
+                     data-technologies="Python,Supabase,PostgreSQL,OpenAI Whisper,JavaScript,Cloudflare"
+                     data-categories="Web Development,AI/ML,Search Engine"
+                     data-title="Time Crisis Search Engine"
+                     data-description="Advanced search engine for Time Crisis podcast episodes with AI-powered transcription and full-text search capabilities">
+                    <div class="article-container">
+                        <picture>
+                            <source srcset="./assets/project-6.webp" type="image/webp">
+                            <img src="./assets/project-6.jpeg" alt="Time Crisis Search Engine" class="project-img">
+                        </picture>
+                    </div>
+                    <h2 class="experience-subtitle project-title">Time Crisis Search<p class="project-sub-title">w/ Supabase, OpenAI Whisper & AI Transcription</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='./projects/time-crisis-search.html'">Learn More</button>
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/WeezerGeezer/tc-search'">View Code</button>
+                    </div>
+                </div>
+                <div class="details-container color-container project-card"
+                     data-technologies="MLX,Python,FastAPI,Gradio,Apple Silicon,AI/ML"
+                     data-categories="AI/ML,API Development,Performance Optimization"
+                     data-title="MLX-LM Toolkit"
+                     data-description="Comprehensive toolkit for running language models on Apple Silicon with comparison tools, caching, fine-tuning, and production API">
+                    <div class="article-container">
+                        <picture>
+                            <source srcset="./assets/project-1.webp" type="image/webp">
+                            <img src="./assets/project-1.jpeg" alt="MLX-LM Toolkit" class="project-img">
+                        </picture>
+                    </div>
+                    <h2 class="experience-subtitle project-title">MLX-LM Toolkit<p class="project-sub-title">w/ Apple Silicon Optimization & Production API</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='./projects/mlx-toolkit.html'">Learn More</button>
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/WeezerGeezer/macllm'">View Code</button>
+                    </div>
+                </div>
+                <div class="details-container color-container project-card"
+                     data-technologies="Arduino,C++,Swift,iOS Development,Bluetooth,Hardware"
+                     data-categories="Hardware,Mobile Development,Game Development,IoT"
+                     data-title="Arduino Catchphrase System"
+                     data-description="Complete hardware game system with Arduino device, iOS companion app, and Bluetooth connectivity for wireless content management">
+                    <div class="article-container">
+                        <picture>
+                            <source srcset="./assets/project-5.webp" type="image/webp">
+                            <img src="./assets/project-5.jpeg" alt="Arduino Catchphrase System" class="project-img">
+                        </picture>
+                    </div>
+                    <h2 class="experience-subtitle project-title">Arduino Catchphrase System<p class="project-sub-title">w/ Hardware Device & iOS App</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='./projects/arduino-catchphrase.html'">Learn More</button>
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://www.youtube.com/shorts/hS1pL4IaIuI'">Watch Demo</button>
+                    </div>
+                </div>
+                <div class="details-container color-container project-card"
+                     data-technologies="HTML,CSS,JavaScript,AI,WebP,Masonry Layout"
+                     data-categories="Web Development,Photography,AI Integration"
+                     data-title="Photography Portfolio"
+                     data-description="Professional photography portfolio with AI-powered categorization, intelligent masonry layout, and advanced image optimization">
+                    <div class="article-container">
+                        <picture>
+                            <source srcset="./assets/project-7.webp" type="image/webp">
+                            <img src="./assets/project-7.jpeg" alt="Photography Portfolio" class="project-img">
+                        </picture>
+                    </div>
+                    <h2 class="experience-subtitle project-title">Photography Portfolio<p class="project-sub-title">w/ AI Categorization & Masonry Layout</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='./projects/photography-portfolio.html'">Learn More</button>
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/WeezerGeezer/photography-portfolio-standalone'">View Code</button>
+                    </div>
+                </div>
+                <div class="details-container color-container project-card"
+                     data-technologies="Python,PyTorch,NLTK,Tkinter,yt-dlp,Audio Processing"
+                     data-categories="Audio Processing,AI/ML,Desktop Application"
+                     data-title="Clip-Gen Audio Tool"
+                     data-description="Advanced audio clip extraction tool with timestamped search capabilities, multi-source support, and transcript analysis">
+                    <div class="article-container">
+                        <picture>
+                            <source srcset="./assets/project-8.webp" type="image/webp">
+                            <img src="./assets/project-8.jpeg" alt="Clip-Gen Audio Tool" class="project-img">
+                        </picture>
+                    </div>
+                    <h2 class="experience-subtitle project-title">Clip-Gen Audio Tool<p class="project-sub-title">w/ Transcript Search & Multi-source Support</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='./projects/clip-gen.html'">Learn More</button>
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/WeezerGeezer/clip-gen'">View Code</button>
+                    </div>
+                </div>
+                <div class="details-container color-container project-card"
+                     data-technologies="HTML,CSS,JavaScript,Canvas API,Image Processing"
+                     data-categories="Web Development,Image Processing,Utility Tools"
+                     data-title="White Border Image Tool"
+                     data-description="Browser-based tool for adding white borders to images while maintaining aspect ratio, perfect for print preparation">
+                    <div class="article-container">
+                        <picture>
+                            <source srcset="./assets/project-9.webp" type="image/webp">
+                            <img src="./assets/project-9.jpeg" alt="White Border Image Tool" class="project-img">
+                        </picture>
+                    </div>
+                    <h2 class="experience-subtitle project-title">White Border Tool<p class="project-sub-title">w/ Canvas API & Print Optimization</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='./projects/white-border-tool.html'">Learn More</button>
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/WeezerGeezer/white-bars'">View Code</button>
+                    </div>
+                </div>
+                <div class="details-container color-container project-card"
+                     data-technologies="Python,WeasyPrint,Markdown,CSS,Jinja2,PDF Generation"
+                     data-categories="Developer Tools,Document Generation,Automation"
+                     data-title="Resume Generator"
+                     data-description="Command-line tool for converting Markdown resumes to professionally styled PDFs with version control integration">
+                    <div class="article-container">
+                        <picture>
+                            <source srcset="./assets/project-10.webp" type="image/webp">
+                            <img src="./assets/project-10.jpeg" alt="Resume Generator" class="project-img">
+                        </picture>
+                    </div>
+                    <h2 class="experience-subtitle project-title">Resume Generator<p class="project-sub-title">w/ Markdown & Professional PDF Output</p></h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='./projects/resume-generator.html'">Learn More</button>
+                        <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/WeezerGeezer/resume-generator'">View Code</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

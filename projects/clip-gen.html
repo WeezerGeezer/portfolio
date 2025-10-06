@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip-Gen Audio Tool - Mitchell Carter</title>
+    <meta name="description" content="Advanced audio clip extraction tool with timestamped search capabilities, multi-source support, and transcript analysis for Time Crisis podcast.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitchellcarter.dev/projects/clip-gen.html">
+    <meta property="og:title" content="Clip-Gen Audio Tool - Timestamped Audio Processing">
+    <meta property="og:description" content="Advanced audio clip extraction tool with timestamped search capabilities, multi-source support, and transcript analysis for Time Crisis podcast.">
+    <meta property="og:image" content="https://mitchellcarter.dev/assets/project-8.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mitchellcarter.dev/projects/clip-gen.html">
+    <meta property="twitter:title" content="Clip-Gen Audio Tool - Timestamped Audio Processing">
+    <meta property="twitter:description" content="Advanced audio clip extraction tool with timestamped search capabilities, multi-source support, and transcript analysis for Time Crisis podcast.">
+    <meta property="twitter:image" content="https://mitchellcarter.dev/assets/project-8.jpeg">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+    <link rel="canonical" href="https://mitchellcarter.dev/projects/clip-gen.html">
+</head>
+<body>
+    <!-- Top Bar Navigation -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../projects.html">Projects</a>
+            <span class="breadcrumb-separator">→</span>
+            <span class="breadcrumb-current">Clip-Gen Audio Tool</span>
+        </div>
+    </section>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1 class="project-title">Clip-Gen Audio Tool</h1>
+            <p class="project-subtitle">Timestamped Audio Processing & Clip Extraction</p>
+            <p class="project-tech-stack">Built with Python, PyTorch, NLTK & Multi-source Audio Processing</p>
+            <div class="project-links">
+                <a href="https://github.com/WeezerGeezer/clip-gen" class="btn btn-color-2" target="_blank">View Source Code</a>
+            </div>
+        </div>
+        <div class="project-hero-image">
+            <picture>
+                <source srcset="../assets/project-8.webp" type="image/webp">
+                <img src="../assets/project-8.jpeg" alt="Clip-Gen Audio Tool Interface" />
+            </picture>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Project Overview</h2>
+            <p>A sophisticated Python-based audio processing tool designed for extracting clips from Time Crisis podcast episodes with precision timestamp control. The project evolved from simple local file processing to a comprehensive "Mega Clipper" supporting multiple online sources and advanced transcript analysis.</p>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="project-section challenge-section">
+        <div class="project-content">
+            <h2>The Challenge</h2>
+            <p>Creating an efficient workflow for extracting audio clips from podcast content presented several technical challenges:</p>
+            <ul class="challenge-list">
+                <li><strong>Multi-source Audio Processing:</strong> Supporting local files, YouTube, SoundCloud, and RSS feeds with consistent quality</li>
+                <li><strong>Timestamp Precision:</strong> Achieving millisecond-accurate clip extraction from various audio formats</li>
+                <li><strong>Content Discovery:</strong> Finding specific moments across hundreds of episodes using transcript analysis</li>
+                <li><strong>User Experience:</strong> Building intuitive interfaces for complex audio processing workflows</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Solution -->
+    <section class="project-section solution-section">
+        <div class="project-content">
+            <h2>Technical Solution</h2>
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <h3>Multi-threaded Audio Processing</h3>
+                    <p>Implemented non-blocking GUI with PyDub and FFmpeg backend for professional-quality audio processing across multiple formats and sources.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Intelligent Transcript Analysis</h3>
+                    <p>Built NLTK-powered text analysis system with smart filtering and named entity recognition for finding specific content across episodes.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Cross-platform Compatibility</h3>
+                    <p>Designed for Windows and macOS with automatic codec detection and platform-specific optimizations for reliable performance.</p>
+                </div>
+                <div class="solution-item">
+                    <h3>Advanced Source Integration</h3>
+                    <p>Integrated yt-dlp for YouTube downloads, feedparser for RSS processing, and direct HTTP streaming for maximum flexibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section features-section">
+        <div class="project-content">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Multi-source Processing</h3>
+                    <p>Extract clips from local files, YouTube, SoundCloud, and podcast RSS feeds</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Precision Timestamps</h3>
+                    <p>Millisecond-accurate clip extraction with MM:SS format input validation</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Transcript Analysis</h3>
+                    <p>NLTK-powered frequency analysis and phrase search across episode transcripts</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>Dark Theme GUI</h3>
+                    <p>User-friendly Tkinter interface with real-time progress tracking</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Quality Control</h3>
+                    <p>Configurable audio quality from 64-320 kbps with format validation</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Background Processing</h3>
+                    <p>Multi-threaded downloads and processing with non-blocking user interface</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="project-section tech-section">
+        <div class="project-content">
+            <h2>Technology Stack</h2>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Audio Processing</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">PyDub</span>
+                        <span class="tech-tag">FFmpeg</span>
+                        <span class="tech-tag">yt-dlp</span>
+                        <span class="tech-tag">feedparser</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Text Analysis</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">pandas</span>
+                        <span class="tech-tag">CSV Processing</span>
+                        <span class="tech-tag">Named Entity Recognition</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Interface & System</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python 3.9+</span>
+                        <span class="tech-tag">Tkinter</span>
+                        <span class="tech-tag">Threading</span>
+                        <span class="tech-tag">Cross-platform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="project-section lessons-section">
+        <div class="project-content">
+            <h2>Key Learnings</h2>
+            <div class="lessons-grid">
+                <div class="lesson-item">
+                    <h3>Audio Processing Mastery</h3>
+                    <p>Gained expertise in digital audio manipulation, codec handling, and cross-platform audio processing with professional-grade tools and libraries.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Natural Language Processing</h3>
+                    <p>Learned to implement sophisticated text analysis workflows including frequency analysis, named entity recognition, and content discovery algorithms.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Desktop Application Architecture</h3>
+                    <p>Mastered multi-threaded GUI development with responsive interfaces, background processing, and cross-platform compatibility considerations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps / Future Enhancements -->
+    <section class="project-section next-steps-section">
+        <div class="project-content">
+            <h2>Future Enhancements</h2>
+            <ul class="next-steps-list">
+                <li>Implement machine learning for automatic highlight detection and content categorization</li>
+                <li>Add batch processing capabilities for multiple episodes with queue management</li>
+                <li>Create web-based interface for remote access and collaborative clip creation</li>
+                <li>Integrate with cloud storage services for automatic backup and sharing</li>
+                <li>Add support for video clip extraction with synchronized audio processing</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>Explore the Project</h2>
+            <p>Discover how advanced audio processing and natural language analysis come together for efficient content extraction workflows.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/WeezerGeezer/clip-gen" class="btn btn-color-2" target="_blank">View Source Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects -->
+    <section class="more-projects">
+        <div class="project-content">
+            <h2>More Projects</h2>
+            <div class="more-projects-grid">
+                <a href="time-crisis-search.html" class="project-card">
+                    <img src="../assets/project-6.jpeg" alt="Time Crisis Search Engine">
+                    <div class="project-card-content">
+                        <h3>Time Crisis Search Engine</h3>
+                        <p>AI-powered podcast search with transcription</p>
+                    </div>
+                </a>
+                <a href="photography-portfolio.html" class="project-card">
+                    <img src="../assets/project-7.jpeg" alt="Photography Portfolio">
+                    <div class="project-card-content">
+                        <h3>Photography Portfolio</h3>
+                        <p>AI-powered photo gallery with masonry layout</p>
+                    </div>
+                </a>
+            </div>
+            <div class="back-to-projects">
+                <a href="../projects.html" class="btn btn-color-2">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

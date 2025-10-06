@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Crisis Search - Mitchell Carter</title>
+    <meta name="description" content="Advanced search engine for Time Crisis podcast episodes with AI-powered transcription using OpenAI Whisper, Whoosh, and Google Cloud.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitchellcarter.dev/projects/time-crisis-search.html">
+    <meta property="og:title" content="Time Crisis Search - AI-Powered Podcast Search Engine">
+    <meta property="og:description" content="Advanced search engine for Time Crisis podcast episodes with AI-powered transcription using OpenAI Whisper, Whoosh, and Google Cloud.">
+    <meta property="og:image" content="https://mitchellcarter.dev/assets/project-6.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mitchellcarter.dev/projects/time-crisis-search.html">
+    <meta property="twitter:title" content="Time Crisis Search - AI-Powered Podcast Search Engine">
+    <meta property="twitter:description" content="Advanced search engine for Time Crisis podcast episodes with AI-powered transcription using OpenAI Whisper, Whoosh, and Google Cloud.">
+    <meta property="twitter:image" content="https://mitchellcarter.dev/assets/project-6.jpeg">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../assets/css/project-pages.css">
+    <link rel="canonical" href="https://mitchellcarter.dev/projects/time-crisis-search.html">
+</head>
+<body>
+    <!-- Top Bar Navigation -->
+    <nav id="top-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">About</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../blog.html" class="nav-link">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onClick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
+                <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
+                <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
+                <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../projects.html">Projects</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">Time Crisis Search Engine</span>
+        </div>
+    </section>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <h1 class="project-title">Time Crisis Search</h1>
+            <p class="project-subtitle">AI-Powered Podcast Search Engine</p>
+            <p class="project-tech-stack">Built with Python, Supabase, OpenAI Whisper, and PostgreSQL</p>
+            <div class="project-links">
+                <a href="https://tc-search.com" class="btn btn-color-1" target="_blank">View Live Site</a>
+                <a href="https://github.com/WeezerGeezer/tc-search" class="btn btn-color-2" target="_blank">View Code</a>
+            </div>
+        </div>
+        <div class="project-hero-image">
+            <picture>
+                <source srcset="../assets/project-6.webp" type="image/webp">
+                <img src="../assets/project-6.jpeg" alt="Time Crisis Search Engine Interface" />
+            </picture>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>The Problem</h2>
+            <p>As a longtime fan of Ezra Koenig's "Time Crisis" radio show, I found myself constantly trying to remember specific moments, jokes, or discussions from hundreds of hours of podcast content. The show has been running since 2015, covering everything from music industry insights to random cultural commentary, but there was no way to search through this treasure trove of content.</p>
+
+            <p>The challenge wasn't just building a search engine—it was creating an entire pipeline to convert audio into searchable, accurate text while maintaining the context and conversational flow that makes the show special. I needed to solve speaker identification (distinguishing between Ezra, his co-host Jake, and various guests), handle varying audio quality, and create a search experience that felt natural and responsive.</p>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-section features-section">
+        <div class="project-content">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>AI Transcription</h3>
+                    <p>Automated audio transcription using OpenAI Whisper with timestamp precision</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Full-Text Search</h3>
+                    <p>Advanced search across all episodes with relevance scoring and filtering</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Timestamp Results</h3>
+                    <p>Search results include exact timestamps for precise content location</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-friendly interface optimized for all device sizes</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Architecture</h3>
+                    <p>Scalable Google Cloud infrastructure for reliable performance</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Queries</h3>
+                    <p>Sub-second search responses with intelligent ranking algorithms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="project-section tech-section">
+        <div class="project-content">
+            <h2>Technology Stack</h2>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Whoosh</span>
+                        <span class="tech-tag">OpenAI Whisper</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Infrastructure</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Google Cloud</span>
+                        <span class="tech-tag">Cloud Storage</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="project-section lessons-section">
+        <div class="project-content">
+            <h2>Key Learnings</h2>
+            <div class="lessons-grid">
+                <div class="lesson-item">
+                    <h3>AI Model Integration</h3>
+                    <p>Gained experience working with large language models and optimizing transcription accuracy for podcast-specific content and terminology.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Search Algorithm Design</h3>
+                    <p>Learned to implement efficient search algorithms and indexing strategies for real-time query processing across large text datasets.</p>
+                </div>
+                <div class="lesson-item">
+                    <h3>Cloud Architecture</h3>
+                    <p>Developed expertise in cloud deployment, scaling considerations, and cost optimization for media-heavy applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps / Future Enhancements -->
+    <section class="project-section next-steps-section">
+        <div class="project-content">
+            <h2>Future Enhancements</h2>
+            <ul class="next-steps-list">
+                <li>Implement machine learning for improved search relevance and personalization</li>
+                <li>Add support for multiple podcast sources and automated episode discovery</li>
+                <li>Integrate real-time transcription for live episodes and streaming content</li>
+                <li>Develop mobile applications for iOS and Android platforms</li>
+                <li>Add social features like saved searches, sharing, and community recommendations</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="project-cta">
+        <div class="project-content">
+            <h2>Explore the Project</h2>
+            <p>Experience the power of AI-driven podcast search and discover how technology can make audio content more accessible.</p>
+            <div class="cta-buttons">
+                <a href="https://tc-search.com" class="btn btn-color-1" target="_blank">Try Live Demo</a>
+                <a href="https://github.com/WeezerGeezer/tc-search" class="btn btn-color-2" target="_blank">View Source Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects -->
+    <section class="more-projects">
+        <div class="project-content">
+            <h2>More Projects</h2>
+            <div class="more-projects-grid">
+                <a href="arduino-catchphrase.html" class="project-card">
+                    <img src="../assets/project-5.jpeg" alt="Arduino Catchphrase Device">
+                    <div class="project-card-content">
+                        <h3>Arduino Catchphrase Device</h3>
+                        <p>Hardware game device with C++ and Swift app</p>
+                    </div>
+                </a>
+                <a href="m-event-app.html" class="project-card">
+                    <img src="../assets/project-1.jpeg" alt="M-Event Mobile App">
+                    <div class="project-card-content">
+                        <h3>M-Event Mobile App</h3>
+                        <p>React Native app with PostgreSQL backend</p>
+                    </div>
+                </a>
+            </div>
+            <div class="back-to-projects">
+                <a href="../index.html#projects" class="btn btn-color-2">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; 2024 Mitchell Carter. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
