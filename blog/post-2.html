@@ -61,77 +61,13 @@
                 <p style="color: #888; font-size: 1.1rem;">Exploring Apple's MLX framework for running large language models locally on Apple Silicon</p>
             </header>
 
-            <section style="margin-bottom: 2rem;">
-                <h2>The Local AI Revolution</h2>
-                <p>Running large language models locally seemed impossible just a few years ago. These models require massive computational resources, typically running on expensive cloud infrastructure with powerful GPUs. But Apple Silicon changed everything.</p>
-                <p>With unified memory architecture and Metal Performance Shaders, M-series chips can run sophisticated AI models entirely on-device. No cloud dependencies, no privacy concerns, and surprisingly fast inference speeds.</p>
-            </section>
-
-            <section style="margin-bottom: 2rem;">
-                <h2>Why MLX?</h2>
-                <p>Apple's MLX framework is purpose-built for machine learning on Apple Silicon. Unlike PyTorch or TensorFlow, MLX is designed from the ground up to leverage the unique advantages of Apple's unified memory architecture.</p>
-                <p>Key benefits include:</p>
-                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
-                    <li><strong>Unified Memory:</strong> CPU and GPU share the same memory pool, eliminating expensive data transfers</li>
-                    <li><strong>Metal Integration:</strong> Direct access to Apple's graphics framework for optimal performance</li>
-                    <li><strong>Familiar API:</strong> NumPy-like interface makes it accessible to Python developers</li>
-                    <li><strong>Lazy Evaluation:</strong> Computations only execute when needed, optimizing memory usage</li>
-                </ul>
-            </section>
-
-            <section style="margin-bottom: 2rem;">
-                <h2>Building the Toolkit</h2>
-                <p>I developed a comprehensive toolkit for running language models with MLX, addressing common pain points developers face when working with local AI:</p>
-                <p><strong>Model Comparison Dashboard:</strong> Built with Gradio, allowing side-by-side evaluation of different models. Testing 20+ quantized versions of popular models helped identify the sweet spot between quality and performance.</p>
-                <p><strong>Advanced Caching:</strong> The biggest innovation was implementing KV cache persistence using SafeTensors. Traditional approaches recompute everything on each request. My caching system reduces time-to-first-token by 30-80% for repeated queries or long contexts.</p>
-                <p><strong>LoRA Fine-tuning:</strong> Low-Rank Adaptation enables model customization without retraining the entire network. This makes domain-specific models feasible on consumer hardware.</p>
-                <p><strong>Production API:</strong> An OpenAI-compatible FastAPI server with streaming responses. Drop-in replacement for cloud APIs, but running entirely on your Mac.</p>
-            </section>
-
-            <section style="margin-bottom: 2rem;">
-                <h2>Performance Insights</h2>
-                <p>Testing revealed surprising results. A Mac Studio with M2 Ultra can run 70B parameter models at interactive speeds—roughly 20-30 tokens per second. Smaller 13B models fly, generating 80-100 tokens per second.</p>
-                <p>Memory usage scales linearly with model size. A 7B model uses about 5GB RAM, 13B uses 9GB, and 70B uses around 40GB. Quantization helps tremendously—4-bit quantized models use roughly 1/4 the memory of full precision versions with minimal quality loss.</p>
-                <p>The caching system transformed user experience. Without caching, loading a 70B model and generating a response takes 30+ seconds. With proper cache utilization, subsequent queries in the same context drop to 3-5 seconds.</p>
-            </section>
-
-            <section style="margin-bottom: 2rem;">
-                <h2>Privacy and Control</h2>
-                <p>Running models locally offers underappreciated benefits beyond performance. Your data never leaves your device. No API keys, no usage limits, no service outages. You control everything.</p>
-                <p>This matters for sensitive work—legal documents, medical records, proprietary code. Cloud APIs require absolute trust in the provider. Local inference eliminates that trust requirement.</p>
-            </section>
-
-            <section style="margin-bottom: 2rem;">
-                <h2>Real-World Applications</h2>
-                <p>I've integrated local models into several workflows:</p>
-                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
-                    <li><strong>Code Review:</strong> Automated PR analysis without exposing proprietary code to third parties</li>
-                    <li><strong>Document Processing:</strong> Extracting insights from PDFs and long-form content</li>
-                    <li><strong>Content Generation:</strong> Drafting blog posts, documentation, and technical writing</li>
-                    <li><strong>Research Assistant:</strong> Summarizing papers and answering domain-specific questions</li>
-                </ul>
-                <p>The combination of speed, privacy, and unlimited usage makes local models practical for production work.</p>
-            </section>
-
-            <section style="margin-bottom: 2rem;">
-                <h2>Challenges and Limitations</h2>
-                <p>Local AI isn't perfect. Model selection matters tremendously—different models excel at different tasks. There's no one-size-fits-all solution.</p>
-                <p>Hardware requirements are real. While Apple Silicon performs admirably, you need at least 16GB unified memory for comfortable 7B model usage. 32GB opens up 13B models, and 64GB+ enables 70B models.</p>
-                <p>Model quality varies. Open-source models sometimes lag behind proprietary alternatives like GPT-4. The gap is closing, but it exists.</p>
-            </section>
-
-            <section style="margin-bottom: 2rem;">
-                <h2>The Future</h2>
-                <p>Local AI development is accelerating. New models drop weekly, each improving on the last. Hardware continues getting better—M3 chips are even faster than M2.</p>
-                <p>The MLX ecosystem is growing. More developers are building tools, sharing fine-tuned models, and pushing the boundaries of what's possible on consumer hardware.</p>
-                <p>We're witnessing a fundamental shift. AI development is moving from exclusive cloud infrastructure to anyone's laptop. That democratization matters.</p>
-            </section>
-
-            <section style="margin-bottom: 2rem;">
-                <h2>Getting Started</h2>
-                <p>If you're interested in local AI development, start small. Download MLX, try running a 7B model, and experiment. The barrier to entry has never been lower.</p>
-                <p>My toolkit provides a starting point, but the real learning comes from building your own solutions. Every use case is unique, and the flexibility of local models lets you customize everything.</p>
-                <p>The future of AI isn't just in massive datacenters—it's also on the device in your pocket. And that's incredibly exciting.</p>
+            <section style="margin-bottom: 2rem; text-align: center; padding: 3rem 0;">
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Update Coming Soon!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">This article is currently being updated with new content.</p>
+                <p style="margin-bottom: 1.5rem;">In the meantime, check out the related project on GitHub:</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/WeezerGeezer/macllm" class="btn btn-color-2" target="_blank">View MLX-LM Toolkit on GitHub</a>
+                </div>
             </section>
         </div>
     </article>
