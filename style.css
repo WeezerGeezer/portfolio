@@ -2269,6 +2269,9 @@ body {
 .project-title  {
     margin: 1rem;
     color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .project-btn    {
@@ -2277,7 +2280,11 @@ body {
 }
 
 .project-sub-title  {
-    font-size: medium;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(85, 85, 85);
+    margin: 0;
+    line-height: 1.4;
 }
 
 .project-arrow {
