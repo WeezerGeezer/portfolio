@@ -7,7 +7,7 @@ function toggleMenu() {
 
 // PROJECT FILTERING FUNCTIONALITY
 document.addEventListener('DOMContentLoaded', function() {
-    const projectCards = document.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('.project-card, .project-list-item');
     const filterButtons = document.querySelectorAll('.filter-btn');
     const searchInput = document.getElementById('project-search');
     const projectCount = document.getElementById('project-count');
