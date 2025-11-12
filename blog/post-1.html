@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building a Modern Portfolio Site - Mitchell Carter</title>
-    <meta name="description" content="A deep dive into creating a responsive, interactive portfolio with modern web technologies.">
+    <title>Greasing the Gears - Mitchell Carter</title>
+    <meta name="description" content="How I am using time-saving tools for development on MacOS">
 
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../mediaqueries.css">
@@ -16,7 +16,6 @@
         <div class="nav-container">
             <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
             <ul class="nav-links">
-                <li><a href="../index.html" class="nav-link">About</a></li>
                 <li><a href="../projects.html" class="nav-link">Projects</a></li>
                 <li><a href="../blog.html" class="nav-link">Blog</a></li>
                 <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
@@ -33,7 +32,6 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
                 <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
                 <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
                 <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
@@ -48,7 +46,7 @@
             <span class="breadcrumb-separator">→</span>
             <a href="../blog.html">Blog</a>
             <span class="breadcrumb-separator">→</span>
-            <span class="breadcrumb-current">Building a Modern Portfolio Site</span>
+            <span class="breadcrumb-current">Greasing the Gears</span>
         </div>
     </section>
 
@@ -57,60 +55,77 @@
         <div class="project-content">
             <header style="margin-bottom: 2rem;">
                 <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">December 15, 2024</p>
-                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Building a Modern Portfolio Site</h1>
-                <p style="color: #888; font-size: 1.1rem;">A deep dive into creating a responsive, interactive portfolio with modern web technologies</p>
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Greasing the Gears</h1>
+                <p style="color: #888; font-size: 1.1rem;">How I am using time-saving tools for development on MacOS</p>
             </header>
 
             <section style="margin-bottom: 2rem;">
-                <h2>The Challenge</h2>
-                <p>Creating a portfolio site in 2024 comes with unique challenges. Users expect fast load times, beautiful animations, and seamless experiences across all devices. Traditional template-based approaches often fall short, leading to generic-looking sites that don't stand out.</p>
-                <p>I wanted to build something different—a portfolio that showcased both my technical skills and design sensibility while remaining maintainable and performant.</p>
-            </section>
+                <h2>Making A Portfolio Site: The Tool Testing Ground</h2>
+                <p>Over my 8 years of near daily MacOS use, I've been carefully curating tools that have made me much more effecient at executing any manner of tasks. Some of my regular computer work includes editing albums of photos, writing and testing code, designing websites, and writing/researching a host of topics. All of the applications below have made my processes much quicker: some are useful in how they integrate with MacOS, others in how they automate away tasks I don't care for doing manually, and still others help me stay focused on the task at hand. Having these tools work together as frictionless as possible allows me to get stuff done, which is always my goal when I'm having 💻COMPUTER TIME💻.</p>
 
             <section style="margin-bottom: 2rem;">
-                <h2>Design Philosophy</h2>
-                <p>I embraced a bento box layout—a design pattern popularized by modern applications. This grid-based approach allows for flexible content organization while maintaining visual hierarchy. Each "box" in the layout serves a specific purpose, from showcasing recent projects to highlighting technical skills.</p>
-                <p>The color palette draws from nature: earthy greens (#656D4A) paired with clean whites and grays. This creates a professional yet approachable aesthetic that doesn't overwhelm visitors.</p>
-            </section>
+                <h2>Rectangle: Window Management Made Simple</h2>
+                <img src="../assets/blog/post-1/rectangle-logo.png" alt="Rectangle App Logo" style="margin: 1.5rem 0;">
+                <p>I've been on MacOS since I purchased a used 2014 Model Macbook Pro during my senior year of high school. It still gets daily use as a music/streaming device for my stereo system, but it served me well for almost 7 years of near daily use. Before that point, I only ever touched Windows PCs and had pretty good experiences with them that made me hesitant to switch to Apple. When I made the switch to MacOS I found the one feature that was missing was the ability to assign applications to certain halves of the screen. Plenty have heaped praises onto this app, and I'll do the same. Rectangle makes it incredibly easy to organize your windows. I started off by usingthe "drag to the side and have the window fill that half of the screen" feature, but I have since become addicted to using their built in shortcuts for managing my windows. It just makes things so quick and snappy, and having the shortcuts memorized (which becomes second nature after a couple minutes of play) makes you look like a total whiz. Pair this with a few terminal windows and you'll have anyone thinking you're some kind of whiz kid.I'll break down the shortcuts I use the most: Pressing "Ctrl-Option" followed by an arrow key reorganizes your window to that side of the current display, and "Ctrl-Option" followed by either U, I, J, or K (each representing a quadrant of the screen) allows you to quickly organize multiple windows into a display at once. The final command I use when I have multiple displays, which is "Ctrl-Option-Command" followed by an arrow to the left or to the right. This lets you move windows across multiple displays, and I've found to be particularly useful when running a double monitor setup.</p>
+                <p>For web development specifically, using the shortcut keys to cycle through page widths and making sure that the layouts render corrently in each width has been super useful. There are additional settings in the app that let you change what happens when a command is repeated, I have it to cycle between 1/2, 2/3, and 1/3 displays.</p>
+                <img src="../assets/blog/post-1/rectangle-demo.png" alt="Rectangle window management demo" style="margin: 1.5rem 0;">
+                <p>I like to have most functions available to me from the keyboard, as navigating with a mouse often slows me down. Rectangle enable me to organize my displays with utmost efficiency. Dragging windows to the side is LAME! Take a couple minutes to memorize the fairly intuitive shortcuts and manage your windows like the computer whiz you are. I know I feel like one when I hit a Ctrl-Option-LeftArrow to move a window to the left half of my screen🤓.</p>
 
             <section style="margin-bottom: 2rem;">
-                <h2>Technical Implementation</h2>
-                <p>Rather than reaching for heavy frameworks, I built the site with vanilla HTML, CSS, and JavaScript. This decision paid dividends in performance—the entire site loads in under 2 seconds, even on slow connections.</p>
-                <p>Key technical highlights include:</p>
+                <h2>Raycast: The Spotlight Replacement That Does Everything</h2>
+                <img src="../assets/blog/post-1/raycast-logo.png" alt="Raycast App Icon" style="margin: 1.5rem 0;">
+                <p>There's almost too much to talk about with Raycast. There's enough to warrant an entire sries of blog posts. I'll link some videos I watched that introduced it to me, but this app has completely replaced the stock 'Spotlight' search feature on MacOS. I have mine set to Command-Space to launch the Raycast box, and I use Raycast for everything that I can. I have quicklinks set up to search google and youtube (aliased to 'g' and 'yt', respectively). I launch apps, search for emoji, decode/encode text, take screenshots (and instantly copy them to my clipboard), look up Mac settings, control Apple Music, control Apple Podcasts, generate "Lorem Ipsum" text, manage open ports, get SVG logos for web dev, and enable/disable bluetooth (much quicker than clicking for it in the toolbar!). I also use it to search for files on my device, which I have set to the alias 'sf', followed by whatever keywords I'm searching for. I have other alias' and snippets set up for searching Apple Maps, adding emoticons (like ¯\_(ツ)_/¯ and ヽ(。_°)ノ or (ಠ_ಠ)), filling out my email (Just typing @@ instantly turns into my personal email address), and plenty more. It has helped me move away from the mouse and/or trackpad and embrace a mostly keyboard lifestyle, which works perfectly for my needs. Even if you have no desire to move away from using your curosr or trackpad, Raycast is still very useful for the things that may take a few clicks otherwise.</p>
+                <p>When building my updated portfolio site, Raycast was an incredibly useful tool. Need placeholder text for testing the blog layout? Command-Space, type "lorem", and there you have it: instant Lorem Ipsum copied to clipboard. Looking for brand logos to use as SVG icons for social media links? The SVG Logos extension delivered crisp, scalable graphics instantly. Quick Google searches ("g responsive css grid") or jumping to documentation on YouTube ("yt css flexbox tutorial") kept me in flow without context switching to a browser. Even mundane tasks like toggling Apple Music while coding or taking screenshots of layout bugs to share became effortless single-command operations. The cumulative time saved across hundreds of micro-interactions adds up fast, and Raycast is one of the best ways to accomplish this.</p>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Firefox Developer Tools: More Than Just Another Browser</h2>
+                <img src="../assets/blog/post-1/firefox-logo.png" alt="Firefox Developer Edition" style="margin: 1.5rem 0;">
+                <p>When using MacOS, I use the stock Command-Tab to switch between windows. Given this work flow, using Command-Tab to cycle between apps make it useful to have two web browswers up and running, especially during a web development process. I use Firefox as a standard display for any website I develop. It has built in Dev Tools like Responsive Design Mode, visiaully css adjustments, console for tracking issues output via logging, and network monitor to identify loading bottlenecks. I'll use Safari as well, as most of my shortcuts in Raycast launch into Safari for searches. Having safari as my default "browsing" browser and Firefox as my "developing" browser has made my workflow much more effecient.</p>
+                <p>During portfolio development, Firefox's developer tools saved me countless hours of head-scratching. I ran into a particularly annoying bug where adding a <code><section></code> tag unexpectedly inherited CSS properties across all sections of the site, breaking the carefully crafted bento grid layout. The visual CSS inspector in Firefox let me hover over elements and immediately see which styles were being applied and from where. Within minutes, I spotted the culprit: an overly broad CSS selector that was cascading down through nested sections. The grid overlay tool also proved invaluable for debugging my responsive breakpoints—I could instantly visualize where my CSS Grid columns were breaking and adjust accordingly. For anyone doing web development on Mac, Firefox's dev tools are essential for this kind of surgical debugging work.</p>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Claude Code: AI-Powered Development Assistant</h2>
+                <img src="../assets/blog/post-1/claude-code-logo.png" alt="Claude Code Terminal" style="margin: 1.5rem 0;">
+                <p>Ever since I started using my terminal for more than just development tasks, Claude Code has become an incredibly useful digital assisstant. The claims that it can replace a team of software developers is still somehwat oversatted, as a guiding hand is usually needed to get it through more difficult tasks. However, Claude Code is still great. I've always loved the aesthetic that Anthropic has curated (epsecially in contrast to the slop-fest at OpenAI) and using Claude Code integrates really well into my workflows. A couple of my tips:</p>
                 <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
-                    <li><strong>CSS Grid and Flexbox:</strong> The bento layout uses CSS Grid for the overall structure, with Flexbox handling internal component layout.</li>
-                    <li><strong>Progressive Enhancement:</strong> The site works perfectly without JavaScript, but enhanced interactions activate when available.</li>
-                    <li><strong>WebP Images:</strong> All images use modern WebP format with JPEG fallbacks for older browsers.</li>
-                    <li><strong>Custom Filtering System:</strong> The projects page features a real-time filtering system built from scratch, no libraries needed.</li>
+                    <li>Use the /init command to begin with CLAUDE.md files. These essentially are loaded into the context of the prompting that will be done in whatever your directory where you launched it. You can create a global CLAUDE.md to have knowledge present in every cluade code session you launch, I have a few brief prompts in mine asking it to be brief in its responses.</li>
                 </ul>
-            </section>
+                <p>Beyond basic code generation, Claude Code shines in areas I didn't initially expect. Security reviews become collaborative sessions where I can ask it to scan through code looking for common vulnerabilities or outdated dependencies. I've built up a collection of utility scripts—ranging from batch file renamers to git workflow automators—by describing what I need and letting Claude generate the initial scaffolding, which I then refine. The real magic happens when implementing features: I'll either provide a detailed spec or ask Claude to generate one based on a rough idea, then iterate from there. It's like pair programming with an infinitely patient partner who never judges your questions.</p>
+                <p>For the portfolio specifically, Claude Code accelerated development significantly. I used it to scaffold the initial HTML structure and bento grid layout, saving hours of boilerplate typing. CSS animations and the JavaScript filtering system for projects were generated in minutes, then refined to my exact spec. When errors popped up, I'd paste them directly into Claude and get recomended code blocks to add in logging statements, which made debugging quick and simple. The learning curve for new patterns shortened dramatically—Claude would explain concepts as it implemented them. Conservatively, I'd estimate it saved 15-20 hours of work on this project alone. That said, I've learned where its boundaries are: I prefer to handle CSS fine-tuning and visual polish myself, making small adjustments directly in the stylesheet. Claude is excellent at structure and logic, but visual design still requires a human touch.</p>
 
             <section style="margin-bottom: 2rem;">
-                <h2>Responsive Design</h2>
-                <p>Mobile-first design is non-negotiable in 2024. The site transforms dramatically at different breakpoints, switching from a complex grid layout on desktop to a clean, stacked layout on mobile. The bento boxes flatten into full-width cards, making content scannable on any device.</p>
-                <p>Special attention went into the hamburger menu and touch interactions. Every button is adequately sized for thumb navigation, and hover effects gracefully degrade on touch devices.</p>
-            </section>
+                <h2>Ditching AltTab: Mastering Native MacOS Window and Tab Switching</h2>
+                <p>Go to any list of "Useful Mac Apps" and you'll probably find AltTab, a Windows style window switching application that runs at all times. I rejected the need for this, not because I'm paranoid about an app watching my screen (Raycast and Bartender already do this) but because there's a philosophy present in the Mac Spaces Feature that I've found useful for focussing my work and keeping me on track. I organize my windows into different desktop views (Spaces), and use Ctrl-Arrow to switch between spaces. I have one space for writing & code (Usually a Terminal with Vim/Claude Code/Bash on one side, Firefox on the right), one space for Photos, one with Apple Music & Apple Podcasts (I'm a believer in using the stock MacOS apps for the simple stuff, they work well!), and one space that functions as my junk drawer. There's plenty of native macOS shortcuts you can use within these views. For any app that has Tabs, you can swap between them by holding Command and pressing a number between 1 and 9 (Command-N, where N is a number 1-9). This is useful for Terminal, Firefox, and Safari, as long as you keep your number of tabs open to a minimum (I'll do 5 at max to stay focused). Additionally, cycling through app windows using Command-` is great. What's important for me when I'm working is having these workspaces organized, which may mean multiple windows of many apps, pairing this with Rectangles ability to sort windows into quadratns fixes the problem with tab switching and having other windows come to the front.</p>
+                <p>A typical portfolio development session demonstrates this workflow perfectly: I'd have Terminal in tab 1 running the local development server (http.server on port 8080), tab 2 ready for git commands, and tab 3 for Claude Code sessions. Command-1, Command-2, Command-3—instant switching without thinking. Firefox would display the live site at localhost:8080, and I'd use Command-Tab to jump between Terminal and Firefox dozens of times per session. When I needed to research a CSS technique or check browser compatibility, Command-Tab would bring up Safari (my research browser), I'd find what I needed, then Command-Tab back to Firefox to implement it. The whole dance—Terminal for server status, Firefox for development preview, Safari for research—became muscle memory. No mouse needed, no visual hunting for the right window, just rapid-fire keyboard shortcuts that kept my hands on the home row and my focus on the work.</p>
 
             <section style="margin-bottom: 2rem;">
-                <h2>Performance Optimization</h2>
-                <p>Performance wasn't an afterthought—it was baked into every decision. The CSS uses hardware-accelerated transforms for animations, ensuring smooth 60fps interactions. Images are lazy-loaded using the Intersection Observer API, reducing initial page weight.</p>
-                <p>The result? A Lighthouse score of 98+ on all metrics. Fast, accessible, and delightful to use.</p>
-            </section>
+                <h2>Putting It All Together: The Complete Workflow</h2>
+                <p>Essentially once I'm sat down to work at my laptop, I'll use a combination of Raycast, Rectangle. Firefox, Claude Code, and my terminal in order to accomplish whatever the goal is I have. I use the Mac Spaces feature to organize my work between editing photos, developing code, and having music or something else on in the background. These tools help me stay focused as I don't have a bunch of clutter clogging up my flow. I'll begin by organizing my windows how I'd need them, and then I'd get to work on whatever the task at hand. Before writing this post, my most recent big project was an update to my personal website, so I chose to outline how these tools have helped me in this specific process.</p>
 
             <section style="margin-bottom: 2rem;">
-                <h2>Lessons Learned</h2>
-                <p>Building this portfolio reinforced several principles:</p>
+                <h2>The Results: A Portfolio Built at Speed</h2>
+                <p>The finished and updated portfolio includes everything I set out to build: a responsive bento grid homepage, individual project pages with detailed case studies, a fully functional blog system, an interactive career timeline, and project filtering capabilities. From initial concept to deployment, the entire site took roughly 15 hours of focused development time spread across a couple weeks. Without these tools? I'd conservatively estimate 30-40 hours, maybe more. The time savings aren't just about raw speed—it's about maintaining momentum and flow. When you can resize windows instantly, search for anything in seconds, debug CSS visually, and generate boilerplate with AI assistance, you spend more time thinking about design and architecture rather than fighting with your environment.</p>
+                <p>The best development workflow is one that becomes invisible. You shouldn't be thinking about your tools, they should just WORK. If I can recommend anything to developers or Mac users in general looking to optimize their setup, it's this: invest time upfront to eliminate friction. Learn the keyboard shortcuts. Configure your tools to match your mental model. Experiment until context-switching feels effortless. The hours you spend setting up your environment will pay dividends for years.</p>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Key Takeaways</h2>
+                <p>After eight years of refining my MacOS workflow, here's what I've learned works:</p>
+                <p><strong>Must-Have Tools:</strong></p>
                 <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
-                    <li>Start with content, not design. Know what you want to say before deciding how to say it.</li>
-                    <li>Constraints breed creativity. Limiting myself to vanilla JavaScript forced elegant solutions.</li>
-                    <li>Details matter. Small touches like smooth transitions and thoughtful spacing elevate the entire experience.</li>
-                    <li>Test relentlessly. What works on your laptop might break on someone's phone.</li>
+                    <li><strong>Rectangle</strong> - Window management is non-negotiable. Start here.</li>
+                    <li><strong>Raycast</strong> - Replaces Spotlight and does 100x more. So fun to use and explore.</li>
+                    <li><strong>Native Shortcuts</strong> - Command-Tab, Command-`, Command-N for tabs. Learn these before installing anything else.</li>
                 </ul>
-            </section>
-
-            <section style="margin-bottom: 2rem;">
-                <h2>What's Next</h2>
-                <p>The site continues to evolve. Future plans include adding a full blog with RSS support, implementing view transitions for smoother page navigation, and exploring more interactive timeline features. The beauty of owning your codebase is the freedom to experiment and iterate.</p>
+                <p><strong>Nice-to-Have (But Really Nice):</strong></p>
+                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
+                    <li><strong>Firefox Developer Tools</strong> - If you do web development, essential. Otherwise, Safari works fine.</li>
+                    <li><strong>Claude Code</strong> - Transforms development speed, but requires a learning curve and thoughtful prompting.</li>
+                    <li><strong>Spaces</strong> - Organizational superpower for focus, though not for everyone.</li>
+                </ul>
+                <p><strong>For Beginners:</strong></p>
+                <p>Start small. Pick one tool, use it for a week until it's muscle memory, then add another. Don't install fifteen productivity apps at once and get overwhelmed. Resist that temptation. Master Rectangle's four basic shortcuts first. Then move to Raycast for launching apps. Build gradually.</p>
+                <p><strong>What's Next:</strong></p>
+                <p>I'm exploring deeper automation with custom scripts and shell aliases, investigating better clipboard management workflows, and experimenting with Vim motions across all my apps. The workflow never stops evolving—it's a continuous process of identifying friction and smoothing it out. The goal remains the same: make the tools disappear so the work can shine.</p>
             </section>
         </div>
     </article>

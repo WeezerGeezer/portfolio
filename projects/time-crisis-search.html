@@ -84,15 +84,71 @@
         </div>
     </section>
 
-    <!-- Update Coming Soon -->
+    <!-- Project Overview -->
     <section class="project-section">
-        <div class="project-content" style="text-align: center; padding: 3rem 0;">
-            <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Update Coming Soon!</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">This project page is currently being updated with new content.</p>
-            <p style="margin-bottom: 1.5rem;">Check out the project on GitHub to explore the code:</p>
-            <div class="project-links">
-                <a href="https://github.com/WeezerGeezer/tc-search" class="btn btn-color-2" target="_blank">View Source Code</a>
-            </div>
+        <div class="project-content">
+            <h2>Project Overview</h2>
+            <p>This is a search engine I built for the internet radio show <a href="https://music.apple.com/us/show/time-crisis-with-ezra-koenig/1464856576" target="_blank">Time Crisis with Ezra Koenig</a>, hosted on <a href="https://music.apple.com/us/browse" target="_blank">Apple Music One</a>.</p>
+            <p>Essentially, I wanted to be able to look up words, artists, and songs from previous episodes and reference them when they get talked about in future episodes. The show is very self-referential (Borgesian, some might call it). So having a library of transcripts from the show becomes essential if you want to get the full joke of all the callbacks and recurring themes that make Time Crisis with Ezra Koenig so memorable and fun to listen to. I listened back to the show from the very beginning fairly recently, and I was struck by how much of a time capsule it is for the 2015 to 2020 era of American music and culture. Having an easily searchable record of transcripts for this internet radio show lets real TC heads connect the threads, the dots, and the so-and-so of the Time Crisis universe.</p>
+        </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>The Challenge</h2>
+            <p>Funny enough, the week that I published this search engine on the <a href="https://www.reddit.com/r/timecrisis/" target="_blank">Time Crisis subreddit</a>, I scrolled back to see that another TC head had also created a transcript search engine. I want to assure the TC community and the greater world that these were ideas arrived upon independently, but even in the first place, a transcript search is not the most novel idea. Either way, this started out as my own way of searching up references from previous episodes and finding specific segments so I could share the show with my friends. I hope that this continues to enable this sort of lore-sharing behavior among future Time Crisis heads and other listeners.</p>
+            <p>Within <a href="https://music.apple.com" target="_blank">Apple Music</a>/<a href="https://podcasts.apple.com" target="_blank">Apple Podcasts</a>, they have a transcript feature for podcast episodes, but there's no way to search across the entire base of a podcast's transcript history, which is why I wanted to create this website.</p>
+            <p>As a show with now 244 episodes, this meant transcribing <strong>488 hours</strong> of audio, music, and conversation.</p>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Technical Implementation</h2>
+
+            <h3>Transcription Pipeline</h3>
+            <p>For the creation of the transcripts, I initially used a <a href="https://github.com/ggerganov/whisper.cpp" target="_blank">whisper.cpp</a> model to transcribe the episodes individually. Eventually, I moved on to batch processing with various scripts using this setup, but I found a Mac application called <a href="https://goodsnooze.gumroad.com/l/macwhisper" target="_blank">MacWhisper</a>, which made things a hundred times easier. Especially now as I begin to assign speakers and add further details to the transcripts, the MacWhisper app has a good suite of features that allow me to accomplish this.</p>
+            <p>The transcripts themselves are broken up into segments. The MacWhisper app does a pretty good job at recognizing speakers and separating segments from different speakers, which allows the reader to see the flow of the conversation. These timestamps were then used from the transcript to implement jump-to-point navigation from the search results to the individual episode page.</p>
+
+            <h3>Database & Infrastructure</h3>
+            <p>The setup of the current program is a <a href="https://supabase.com" target="_blank">Supabase</a> backend paired with a <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a> front-end deployment. I can upload and update transcripts via the Supabase backend without needing to push updates to the Cloudflare Pages deployment due to the API I created within Supabase to make calls upon the database of transcripts.</p>
+            <p>To load the transcripts into the site, I set up a simple bucket of transcript CSV files that populate the page when a user navigates to an episode's page template given an episode number in the URL.</p>
+
+            <h3>Search Features</h3>
+            <p>Additional features were added to the search, like sorting by episode age (so you can see how a term has been used throughout the course of the show) or by the number of hits (which allows you to see the episodes where something is discussed the most). These were basic features that were easily implemented using the Cloudflare edge code and good knowledge of the codebase.</p>
+
+            <h3>Frontend Design</h3>
+            <p>For the front-end design, I went for a Google imitation, but with the classic Joker Man font, which has been a topic of discussion on the show in the past. There's a dark and light mode with system preference detection. There are browsing pages for looking at the complete episode list and the complete guest list of the show. The design is also responsive to mobile, allowing for easy navigation on phones, tablets, and small screens.</p>
+            <p>I don't have any analytics implemented at the moment, but that would be a future addition to the site in order to understand what TC heads are searching for the most.</p>
+        </div>
+    </section>
+
+    <!-- Technical Challenges & Solutions -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Technical Challenges & Solutions</h2>
+            <p>When it came to challenges for this project, I initially started with a <a href="https://flask.palletsprojects.com" target="_blank">Flask</a> backend deployed on <a href="https://cloud.google.com" target="_blank">Google Cloud Platform</a>, which was too much of a hassle, admittedly. Once I ran out of free Google Cloud credits, it began charging me way more than it should actually cost to host something like this. So I immediately made the jump to Supabase in order to save money on a not-too-intensive application.</p>
+            <p>Migrating the site was pretty easy. I set up a front-end on Cloudflare Pages—I had initially purchased the domain through <a href="https://www.cloudflare.com" target="_blank">Cloudflare</a> so I just set up Cloudflare Pages, made all the front-end changes I wanted, and configured Supabase. With the Supabase and Cloudflare duo working together, all I had to do was shut down the Google Cloud Platform instance and switch the DNS records to point to Cloudflare Pages rather than the Google Cloud Platform instance.</p>
+        </div>
+    </section>
+
+    <!-- Results & Impact -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Results & Impact</h2>
+            <p>As for financial results, the initial deployment of this search engine would have cost me $30 a month for some reason via Google Cloud Platform. I probably didn't choose the right service to minimize costs, but I had free credits with GCP, so I wasn't too worried about it—that is, until the billing started to come in when I ran out of free credit.</p>
+            <p>As for impact, my friends and I who listen to the show love using the site to reference episodes from the past and to find specific bits that we want to re-listen to. I've shared it with the Time Crisis subreddit as well as with the show itself via their email.</p>
+        </div>
+    </section>
+
+    <!-- Future Enhancements -->
+    <section class="project-section">
+        <div class="project-content">
+            <h2>Future Enhancements</h2>
+            <p>This project as a whole got me familiar with the challenges behind audio transcription and the processes one might take to create a viewable webpage for transcriptions. I think that in the future I could use the basics I built for this site to provide API access for marketing—if companies wanted to see when their products were mentioned on a podcast, that's not often information easily accessible via <a href="https://www.google.com" target="_blank">Google</a>, <a href="https://duckduckgo.com" target="_blank">DuckDuckGo</a>, <a href="https://www.bing.com" target="_blank">Bing</a>, etc. As for now, I consider this project to be finished, and it will be continually updated as new episodes release.</p>
+            <p><strong>TC forever.</strong></p>
         </div>
     </section>
 
@@ -100,9 +156,9 @@
     <section class="project-cta">
         <div class="project-content">
             <h2>Explore the Project</h2>
-            <p>Experience the power of AI-driven podcast search and discover how technology can make audio content more accessible.</p>
+            <p>Experience the power of searchable podcast transcripts and connect the threads of the Time Crisis universe.</p>
             <div class="cta-buttons">
-                <a href="https://tc-search.com" class="btn btn-color-1" target="_blank">Try Live Demo</a>
+                <a href="https://tc-search.com" class="btn btn-color-1" target="_blank">Try Live Site</a>
                 <a href="https://github.com/WeezerGeezer/tc-search" class="btn btn-color-2" target="_blank">View Source Code</a>
             </div>
         </div>

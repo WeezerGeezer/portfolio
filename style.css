@@ -1752,11 +1752,10 @@ body {
 }
 
 .timeline-box .organization-logo[data-org="mortar-creek"] .logo-img {
-    width: 150%;
-    height: 150%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    border-radius: 0;
-    transform: translate(-16.5%, -16.5%);
+    border-radius: 50%;
 }
 
 /* ===== TIMELINE FULL-WIDTH SECTION (HIDDEN ON DESKTOP) ===== */
@@ -2609,11 +2608,10 @@ footer p    {
 }
 
 .organization-logo[data-org="mortar-creek"] .logo-img {
-    width: 150%;
-    height: 150%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    border-radius: 0;
-    transform: translate(-16.5%, -16.5%);
+    border-radius: 50%;
 }
 
 /* Timeline Modal */
