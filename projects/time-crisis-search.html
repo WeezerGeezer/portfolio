@@ -117,7 +117,7 @@
             <p>To load the transcripts into the site, I set up a simple bucket of transcript CSV files that populate the page when a user navigates to an episode's page template given an episode number in the URL.</p>
 
             <h3>Search Features</h3>
-            <p>Additional features were added to the search, like sorting by episode age (so you can see how a term has been used throughout the course of the show) or by the number of hits (which allows you to see the episodes where something is discussed the most). These were basic features that were easily implemented using the Cloudflare edge code and good knowledge of the codebase.</p>
+            <p>Additional features were added to the search, like sorting by episode age (so you can see how a term has been used throughout the course of the show) or by the number of hits (which allows you to see the episodes where something is discussed the most). These were basic features that were easily implemented using Claude code and good knowledge of the codebase.</p>
 
             <h3>Frontend Design</h3>
             <p>For the front-end design, I went for a Google imitation, but with the classic Joker Man font, which has been a topic of discussion on the show in the past. There's a dark and light mode with system preference detection. There are browsing pages for looking at the complete episode list and the complete guest list of the show. The design is also responsive to mobile, allowing for easy navigation on phones, tablets, and small screens.</p>
@@ -129,7 +129,7 @@
     <section class="project-section">
         <div class="project-content">
             <h2>Technical Challenges & Solutions</h2>
-            <p>When it came to challenges for this project, I initially started with a <a href="https://flask.palletsprojects.com" target="_blank">Flask</a> backend deployed on <a href="https://cloud.google.com" target="_blank">Google Cloud Platform</a>, which was too much of a hassle, admittedly. Once I ran out of free Google Cloud credits, it began charging me way more than it should actually cost to host something like this. So I immediately made the jump to Supabase in order to save money on a not-too-intensive application.</p>
+            <p>When it came to challenges for this project, I initially started with a <a href="https://flask.palletsprojects.com" target="_blank">Flask</a> backend deployed on <a href="https://cloud.google.com" target="_blank">Google Cloud Platform</a>, which was too much of a hassle, admittedly. Once I ran out of free Google Cloud credits, it began charging me way more than it should actually cost to host something like this. I immediately made the jump to Supabase in order to save money on a not-too-intensive application.</p>
             <p>Migrating the site was pretty easy. I set up a front-end on Cloudflare Pages—I had initially purchased the domain through <a href="https://www.cloudflare.com" target="_blank">Cloudflare</a> so I just set up Cloudflare Pages, made all the front-end changes I wanted, and configured Supabase. With the Supabase and Cloudflare duo working together, all I had to do was shut down the Google Cloud Platform instance and switch the DNS records to point to Cloudflare Pages rather than the Google Cloud Platform instance.</p>
         </div>
     </section>
