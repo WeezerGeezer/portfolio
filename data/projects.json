@@ -5,7 +5,7 @@
       "title": "Time Crisis Search",
       "subtitle": "w/ Whoosh, Google Cloud, & OpenAI Whisper",
       "slug": "time-crisis-search",
-      "shortDescription": "Advanced search engine for Time Crisis podcast episodes with AI-powered transcription and full-text search capabilities.",
+      "shortDescription": "Advanced search engine for Time Crisis internet radio show episodes with AI-powered transcription and full-text search capabilities.",
       "image": "./assets/project-6.jpeg",
       "technologies": ["Python", "Whoosh", "Google Cloud", "OpenAI Whisper", "Flask", "JavaScript"],
       "categories": ["Web Development", "AI/ML", "Search Engine"],
@@ -16,12 +16,12 @@
       },
       "featured": true,
       "details": {
-        "overview": "A comprehensive search engine built specifically for Time Crisis podcast episodes, featuring AI-powered transcription and intelligent search capabilities.",
-        "challenge": "Creating a searchable database of podcast content that traditionally exists only in audio format, requiring accurate transcription and fast search capabilities.",
+        "overview": "A comprehensive search engine built specifically for Time Crisis internet radio show episodes, featuring AI-powered transcription and intelligent search capabilities.",
+        "challenge": "Creating a searchable database of internet radio show content that traditionally exists only in audio format, requiring accurate transcription and fast search capabilities.",
         "solution": "Implemented OpenAI Whisper for high-quality audio transcription, Whoosh for full-text search indexing, and Google Cloud for scalable hosting and storage.",
         "keyFeatures": [
           "AI-powered audio transcription using OpenAI Whisper",
-          "Full-text search across all podcast episodes",
+          "Full-text search across all internet radio show episodes",
           "Episode metadata and timestamp-based results",
           "Responsive web interface with search filters",
           "Cloud-based architecture for scalability"
