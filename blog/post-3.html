@@ -16,7 +16,6 @@
         <div class="nav-container">
             <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
             <ul class="nav-links">
-                <li><a href="../index.html" class="nav-link">About</a></li>
                 <li><a href="../projects.html" class="nav-link">Projects</a></li>
                 <li><a href="../blog.html" class="nav-link">Blog</a></li>
                 <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
@@ -33,7 +32,6 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
                 <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
                 <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
                 <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
@@ -58,17 +56,51 @@
             <header style="margin-bottom: 2rem;">
                 <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">November 10, 2024</p>
                 <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Hardware Meets Software</h1>
-                <p style="color: #888; font-size: 1.1rem;">Creating custom Arduino devices with companion mobile apps for seamless integration</p>
+                <p style="color: #888; font-size: 1.1rem;">Why I built a physical Catchphrase game when a phone app would have been easier</p>
             </header>
 
-            <section style="margin-bottom: 2rem; text-align: center; padding: 3rem 0;">
-                <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Update Coming Soon!</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">This article is currently being updated with new content.</p>
-                <p style="margin-bottom: 1.5rem;">In the meantime, check out the related projects on GitHub:</p>
-                <div class="cta-buttons">
-                    <a href="https://github.com/WeezerGeezer/ArduinoCatchphraseBLE" class="btn btn-color-2" target="_blank" style="margin-right: 1rem;">View Arduino Catchphrase on GitHub</a>
-                    <a href="https://github.com/WeezerGeezer/CatchphraseiOSApp" class="btn btn-color-2" target="_blank">View iOS App on GitHub</a>
-                </div>
+            <section style="margin-bottom: 2rem;">
+                <h2>Why Build Something Physical?</h2>
+                <p>I could have just built an app. Catchphrase is a party game where you see a word or phrase, try to get your team to guess it, and pass the device before the timer runs out. A phone app could handle that in a weekend. But there's something about a physical device that a touchscreen can't replicate. The satisfying click of a real button. An LCD screen that everyone can see across the table. A buzzer that actually startles people when time runs out. These things matter when you're trying to create a fun experience for a group, and they're the reason board games still exist when every one of them could be an app.</p>
+                <p>The real motivation, though, was that I wanted to learn how hardware and software talk to each other. I'd done plenty of software-only projects, and I'd tinkered with Arduino before, but I'd never built something where a physical device and a mobile app had to work together wirelessly. Catchphrase gave me a perfect excuse: the game hardware handles gameplay, and an iOS app handles managing the phrase categories that get sent to the device over Bluetooth. Two separate systems, one seamless experience. That was the goal, anyway.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Hardware: A Seeed XIAO nRF52840</h2>
+                <p>The brain of the device is a Seeed XIAO nRF52840, a tiny microcontroller that packs Bluetooth Low Energy support right onto the board. I chose it over a standard Arduino because BLE was a hard requirement—I needed the device to communicate wirelessly with an iPhone. The rest of the hardware is straightforward: a 16x2 LCD character display for showing phrases, three tactile buttons for navigation (up, down, select), an RGB LED for status indication, a passive buzzer for audio feedback, and a MicroSD card module for storing phrase data. The whole thing runs on three AA batteries.</p>
+                <p>The game loop itself is a state machine. When you power it on, you see a menu of phrase categories loaded from the SD card. Select one, and the game begins: a random phrase appears on the LCD, you have 30 seconds, and pressing the button advances to the next phrase. The RGB LED starts green and shifts to blinking red as time runs down—the blink rate accelerates as the clock ticks, which adds a nice bit of tension. When time's up, the buzzer plays a descending tone sequence that gets a reaction every time. The device also has a 5-minute sleep timer to save battery life, waking up on any button press.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The iOS App: SwiftUI + CoreBluetooth</h2>
+                <p>The companion app is a SwiftUI application for managing phrase categories. You create categories like "Movies," "Animals," or "Inside Jokes," add phrases to each one, and then wirelessly push them to the game device over BLE. The app stores everything locally using UserDefaults with JSON encoding. The UI is minimal—a list of categories, tap into one to see its phrases, and a device connection screen for syncing.</p>
+                <p>The data transfer works like this: the app encodes a category and its phrases as a JSON object, then writes it to a BLE characteristic on the Arduino. The Arduino receives the data, parses the JSON with ArduinoJson, and saves the phrases as a text file on the SD card. From the user's perspective, you tap "sync" and the phrases show up on the device. Behind the scenes, there's a surprising amount of coordination happening between CoreBluetooth's central manager, the peripheral's GATT services, characteristic discovery, and the actual data write.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Hard Part: Apple's CoreBluetooth</h2>
+                <p>If I could give one piece of advice to anyone starting a BLE project with iOS, it would be this: budget way more time for CoreBluetooth than you think you'll need. The framework is powerful, but it's also unforgiving. The API is delegate-based, which means your Bluetooth logic gets spread across a dozen callback methods—<code>centralManagerDidUpdateState</code>, <code>didDiscover</code>, <code>didConnect</code>, <code>didDiscoverServices</code>, <code>didDiscoverCharacteristicsFor</code>, and on and on. Each callback triggers the next step in a chain, and if any step fails silently (which they sometimes do), debugging is painful.</p>
+                <p>The trickiest issue I ran into was the disconnect between how BLE works conceptually and how CoreBluetooth exposes it. You'd think "connect to device and send data" would be a few lines of code. In reality, you scan for peripherals, filter by service UUID, connect, wait for the connection callback, discover services, wait for the service discovery callback, discover characteristics within those services, wait for that callback, store references to the characteristics you need, and only then can you write data. And at every step, you need to handle the case where the connection drops, the device goes out of range, or the user backgrounds the app.</p>
+                <p>Wrapping all of this in a clean SwiftUI interface with <code>@Published</code> properties and <code>ObservableObject</code> patterns took more iteration than the actual game firmware. The Arduino side was comparatively simple—you set up a BLE service, define a characteristic, and handle incoming writes in a callback. The iOS side is where the complexity lives.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Current State: Breadboard Prototype</h2>
+                <p>Right now the device lives on a breadboard with a tangle of jumper wires that would make any electrical engineer wince. It works, and it's been played at several gatherings, but it's not exactly something you'd want to toss around a circle of friends. The next step is designing a proper enclosure—either 3D-printed or laser-cut—that protects the electronics and makes the device feel like an actual product rather than a science fair project. I'd also like to design a custom PCB to replace the breadboard, which would make the device smaller and more durable.</p>
+                <p>Despite its rough appearance, the prototype has been the hit of every game night I've brought it to. There's something about pulling out a custom-built device that gets people interested in a way that opening an app on your phone never does. People want to know how it works, what the blinking lights mean, and whether they can make their own categories. That's the best part of building physical things—they invite curiosity.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>What I Learned</h2>
+                <p>This project taught me more about the gap between hardware and software than any tutorial could. Some takeaways:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
+                    <li><strong>BLE is not Bluetooth Classic</strong> - They're fundamentally different protocols. BLE is designed for low-power, small data transfers—perfect for sending phrase lists, not great for streaming audio. Understanding this distinction early saves a lot of confusion.</li>
+                    <li><strong>CoreBluetooth requires patience</strong> - Apple's framework is capable but verbose. Plan for the delegate chain, handle every failure case, and test on real devices early. The simulator doesn't support BLE.</li>
+                    <li><strong>Physical feedback matters</strong> - The buzzer, the LED color changes, the button clicks—these small details make the game feel real in a way that haptic feedback on a phone screen doesn't match.</li>
+                    <li><strong>Prototype early, polish later</strong> - The breadboard version let me validate the concept and iterate on the game logic before investing in a PCB or enclosure. Ship the ugly version first.</li>
+                    <li><strong>JSON over BLE works</strong> - Sending structured data as JSON over BLE characteristics is a simple, flexible approach for small payloads. ArduinoJson on the firmware side makes parsing painless.</li>
+                </ul>
+                <p>The full source code for both the Arduino firmware and the iOS app are on GitHub. If you've got a Seeed XIAO board lying around and want to build your own version, everything you need is there.</p>
             </section>
         </div>
     </article>
@@ -79,6 +111,8 @@
             <h2>Read More</h2>
             <p>Explore more articles and project deep-dives</p>
             <div class="cta-buttons">
+                <a href="https://github.com/WeezerGeezer/ArduinoCatchphraseBLE" class="btn btn-color-2" target="_blank">Arduino on GitHub</a>
+                <a href="https://github.com/WeezerGeezer/CatchphraseiOSApp" class="btn btn-color-2" target="_blank">iOS App on GitHub</a>
                 <a href="../blog.html" class="btn btn-color-2">Back to Blog</a>
             </div>
         </div>

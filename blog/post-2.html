@@ -16,7 +16,6 @@
         <div class="nav-container">
             <div class="logo"><a href="../index.html">Mitchell Carter</a></div>
             <ul class="nav-links">
-                <li><a href="../index.html" class="nav-link">About</a></li>
                 <li><a href="../projects.html" class="nav-link">Projects</a></li>
                 <li><a href="../blog.html" class="nav-link">Blog</a></li>
                 <li><a href="https://photos.mitchellcarter.dev" target="_blank" class="nav-link">Photos</a></li>
@@ -33,7 +32,6 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="../index.html" onClick="toggleMenu()">About</a></li>
                 <li><a href="../projects.html" onClick="toggleMenu()">Projects</a></li>
                 <li><a href="../blog.html" onClick="toggleMenu()">Blog</a></li>
                 <li><a href="https://photos.mitchellcarter.dev" target="_blank" onClick="toggleMenu()">Photos</a></li>
@@ -61,13 +59,89 @@
                 <p style="color: #888; font-size: 1.1rem;">Exploring Apple's MLX framework for running large language models locally on Apple Silicon</p>
             </header>
 
-            <section style="margin-bottom: 2rem; text-align: center; padding: 3rem 0;">
-                <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Update Coming Soon!</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">This article is currently being updated with new content.</p>
-                <p style="margin-bottom: 1.5rem;">In the meantime, check out the related project on GitHub:</p>
-                <div class="cta-buttons">
-                    <a href="https://github.com/WeezerGeezer/macllm" class="btn btn-color-2" target="_blank">View MLX-LM Toolkit on GitHub</a>
-                </div>
+            <section style="margin-bottom: 2rem;">
+                <h2>Why Run LLMs Locally?</h2>
+                <p>I've been using cloud-based AI tools like Claude Code for a while now (see my previous post on that), but I kept wondering: how capable are the models you can run right on your own machine? Apple's M-series chips have unified memory architectures that make them surprisingly well-suited for machine learning workloads, and Apple released an open-source framework called MLX specifically designed to take advantage of this hardware. I wanted to find out what these local models could actually do, how fast they could run, and where the limits are. So I built a toolkit to test it all out.</p>
+                <p>There's also a privacy angle worth mentioning. Running models locally means your prompts never leave your machine. For certain use cases—working with proprietary code, personal data, or just preferring to keep things offline—that matters. It's not the main reason I started this project, but it's a nice benefit that comes along for free.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Setup: MLX on Apple Silicon</h2>
+                <p>Apple's MLX framework is purpose-built for Apple Silicon. It takes advantage of the unified memory architecture on M-series chips, meaning the GPU and CPU share the same memory pool—no copying data back and forth between them like you'd have to on a traditional setup with a discrete GPU. For running language models, this is a big deal. Models that would normally require dedicated GPU VRAM can instead just use your regular system memory.</p>
+                <p>I built my toolkit on top of <code>mlx-lm</code>, a Python library that wraps MLX for language model tasks. The toolkit includes 11 example scripts covering everything from basic text generation and streaming output to a full REST API server, a Gradio web interface, fine-tuning with LoRA, prompt caching, and model quantization. Think of it as a comprehensive test bench for seeing what local LLMs can do on a Mac. You can run individual scripts directly or use the interactive menu system to try each feature.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Model Quantization: Fitting Big Models on Small Machines</h2>
+                <p>The most interesting technical piece of this project was working with quantized models. Full-precision language models are huge—a 7 billion parameter model can easily eat 14GB of memory in its native form. Most people don't have that kind of headroom to spare. Quantization compresses the model weights from 16-bit or 32-bit floating point numbers down to 4-bit integers. You lose some precision, but in practice the quality drop is often barely noticeable for conversational and coding tasks.</p>
+                <p>The models I tested are all 4-bit quantized versions from the <code>mlx-community</code> collection on Hugging Face. A 7B parameter model that would normally need ~14GB of memory fits comfortably in ~4-5GB after 4-bit quantization. That's the difference between "won't run on my machine" and "runs with room to spare." The toolkit includes a model conversion script that lets you take any Hugging Face model, convert it to MLX format, and quantize it—so you can experiment with whatever models interest you.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>The Benchmarks: Model vs. Model</h2>
+                <p>Here's the part I was most curious about. I tested several popular open-source models on my M2 Pro with 16GB of RAM to see how they compare in speed, memory usage, and overall usability. All models are 4-bit quantized:</p>
+                <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #333;">
+                            <th style="text-align: left; padding: 0.75rem;">Model</th>
+                            <th style="text-align: left; padding: 0.75rem;">Size</th>
+                            <th style="text-align: left; padding: 0.75rem;">Load Time</th>
+                            <th style="text-align: left; padding: 0.75rem;">Tokens/sec</th>
+                            <th style="text-align: left; padding: 0.75rem;">Memory</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 0.75rem;">Llama 3.2 3B</td>
+                            <td style="padding: 0.75rem;">~2GB</td>
+                            <td style="padding: 0.75rem;">3-5s</td>
+                            <td style="padding: 0.75rem;">40-60</td>
+                            <td style="padding: 0.75rem;">~3GB</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 0.75rem;">Mistral 7B</td>
+                            <td style="padding: 0.75rem;">~4GB</td>
+                            <td style="padding: 0.75rem;">5-8s</td>
+                            <td style="padding: 0.75rem;">25-35</td>
+                            <td style="padding: 0.75rem;">~5GB</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 0.75rem;">Qwen 2.5 7B</td>
+                            <td style="padding: 0.75rem;">~4GB</td>
+                            <td style="padding: 0.75rem;">6-10s</td>
+                            <td style="padding: 0.75rem;">20-30</td>
+                            <td style="padding: 0.75rem;">~5GB</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The Llama 3.2 3B model is the speed king. At 40-60 tokens per second, responses feel nearly instant—you're getting output faster than you can read it. It loads in a few seconds and only uses about 3GB of memory, leaving plenty of room for everything else. The tradeoff is that it's a smaller model, so its responses aren't as nuanced as the 7B options for complex reasoning tasks. For quick Q&A, summarization, and straightforward coding questions, it's excellent.</p>
+                <p>Mistral 7B hits a nice sweet spot. It's noticeably more capable than the 3B model for longer, more thoughtful responses, and 25-35 tokens per second is still very usable—you won't be waiting around. It's my go-to for general-purpose local inference. Qwen 2.5 7B performs similarly in terms of speed and memory, but I found it slightly better for multilingual tasks and structured outputs. Both 7B models are comfortable to run on a 16GB machine, though you probably don't want to run them alongside memory-hungry apps.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>What I Built With It</h2>
+                <p>The toolkit isn't just benchmarks—it's a collection of practical tools I actually use. The chat interface runs in the terminal with conversation history, so I can have multi-turn conversations with a local model without any internet connection. The FastAPI server exposes a REST API that mimics the structure of cloud AI APIs, which means you can point existing scripts or tools at <code>localhost:8000</code> instead of a cloud endpoint. The Gradio web interface gives you a browser-based chat with parameter controls if you want to experiment with temperature, top-p, and other generation settings without touching code.</p>
+                <p>I also built a fine-tuning pipeline using LoRA (Low-Rank Adaptation), which lets you customize a model's behavior with a small dataset without retraining the whole thing. The training datasets I put together include customer service conversations, instruction-following examples, and some more creative ones. LoRA adapters are tiny—just a few megabytes—so you can have multiple specialized versions of a model without duplicating the base weights.</p>
+                <p>Prompt caching was another useful addition. If you're repeatedly querying a model with the same system prompt or context prefix, caching the key-value pairs from that prefix means the model doesn't have to reprocess it every time. For workflows where you're asking many questions about the same document or codebase, the speedup is significant.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Where Local Models Fall Short</h2>
+                <p>I want to be honest about the limitations. These local models are not replacements for cloud services like Claude or GPT-4 for complex tasks. A 7B parameter model running locally is fundamentally less capable than a model with hundreds of billions of parameters running on a datacenter's worth of hardware. Long-form reasoning, nuanced code generation, and tasks that require extensive world knowledge are areas where the gap is most obvious. I still reach for Claude Code when I need the heavy lifting done.</p>
+                <p>Memory is the other constraint. On a 16GB machine, a 7B model is about the practical ceiling if you want to keep using your computer for other things. The M-series chips with 32GB or more open up bigger models, but at 16GB you're making tradeoffs. That said, for the use cases where local models work well—quick lookups, offline coding assistance, data processing without sending data to the cloud—they work really well.</p>
+            </section>
+
+            <section style="margin-bottom: 2rem;">
+                <h2>Key Takeaways</h2>
+                <p>After spending time building and testing this toolkit, here's what I've learned:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem; line-height: 1.8;">
+                    <li><strong>Apple Silicon is legit for ML</strong> - The unified memory architecture makes running quantized LLMs practical on consumer hardware. MLX takes full advantage of it.</li>
+                    <li><strong>4-bit quantization is the enabler</strong> - Without quantization, most useful models wouldn't fit. With it, a 7B model runs comfortably on a 16GB MacBook.</li>
+                    <li><strong>3B models are underrated</strong> - If speed matters more than depth, Llama 3.2 3B at 40-60 tokens/sec is hard to beat for everyday tasks.</li>
+                    <li><strong>7B is the sweet spot at 16GB</strong> - Mistral 7B gives you a good balance of capability and speed without starving the rest of your system.</li>
+                    <li><strong>Local and cloud aren't either/or</strong> - Use local models for quick, private, offline tasks. Use cloud models for the heavy stuff. They complement each other well.</li>
+                </ul>
+                <p>The full toolkit is open source on GitHub if you want to try it yourself. All you need is a Mac with Apple Silicon and Python installed.</p>
             </section>
         </div>
     </article>
@@ -78,6 +152,7 @@
             <h2>Read More</h2>
             <p>Explore more articles and project deep-dives</p>
             <div class="cta-buttons">
+                <a href="https://github.com/WeezerGeezer/macllm" class="btn btn-color-2" target="_blank">View on GitHub</a>
                 <a href="../blog.html" class="btn btn-color-2">Back to Blog</a>
             </div>
         </div>
