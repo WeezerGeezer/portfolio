@@ -100,3 +100,11 @@ This is currently a static website with plans to add build tooling. Changes can 
 ## Deployment
 
 The site is deployed on Cloudflare Pages and automatically rebuilds when changes are pushed to the main branch.
+
+## Working from Cloud Sessions (Claude Code on the web / mobile)
+
+- Never push directly to `main` — it deploys to production immediately
+- Work on a feature branch; Cloudflare Pages builds a preview URL for each branch, so changes can be checked on a phone before merging
+- Keep changes scoped to small, reviewable PRs (e.g. layout, then typography, then individual pages) rather than one large diff
+- `planning/` and `.blogdrafts/` are gitignored and won't exist in cloud sessions
+- If a change alters the layout or components described above, update this file in the same PR
