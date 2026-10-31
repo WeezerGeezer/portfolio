@@ -259,12 +259,30 @@ let smoke = [];
 let streaks = [];
 let splashes = [];
 
-// click/tap anywhere to blow the boat away from the pointer
-// click/tap anywhere to blow the boat away from the pointer
+// click above the water to blow the boat; click below it to startle the fish
 addEventListener("pointerdown", (e) => {
   if (e.target.closest("a, button")) return;
   const px = e.clientX;
   const py = e.clientY;
+  const surfaceY = surface(px, simTime);
+
+  if (py >= surfaceY) {
+    [...fish, school].forEach((f) => {
+      if (f.y != null && Math.hypot(f.x - px, f.y - py) < 170) {
+        f.dir = f.x >= px ? 1 : -1;
+        f.boost = 140;
+      }
+    });
+    for (let i = 0; i < 7; i++)
+      bubbles.push({
+        x: px + rand(-8, 8),
+        y: py + rand(-8, 8),
+        r: rand(1.5, 4),
+        phase: rand(0, 6),
+      });
+    return;
+  }
+
   const dx = boatX - px;
   const dir = dx >= 0 ? 1 : -1;
   boatV += dir * 260 * Math.exp(-Math.abs(dx) / 500);
@@ -279,35 +297,16 @@ addEventListener("pointerdown", (e) => {
     });
   }
 
-  // nearby fish dart away
-  [...fish, school].forEach((f) => {
-    if (f.y != null && Math.hypot(f.x - px, f.y - py) < 170) {
-      f.dir = f.x >= px ? 1 : -1;
-      f.boost = 140;
-    }
-  });
-
-  const surfaceY = surface(px, simTime);
-  if (py < surfaceY) {
-    // splash where the gust hits the water
-    for (let i = 0; i < 9; i++)
-      splashes.push({
-        x: px,
-        y: surfaceY,
-        vx: rand(-50, 50) + dir * 40,
-        vy: rand(-170, -80),
-        ring: false,
-      });
-    splashes.push({ x: px, y: surfaceY, age: 0, ring: true });
-  } else {
-    for (let i = 0; i < 7; i++)
-      bubbles.push({
-        x: px + rand(-8, 8),
-        y: py + rand(-8, 8),
-        r: rand(1.5, 4),
-        phase: rand(0, 6),
-      });
-  }
+  // splash where the gust hits the water
+  for (let i = 0; i < 9; i++)
+    splashes.push({
+      x: px,
+      y: surfaceY,
+      vx: rand(-50, 50) + dir * 40,
+      vy: rand(-170, -80),
+      ring: false,
+    });
+  splashes.push({ x: px, y: surfaceY, age: 0, ring: true });
 });
 
 function drawSunOrMoon() {
