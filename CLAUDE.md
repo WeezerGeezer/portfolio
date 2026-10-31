@@ -9,8 +9,11 @@ This is a modern personal portfolio website built with vanilla HTML, CSS, and Ja
 ## Project Structure
 
 ### Core Files
-- `index.html` - Main HTML file containing all page sections (profile, about, projects, experience, contact)
-- `style.css` - Primary stylesheet with desktop styles and modern interactive elements
+- `index.html` - Minimal homepage: short bio, icon links, and an animated lake scene (see "Homepage" below)
+- `assets/css/home.css` / `assets/js/lake.js` - Homepage styles and the canvas lake animation
+- `classic.html` - The previous bento-box homepage (no longer linked; the bento notes below describe it)
+- `drive.html` - Unfinished "drive" redesign experiment
+- `style.css` - Stylesheet for the classic bento page, blog, and project pages
 - `mediaqueries.css` - Responsive design styles for mobile/tablet devices
 - `script.js` - JavaScript for hamburger menu, project filtering, and interactive features
 
@@ -22,6 +25,15 @@ This is a modern personal portfolio website built with vanilla HTML, CSS, and Ja
 - `projects/` - Individual project pages with detailed information
 - `blog/` - Individual blog post pages (post-1.html, post-2.html, post-3.html)
 - `data/` - JSON files for blog posts metadata and content management
+
+## Homepage
+
+- Plain white page set in Fraunces (self-hosted at `assets/fonts/fraunces-latin.woff2`); text sits on a soft white backing so the scenery never hurts legibility
+- `lake.js` draws a full-viewport canvas: sky (sun/moon, clouds, DTE Monroe stacks with smoke) and a side-on "aquarium" lake at the bottom (boat, fish, seaweed, sand). Water height is `clamp(140px, 26vh, 260px)` and must match `padding-bottom` in `home.css`
+- Live data for LaPlaisance Bay: Open-Meteo forecast (wind, clouds, rain/snow/fog, sunrise/sunset), Open-Meteo Marine (wave height), NOAA Toledo station 9063085 (water temp). Wind drives the boat, waves, and smoke; sunrise/sunset tint the water
+- Clicking blows the boat away from the pointer, scatters nearby fish, and splashes (or bubbles, if underwater)
+- Respects `prefers-reduced-motion` (slower scene, no precipitation); scenery scales down below 900px wide
+- `assets/og-image.png` is a screenshot of the homepage; regenerate it if the page changes noticeably
 
 ## Development
 

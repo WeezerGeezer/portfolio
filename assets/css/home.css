@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../fonts/fraunces-latin.woff2") format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: #fff;
+}
+
+body {
+  font:
+    17px/1.65 "Fraunces",
+    Georgia,
+    serif;
+  color: #1f2328;
+  /* keep text clear of the lake (matches waterHeight() in lake.js) */
+  padding-bottom: calc(clamp(140px, 26vh, 260px) + 2rem);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 34rem;
+  margin: 14vh auto 0;
+  padding: 0 1.5rem;
+  /* soft white backing so scenery behind the text never hurts legibility */
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 36px 28px rgba(255, 255, 255, 0.85);
+  border-radius: 24px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.25rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #c4c9d0;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+.socials {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 1.75rem;
+}
+
+.socials a {
+  display: inline-flex;
+  color: #6b7280;
+  transition: color 0.15s;
+}
+
+.socials a:hover {
+  color: #1f2328;
+}
+
+.socials .divider {
+  width: 1px;
+  background: #e5e7eb;
+}
+
+a:focus-visible {
+  outline: 2px solid #3f93cf;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.socials svg {
+  width: 20px;
+  height: 20px;
+}
+
+#lake {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.placard {
+  position: fixed;
+  left: 12px;
+  bottom: 6px;
+  z-index: 1;
+  margin: 0;
+  padding: 1px 8px;
+  font-size: 12px;
+  color: #5b4a2a;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 3px;
+  max-width: calc(100vw - 24px);
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    margin-top: 2.5rem;
+  }
+}
