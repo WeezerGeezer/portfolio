@@ -33,6 +33,7 @@ This is a modern personal portfolio website built with vanilla HTML, CSS, and Ja
 - Live data for LaPlaisance Bay: Open-Meteo forecast (wind, clouds, rain/snow/fog, sunrise/sunset), Open-Meteo Marine (wave height), NOAA Toledo station 9063085 (water temp). Wind drives the boat, waves, and smoke; sunrise/sunset tint the water
 - Clicking above the water blows the boat away from the pointer and splashes; clicking below it only scatters nearby fish and releases bubbles
 - Respects `prefers-reduced-motion` (slower scene, no precipitation); scenery scales down below 900px wide
+- Cloudflare lets browsers cache CSS/JS for 4 hours, so bump the `?v=` on the `home.css` and `lake.js` links in `index.html` whenever either changes
 - `assets/og-image.png` is a screenshot of the homepage; regenerate it if the page changes noticeably
 
 ## Development
