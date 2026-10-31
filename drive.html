@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Mitchell Carter — Take a Drive</title>
+    <meta
+      name="description"
+      content="Mitchell Carter — developer and automation builder. Take a drive: the blog is in the sun visor, projects in the glovebox, and the radio's on."
+    />
+    <meta name="theme-color" content="#0b1426" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Overpass:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/drive.css" />
+    <script>
+      (function () {
+        try {
+          var c = document.createElement("canvas");
+          if (!(c.getContext("webgl2") || c.getContext("webgl"))) throw 0;
+        } catch (e) {
+          location.replace("classic.html");
+        }
+      })();
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="scene" aria-hidden="true"></canvas>
+
+    <div id="loader" aria-hidden="true">
+      <div class="key"></div>
+      <p>Starting the engine…</p>
+    </div>
+
+    <header class="hud-top">
+      <a class="brand" href="index.html"
+        >Mitchell Carter<span
+          >developer ⋅ automation builder ⋅ photographer</span
+        ></a
+      >
+      <nav class="hud-links" aria-label="Site">
+        <a href="blog.html">Blog</a>
+        <a href="projects.html">Projects</a>
+        <a
+          href="https://photos.mitchellcarter.dev"
+          target="_blank"
+          rel="noopener"
+          >Photos ↗</a
+        >
+        <a href="classic.html" class="muted">Classic site</a>
+      </nav>
+    </header>
+
+    <p id="hint">Move around to look ⋅ click things in the car</p>
+
+    <nav id="dock" aria-label="Car controls">
+      <button data-action="blog" title="Flip down the visor">
+        <span aria-hidden="true">📝</span>Blog
+      </button>
+      <button data-action="glovebox" title="Open the glovebox">
+        <span aria-hidden="true">🗂️</span>Projects
+      </button>
+      <button data-action="about" title="The photo on the dash">
+        <span aria-hidden="true">📸</span>About
+      </button>
+      <button data-action="tassel" title="The tassel on the mirror">
+        <span aria-hidden="true">〽️</span>Journey
+      </button>
+      <button data-action="contact" title="The phone on the dash">
+        <span aria-hidden="true">📱</span>Contact
+      </button>
+      <button data-action="radio" title="Radio on / off">
+        <span aria-hidden="true">📻</span>Radio
+      </button>
+      <button data-action="time" title="Change the time of day">
+        <span aria-hidden="true">🌗</span>Time
+      </button>
+    </nav>
+
+    <button id="back-btn" hidden>← Back to the road</button>
+    <div id="now-playing" hidden></div>
+    <div id="tooltip" aria-hidden="true"></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <div id="panel" role="dialog" aria-modal="true" aria-label="Details" hidden>
+      <div class="panel-card">
+        <button class="panel-close" aria-label="Close">×</button>
+        <div class="panel-body"></div>
+      </div>
+    </div>
+
+    <noscript>
+      <p class="noscript">
+        This site is a drive through the woods built with WebGL.
+        <a href="classic.html">Here's the classic version.</a>
+      </p>
+    </noscript>
+
+    <script type="module" src="assets/js/drive/main.js"></script>
+  </body>
+</html>

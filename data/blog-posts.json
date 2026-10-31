@@ -2,13 +2,13 @@
   "posts": [
     {
       "id": "post-1",
-      "title": "Building a Modern Portfolio Site",
+      "title": "Greasing the Gears",
       "date": "2024-12-15",
       "dateFormatted": "December 15, 2024",
-      "category": "Web Development",
-      "excerpt": "A deep dive into creating a responsive, interactive portfolio with modern web technologies. Learn about the design decisions, technical implementation, and performance optimizations that went into building this site.",
+      "category": "Productivity",
+      "excerpt": "How I am using time-saving tools for development on MacOS: window management, automation, and the apps that keep me in flow.",
       "url": "blog/post-1.html",
-      "tags": ["HTML", "CSS", "JavaScript", "Design"]
+      "tags": ["macOS", "Tools", "Productivity"]
     },
     {
       "id": "post-2",
@@ -16,7 +16,7 @@
       "date": "2024-11-28",
       "dateFormatted": "November 28, 2024",
       "category": "AI/ML",
-      "excerpt": "Exploring Apple's MLX framework for running large language models locally on Apple Silicon. Discover how to build production-ready AI applications with optimal performance and resource efficiency.",
+      "excerpt": "Exploring Apple's MLX framework for running large language models locally on Apple Silicon — what they can do, how fast they run, and where the limits are.",
       "url": "blog/post-2.html",
       "tags": ["MLX", "Python", "AI", "Apple Silicon"]
     },
@@ -26,7 +26,7 @@
       "date": "2024-11-10",
       "dateFormatted": "November 10, 2024",
       "category": "Hardware",
-      "excerpt": "Creating custom Arduino devices with companion mobile apps. Learn about bridging the physical and digital worlds through Bluetooth connectivity, iOS development, and embedded programming.",
+      "excerpt": "Why I built a physical Catchphrase game when a phone app would have been easier — Bluetooth, an nRF52840, and a companion iOS app.",
       "url": "blog/post-3.html",
       "tags": ["Arduino", "C++", "Swift", "IoT"]
     }

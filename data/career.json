@@ -1,0 +1,143 @@
+{
+  "stops": [
+    {
+      "id": "maymobility",
+      "title": "May Mobility",
+      "role": "Field Operations Trainer",
+      "period": "Jul 2026 – Present",
+      "logo": "assets/logos/maymobility.png",
+      "points": [
+        "Expert operator of May autonomous vehicles, including occasional research vehicle driving for training",
+        "Deliver standardized Autonomous Vehicle Operator training nationwide, with classroom and behind-the-wheel sessions",
+        "Conduct on-route ride-alongs, evaluations, and safety check-offs to certify new operators before revenue service",
+        "Provide one-on-one coaching, feedback, and refresher training on safe operations and rider customer service",
+        "Support new launch sites and existing operations on 2-3 week deployments, documenting trainee progress and certifications"
+      ],
+      "tags": [
+        "Autonomous Vehicles",
+        "Training & Development",
+        "Safety Certification",
+        "Field Operations",
+        "Coaching"
+      ]
+    },
+    {
+      "id": "mortar-creek",
+      "title": "Mortar Creek Labs",
+      "role": "Founder & Automation Developer",
+      "period": "2024 – Present",
+      "logo": "assets/logos/mcl.png",
+      "points": [
+        "Founded an automation consultancy serving non-profits, private employees, and local small/mid-sized businesses",
+        "Custom automation solutions with TypeScript, JavaScript, HTML/CSS, and rapid deployment via GitHub Pages",
+        "Built a marketing funnel & landing page with automated lead capture and nurturing",
+        "Invoice processing system that cut manual data entry time by 75%",
+        "Educational AI adoption materials and documentation for client organizations"
+      ],
+      "tags": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "AI Integration",
+        "Automation"
+      ]
+    },
+    {
+      "id": "nar",
+      "title": "Nar Cannabis",
+      "role": "Web Developer & Data Automation Specialist",
+      "period": "Jan 2024 – Dec 2024",
+      "logo": "assets/logos/nar.avif",
+      "points": [
+        "Python automation scripts that saved ~20 hours/week of manual reporting and auditing",
+        "Web tools for labels, price tags, and SEO-optimized e-commerce copy",
+        "Looker Studio dashboards for historical pricing and real-time inventory",
+        "Maintained METRC compliance tracking, filters, discounts, and inventory"
+      ],
+      "tags": [
+        "Python",
+        "JavaScript",
+        "Google Cloud",
+        "Looker Studio",
+        "OpenAI API"
+      ]
+    },
+    {
+      "id": "umits",
+      "title": "University of Michigan ITS",
+      "role": "Full Stack Development Intern",
+      "period": "May 2023 – Aug 2023",
+      "logo": "assets/logos/um-its.jpg",
+      "points": [
+        "Enhanced security for the university-wide authentication system serving 60,000+ people",
+        "Replaced a deprecated two-factor system with a new Duo API integration in Django",
+        "Improved the authentication UI for accessibility",
+        "Led an MVP React Native app, coordinating an intern team with Agile"
+      ],
+      "tags": [
+        "Django",
+        "JavaScript",
+        "React Native",
+        "HTML/CSS",
+        "Agile"
+      ]
+    },
+    {
+      "id": "education",
+      "title": "University of Michigan",
+      "role": "B.S. Informatics — Life Science Informatics",
+      "period": "Fall 2021 – Dec 2023",
+      "logo": "assets/logos/um.png",
+      "highlight": true,
+      "points": [
+        "Final GPA: 3.342 | University Honors (December 2022)",
+        "Transferred from Grand Valley State University with 50 credit hours (3.937 GPA)",
+        "Interdisciplinary program combining computer science, statistics, and biological sciences"
+      ],
+      "tags": [
+        "Web Systems",
+        "Data Structures & Algorithms",
+        "Bioinformatics",
+        "Applied Biostatistics",
+        "Discrete Math"
+      ]
+    },
+    {
+      "id": "icc",
+      "title": "Nakamura Cooperative House",
+      "role": "President, Property Manager & more",
+      "period": "2021 – 2024",
+      "logo": "assets/logos/icc.png",
+      "points": [
+        "President / Property Manager of a 29-member co-op: Slack, Google Sheets meal planning, maintenance tutorials, Notion knowledge base",
+        "Sustainability Steward, Maintenance Manager, and Donor Outreach Coordinator",
+        "Cooked weekly dinner for 29 members",
+        "Produced the \"Rockamura\" music festival in 2022 & 2023"
+      ],
+      "tags": [
+        "Operations",
+        "Tech Implementation",
+        "Event Production",
+        "Community Building"
+      ]
+    },
+    {
+      "id": "eagle-scout",
+      "title": "Boy Scouts — Troop 579",
+      "role": "Eagle Scout",
+      "period": "Through 2020",
+      "logo": "assets/logos/bsa.webp",
+      "points": [
+        "Achieved Eagle Scout rank",
+        "Patrol Leader and Senior Patrol Leader",
+        "Camp Leader at the 2017 National Boy Scout Jamboree"
+      ],
+      "tags": [
+        "Leadership",
+        "Project Management",
+        "Community Service",
+        "Outdoor Skills"
+      ]
+    }
+  ]
+}

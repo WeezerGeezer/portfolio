@@ -19,25 +19,11 @@
         "overview": "A comprehensive search engine built specifically for Time Crisis internet radio show episodes, featuring AI-powered transcription and intelligent search capabilities.",
         "challenge": "Creating a searchable database of internet radio show content that traditionally exists only in audio format, requiring accurate transcription and fast search capabilities.",
         "solution": "Implemented OpenAI Whisper for high-quality audio transcription, Whoosh for full-text search indexing, and Google Cloud for scalable hosting and storage.",
-        "keyFeatures": [
-          "AI-powered audio transcription using OpenAI Whisper",
-          "Full-text search across all internet radio show episodes",
-          "Episode metadata and timestamp-based results",
-          "Responsive web interface with search filters",
-          "Cloud-based architecture for scalability"
-        ],
-        "technicalHighlights": [
-          "Automated transcription pipeline processing hours of audio content",
-          "Optimized search indexing with Whoosh for sub-second query responses",
-          "RESTful API design for front-end integration",
-          "Google Cloud Storage integration for media file management"
-        ],
-        "lessonsLearned": [
-          "Working with large audio datasets and transcription accuracy optimization",
-          "Implementing efficient search algorithms for real-time queries",
-          "Cloud deployment and scaling considerations for media-heavy applications"
-        ]
-      }
+        "keyFeatures": ["AI-powered audio transcription using OpenAI Whisper", "Full-text search across all internet radio show episodes", "Episode metadata and timestamp-based results", "Responsive web interface with search filters", "Cloud-based architecture for scalability"],
+        "technicalHighlights": ["Automated transcription pipeline processing hours of audio content", "Optimized search indexing with Whoosh for sub-second query responses", "RESTful API design for front-end integration", "Google Cloud Storage integration for media file management"],
+        "lessonsLearned": ["Working with large audio datasets and transcription accuracy optimization", "Implementing efficient search algorithms for real-time queries", "Cloud deployment and scaling considerations for media-heavy applications"]
+      },
+      "page": "projects/time-crisis-search.html"
     },
     {
       "id": "arduino-catchphrase",
@@ -58,26 +44,11 @@
         "overview": "A physical recreation of the popular Catchphrase party game using Arduino hardware, featuring custom electronics and a companion iOS app for game management.",
         "challenge": "Designing and building custom hardware that could reliably handle game logic, user input, and audio output while maintaining the fast-paced nature of the original game.",
         "solution": "Developed Arduino-based hardware with custom C++ firmware and a Swift iOS app for game configuration and word management.",
-        "keyFeatures": [
-          "Custom-built Arduino hardware with buttons and display",
-          "Randomized word selection and timer functionality",
-          "Audio feedback and visual indicators for game states",
-          "Companion iOS app for word database management",
-          "Portable design for party game sessions"
-        ],
-        "technicalHighlights": [
-          "Low-level C++ programming for Arduino microcontroller",
-          "Hardware design including circuit layout and component selection",
-          "Swift iOS app development with Bluetooth communication",
-          "Real-time game state management and user interaction handling"
-        ],
-        "lessonsLearned": [
-          "Hardware prototyping and iterative design processes",
-          "Embedded systems programming and resource constraints",
-          "Mobile app development for hardware integration",
-          "User experience design for physical gaming devices"
-        ]
-      }
+        "keyFeatures": ["Custom-built Arduino hardware with buttons and display", "Randomized word selection and timer functionality", "Audio feedback and visual indicators for game states", "Companion iOS app for word database management", "Portable design for party game sessions"],
+        "technicalHighlights": ["Low-level C++ programming for Arduino microcontroller", "Hardware design including circuit layout and component selection", "Swift iOS app development with Bluetooth communication", "Real-time game state management and user interaction handling"],
+        "lessonsLearned": ["Hardware prototyping and iterative design processes", "Embedded systems programming and resource constraints", "Mobile app development for hardware integration", "User experience design for physical gaming devices"]
+      },
+      "page": "projects/arduino-catchphrase.html"
     },
     {
       "id": "m-event-app",
@@ -98,28 +69,11 @@
         "overview": "A comprehensive mobile application designed for University of Michigan students to discover, create, and manage campus events with real-time updates and social features.",
         "challenge": "Creating a user-friendly mobile platform that could handle the complex needs of campus event management while supporting thousands of university users with real-time data synchronization.",
         "solution": "Built a full-stack React Native application with PostgreSQL backend, featuring user authentication, event creation/management, and real-time notifications.",
-        "keyFeatures": [
-          "Cross-platform mobile app built with React Native",
-          "User authentication and profile management",
-          "Event creation, editing, and discovery functionality",
-          "Real-time notifications and updates",
-          "Location-based event filtering and maps integration",
-          "Social features including event sharing and attendee lists"
-        ],
-        "technicalHighlights": [
-          "RESTful API design with Node.js and Express backend",
-          "PostgreSQL database schema optimization for event data",
-          "Real-time data synchronization using WebSocket connections",
-          "React Native performance optimization for large datasets",
-          "Agile development methodology with team collaboration"
-        ],
-        "lessonsLearned": [
-          "Mobile app development lifecycle and deployment processes",
-          "Database design for complex relational data with high concurrency",
-          "Team collaboration and Agile project management",
-          "User experience design for mobile interfaces and accessibility"
-        ]
-      }
+        "keyFeatures": ["Cross-platform mobile app built with React Native", "User authentication and profile management", "Event creation, editing, and discovery functionality", "Real-time notifications and updates", "Location-based event filtering and maps integration", "Social features including event sharing and attendee lists"],
+        "technicalHighlights": ["RESTful API design with Node.js and Express backend", "PostgreSQL database schema optimization for event data", "Real-time data synchronization using WebSocket connections", "React Native performance optimization for large datasets", "Agile development methodology with team collaboration"],
+        "lessonsLearned": ["Mobile app development lifecycle and deployment processes", "Database design for complex relational data with high concurrency", "Team collaboration and Agile project management", "User experience design for mobile interfaces and accessibility"]
+      },
+      "page": "projects/m-event-app.html"
     },
     {
       "id": "mlx-local-models",
@@ -139,29 +93,57 @@
         "overview": "A comprehensive toolkit for deploying and running large language models locally on Mac devices using Apple's MLX framework, optimized for Apple Silicon performance.",
         "challenge": "Creating an accessible way to run powerful AI models locally without cloud dependencies, while maximizing performance on Apple Silicon hardware.",
         "solution": "Built a Python-based toolkit leveraging MLX framework with Gradio web interfaces for easy model interaction and management.",
-        "keyFeatures": [
-          "Local AI model deployment without internet dependency",
-          "Optimized for Apple Silicon (M1/M2/M3) chips",
-          "Gradio web interface for easy interaction",
-          "Support for multiple model formats and architectures",
-          "Real-time inference with low latency",
-          "Model management and version control"
-        ],
-        "technicalHighlights": [
-          "Apple MLX framework integration for hardware acceleration",
-          "Efficient memory management for large models",
-          "Gradio web UI for accessible model interaction",
-          "Model quantization and optimization techniques",
-          "Python-based architecture for flexibility",
-          "Performance benchmarking and monitoring tools"
-        ],
-        "lessonsLearned": [
-          "Working with Apple's MLX framework and Metal acceleration",
-          "Optimizing AI models for edge deployment",
-          "Building intuitive web interfaces with Gradio",
-          "Memory optimization for resource-constrained environments"
-        ]
-      }
+        "keyFeatures": ["Local AI model deployment without internet dependency", "Optimized for Apple Silicon (M1/M2/M3) chips", "Gradio web interface for easy interaction", "Support for multiple model formats and architectures", "Real-time inference with low latency", "Model management and version control"],
+        "technicalHighlights": ["Apple MLX framework integration for hardware acceleration", "Efficient memory management for large models", "Gradio web UI for accessible model interaction", "Model quantization and optimization techniques", "Python-based architecture for flexibility", "Performance benchmarking and monitoring tools"],
+        "lessonsLearned": ["Working with Apple's MLX framework and Metal acceleration", "Optimizing AI models for edge deployment", "Building intuitive web interfaces with Gradio", "Memory optimization for resource-constrained environments"]
+      },
+      "page": "projects/mlx-toolkit.html"
+    },
+    {
+      "id": "photography-portfolio",
+      "title": "Photography Portfolio",
+      "slug": "photography-portfolio",
+      "shortDescription": "Professional photography portfolio with AI-powered categorization, intelligent masonry layout, and advanced image optimization.",
+      "image": "./assets/project-3.png",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "links": {
+        "live": "https://photos.mitchellcarter.dev"
+      },
+      "featured": false,
+      "page": "projects/photography-portfolio.html"
+    },
+    {
+      "id": "clip-gen",
+      "title": "Clip Generator",
+      "slug": "clip-gen",
+      "shortDescription": "Advanced audio clip extraction tool with timestamped search capabilities, multi-source support, and transcript analysis for Time Crisis internet radio show.",
+      "image": "./assets/project-4.jpeg",
+      "technologies": ["Python", "OpenAI", "FFmpeg"],
+      "links": {},
+      "featured": false,
+      "page": "projects/clip-gen.html"
+    },
+    {
+      "id": "white-border-tool",
+      "title": "White Border Tool",
+      "slug": "white-border-tool",
+      "shortDescription": "Automated Instagram post optimization tool with intelligent white border generation, batch processing, and aspect ratio conversion for social media content.",
+      "image": "./assets/project-3.png",
+      "technologies": ["Python", "PIL"],
+      "links": {},
+      "featured": false,
+      "page": "projects/white-border-tool.html"
+    },
+    {
+      "id": "resume-generator",
+      "title": "Resume Generator",
+      "slug": "resume-generator",
+      "shortDescription": "AI-powered resume generation system with LaTeX templating, real-time preview, and automated formatting for professional document creation.",
+      "image": "./assets/project-4.jpeg",
+      "technologies": ["Python", "LaTeX"],
+      "links": {},
+      "featured": false,
+      "page": "projects/resume-generator.html"
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "_readme": "Songs for the car radio. Each entry is looked up on Apple Music and plays its 30-second preview. Use {artist, title}, or {id} with the number after ?i= in an Apple Music song share link. Put a public playlist link in appleMusicPlaylist to show an 'Open playlist' button.",
+  "station": "MCFM 101.9",
+  "appleMusicPlaylist": "",
+  "tracks": [
+    { "artist": "Vampire Weekend", "title": "Harmony Hall" },
+    { "artist": "Weezer", "title": "Island in the Sun" },
+    { "artist": "Fleetwood Mac", "title": "Dreams" },
+    { "artist": "Vampire Weekend", "title": "A-Punk" },
+    { "artist": "The War on Drugs", "title": "Red Eyes" },
+    { "artist": "Weezer", "title": "Buddy Holly" },
+    { "artist": "Tom Petty", "title": "Free Fallin'" },
+    { "artist": "Khruangbin", "title": "Time (You and I)" },
+    { "artist": "Vampire Weekend", "title": "Step" },
+    { "artist": "LCD Soundsystem", "title": "All My Friends" },
+    { "artist": "Weezer", "title": "Say It Ain't So" },
+    { "artist": "Toto", "title": "Africa" }
+  ]
+}
