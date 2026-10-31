@@ -36,7 +36,11 @@ let dirSign = 1; // +1 wind blowing east (left → right), -1 west
 let W, H, waterTop, sandTop;
 let k = 1; // scales the sky scenery and boat down on narrow (phone) screens
 
-const waterHeight = () => Math.max(140, Math.min(H * 0.26, 260));
+// shorter lake on phones so the bio fits above it (matches padding-bottom in home.css)
+const waterHeight = () =>
+  W <= 640
+    ? Math.max(120, Math.min(H * 0.18, 260))
+    : Math.max(140, Math.min(H * 0.26, 260));
 
 function resize() {
   const dpr = window.devicePixelRatio || 1;

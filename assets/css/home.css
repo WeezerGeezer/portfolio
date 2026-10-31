@@ -18,7 +18,7 @@ body {
 
 body {
   font:
-    17px/1.65 "Fraunces",
+    19px/1.65 "Fraunces",
     Georgia,
     serif;
   color: #1f2328;
@@ -29,7 +29,7 @@ body {
 main {
   position: relative;
   z-index: 1;
-  max-width: 34rem;
+  max-width: 38rem;
   margin: 14vh auto 0;
   padding: 0 1.5rem;
   /* soft white backing so scenery behind the text never hurts legibility */
@@ -39,7 +39,7 @@ main {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   margin: 0 0 1.25rem;
@@ -117,10 +117,12 @@ a:focus-visible {
 
 @media (max-width: 640px) {
   body {
-    font-size: 16px;
+    font-size: 17px;
+    line-height: 1.6;
+    padding-bottom: calc(clamp(120px, 18vh, 260px) + 2rem);
   }
 
   main {
-    margin-top: 2.5rem;
+    margin-top: 1.75rem;
   }
 }

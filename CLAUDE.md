@@ -29,7 +29,7 @@ This is a modern personal portfolio website built with vanilla HTML, CSS, and Ja
 ## Homepage
 
 - Plain white page set in Fraunces (self-hosted at `assets/fonts/fraunces-latin.woff2`); text sits on a soft white backing so the scenery never hurts legibility
-- `lake.js` draws a full-viewport canvas: sky (sun/moon, clouds, DTE Monroe stacks with smoke) and a side-on "aquarium" lake at the bottom (boat, fish, seaweed, sand). Water height is `clamp(140px, 26vh, 260px)` and must match `padding-bottom` in `home.css`
+- `lake.js` draws a full-viewport canvas: sky (sun/moon, clouds, DTE Monroe stacks with smoke) and a side-on "aquarium" lake at the bottom (boat, fish, seaweed, sand). Water height is `clamp(140px, 26vh, 260px)` (`clamp(120px, 18vh, 260px)` at ≤640px) and must match `padding-bottom` in `home.css`
 - Live data for LaPlaisance Bay: Open-Meteo forecast (wind, clouds, rain/snow/fog, sunrise/sunset), Open-Meteo Marine (wave height), NOAA Toledo station 9063085 (water temp). Wind drives the boat, waves, and smoke; sunrise/sunset tint the water
 - Clicking above the water blows the boat away from the pointer and splashes; clicking below it only scatters nearby fish and releases bubbles
 - Respects `prefers-reduced-motion` (slower scene, no precipitation); scenery scales down below 900px wide
