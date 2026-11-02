@@ -144,7 +144,7 @@ export function openAbout(onClose) {
         <p><strong>Current work:</strong> Founder of Mortar Creek Labs, an automation consultancy serving small businesses and non-profits. I build custom solutions that eliminate repetitive work and solve real operational problems.</p>
         <p><strong>What I build:</strong> Python automation, React/Django full-stack applications, data pipelines, API integrations, and tools that actually save people time.</p>
         <p>I'm also a pretty good cook, <a href="https://photos.mitchellcarter.dev" target="_blank" rel="noopener">lifelong photographer</a>, used book collector, and an Eagle Scout. I love creation and experimentation, building things that work, eliminating tedious manual processes, and I'm always learning what's next.</p>
-        <p class="panel-foot"><a href="https://github.com/WeezerGeezer" target="_blank" rel="noopener">GitHub</a> ⋅ <a href="https://linkedin.com/in/mitchell-carter-dev" target="_blank" rel="noopener">LinkedIn</a> ⋅ <a href="assets/resume.pdf" target="_blank">Résumé</a></p>
+        <p class="panel-foot"><a href="https://github.com/WeezerGeezer" target="_blank" rel="noopener">GitHub</a> ⋅ <a href="https://linkedin.com/in/mitchell-carter-dev" target="_blank" rel="noopener">LinkedIn</a></p>
       </div>
     </div>`,
     onClose,
@@ -186,7 +186,6 @@ export function openContact(onClose) {
       <a class="contact-row" href="https://linkedin.com/in/mitchell-carter-dev" target="_blank" rel="noopener"><span>💼</span><span><strong>LinkedIn</strong>mitchell-carter-dev</span></a>
       <a class="contact-row" href="https://github.com/WeezerGeezer" target="_blank" rel="noopener"><span>🐙</span><span><strong>GitHub</strong>WeezerGeezer</span></a>
       <a class="contact-row" href="https://photos.mitchellcarter.dev" target="_blank" rel="noopener"><span>📷</span><span><strong>Photos</strong>photos.mitchellcarter.dev</span></a>
-      <a class="contact-row" href="assets/resume.pdf" target="_blank"><span>📄</span><span><strong>Résumé</strong>PDF</span></a>
     </div>`,
     onClose,
   );

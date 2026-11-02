@@ -18,7 +18,7 @@ This is a modern personal portfolio website built with vanilla HTML, CSS, and Ja
 - `script.js` - JavaScript for hamburger menu, project filtering, and interactive features
 
 ### Directories
-- `assets/` - Contains all images, icons, and resume PDF
+- `assets/` - Contains all images and icons
   - `assets/css/` - Additional stylesheets (blog-pages.css, project-pages.css)
   - `assets/js/` - JavaScript modules (blog.js for blog functionality)
   - `assets/logos/` - Organization logos for timeline (needs mortar-creek.png)
@@ -98,7 +98,6 @@ This is currently a static website with plans to add build tooling. Changes can 
 - All assets should be placed in the `assets/` directory
 - Project images should be organized by project in subdirectories
 - Profile and project images should be optimized for web use (WebP preferred)
-- Resume PDF should be updated in `assets/resume.pdf` when needed
 - Blog post metadata managed through `data/blog-posts.json`
 - Organization logos for timeline stored in `assets/logos/` (mortar-creek.png still needed)
 
